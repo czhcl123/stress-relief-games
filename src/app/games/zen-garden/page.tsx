@@ -18,6 +18,10 @@ interface Plant {
   swaySpeed: number
 }
 
+// Stones placed when the garden is first created.
+// Kept as a constant so the init effect never re-runs on "Add Stone".
+const INITIAL_STONES = 3
+
 export default function ZenGarden() {
   const canvasRef = useRef<HTMLCanvasElement>(null)
   const sandCanvasRef = useRef<HTMLCanvasElement | null>(null) // offscreen sand layer
@@ -28,7 +32,6 @@ export default function ZenGarden() {
   const rakeSoundRef = useRef<number>(0)
 
   const [rakeStyle, setRakeStyle] = useState<'straight' | 'circle' | 'wave'>('straight')
-  const [stoneCount, setStoneCount] = useState(3)
 
   const stonesRef = useRef<Stone[]>([])
   const plantsRef = useRef<Plant[]>([])
@@ -155,35 +158,72 @@ export default function ZenGarden() {
     const canvas = canvasRef.current
     if (!canvas) return
     const parent = canvas.parentElement!
-    const w = parent.clientWidth
-    const h = Math.min(500, window.innerHeight * 0.55)
+
+    const targetSize = () => ({
+      w: parent.clientWidth,
+      h: Math.min(500, window.innerHeight * 0.55),
+    })
+
+    // Fill a fresh sand layer with base color + grain noise
+    const makeSand = (w: number, h: number) => {
+      const sand = document.createElement('canvas')
+      sand.width = w
+      sand.height = h
+      const ctx = sand.getContext('2d')!
+      ctx.fillStyle = '#d4b896'
+      ctx.fillRect(0, 0, w, h)
+      const imgData = ctx.getImageData(0, 0, w, h)
+      for (let i = 0; i < imgData.data.length; i += 4) {
+        const noise = (Math.random() - 0.5) * 15
+        imgData.data[i] += noise     // R
+        imgData.data[i+1] += noise   // G
+        imgData.data[i+2] += noise   // B
+      }
+      ctx.putImageData(imgData, 0, 0)
+      return sand
+    }
+
+    const { w, h } = targetSize()
     canvas.width = w
     canvas.height = h
+    sandCanvasRef.current = makeSand(w, h)
 
-    // Create offscreen sand canvas
-    const sand = document.createElement('canvas')
-    sand.width = w
-    sand.height = h
-    sandCanvasRef.current = sand
-
-    // Fill sand texture
-    const sctx = sand.getContext('2d')!
-    sctx.fillStyle = '#d4b896'
-    sctx.fillRect(0, 0, w, h)
-
-    // Add subtle sand grain noise
-    const imgData = sctx.getImageData(0, 0, w, h)
-    for (let i = 0; i < imgData.data.length; i += 4) {
-      const noise = (Math.random() - 0.5) * 15
-      imgData.data[i] += noise     // R
-      imgData.data[i+1] += noise   // G
-      imgData.data[i+2] += noise   // B
-    }
-    sctx.putImageData(imgData, 0, 0)
-
-    stonesRef.current = generateStones(w, h, stoneCount)
+    stonesRef.current = generateStones(w, h, INITIAL_STONES)
     plantsRef.current = generatePlants(w, h)
-  }, [stoneCount, generateStones, generatePlants])
+
+    // Resize: rescale the sand art and keep objects within bounds
+    const onResize = () => {
+      const { w: nw, h: nh } = targetSize()
+      if (nw === canvas.width && nh === canvas.height) return
+
+      // Rebuild sand canvas, drawing the previous art scaled to the new size
+      const prev = sandCanvasRef.current
+      const sand = makeSand(nw, nh)
+      if (prev && prev.width > 0 && prev.height > 0) {
+        const ctx = sand.getContext('2d')!
+        ctx.drawImage(prev, 0, 0, prev.width, prev.height, 0, 0, nw, nh)
+      }
+      sandCanvasRef.current = sand
+
+      canvas.width = nw
+      canvas.height = nh
+
+      const clamp = (v: number, min: number, max: number) =>
+        Math.min(Math.max(v, min), Math.max(min, max))
+
+      for (const s of stonesRef.current) {
+        s.x = clamp(s.x, s.r, nw - s.r)
+        s.y = clamp(s.y, s.r, nh - s.r)
+      }
+      for (const p of plantsRef.current) {
+        p.x = clamp(p.x, 20, nw - 20)
+        p.y = clamp(p.y, 20, nh - 20)
+      }
+    }
+
+    window.addEventListener('resize', onResize)
+    return () => window.removeEventListener('resize', onResize)
+  }, [generateStones, generatePlants])
 
   // Draw rake lines on sand canvas
   const rakeLine = useCallback((x1: number, y1: number, x2: number, y2: number, style: string) => {
@@ -534,7 +574,6 @@ export default function ZenGarden() {
       color: c.color,
       shadow: c.shadow,
     })
-    setStoneCount(stonesRef.current.length)
     playStoneSound()
   }, [playStoneSound])
 
@@ -601,9 +640,9 @@ export default function ZenGarden() {
       </div>
 
       {/* Instructions */}
-      <div className="text-center text-slate-500 text-sm mb-8">
-        <p>👆 <strong className="text-slate-400">Drag</strong> on sand to rake patterns</p>
-        <p>🪨 <strong className="text-slate-400">Drag</strong> stones and plants to reposition them</p>
+      <div className="text-center text-slate-400 text-sm mb-8">
+        <p>👆 <strong className="text-slate-200">Drag</strong> on sand to rake patterns</p>
+        <p>🪨 <strong className="text-slate-200">Drag</strong> stones and plants to reposition them</p>
       </div>
 
       {/* SEO Content */}

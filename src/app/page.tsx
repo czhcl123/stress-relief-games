@@ -67,7 +67,7 @@ export default function Home() {
             href={game.coming ? undefined : game.href}
             className={`group block rounded-2xl border p-6 transition-all ${
               game.coming
-                ? 'border-slate-800 bg-slate-900/50 opacity-60 cursor-default'
+                ? 'border-slate-800 bg-slate-900/40 cursor-default'
                 : 'border-slate-700 bg-slate-800/50 hover:border-violet-500 hover:bg-slate-800 hover:shadow-lg hover:shadow-violet-500/10'
             }`}
           >
@@ -75,7 +75,7 @@ export default function Home() {
             <h2 className="text-xl font-semibold mb-2">
               {game.title}
               {game.coming && (
-                <span className="ml-2 text-xs bg-slate-700 text-slate-400 px-2 py-0.5 rounded-full">
+                <span className="ml-2 text-xs bg-slate-700 text-slate-300 px-2 py-0.5 rounded-full">
                   Coming Soon
                 </span>
               )}

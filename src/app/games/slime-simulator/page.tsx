@@ -456,7 +456,7 @@ export default function SlimeSimulator() {
 
       {/* Poke counter */}
       <div className="text-center mb-4">
-        <span className="text-slate-500 text-sm">Pokes: </span>
+        <span className="text-slate-400 text-sm">Pokes: </span>
         <span className="text-violet-400 font-bold">{pokeCount}</span>
       </div>
 
@@ -478,9 +478,9 @@ export default function SlimeSimulator() {
       </div>
 
       {/* Instructions */}
-      <div className="text-center text-slate-500 text-sm mb-8">
-        <p>👆 <strong className="text-slate-400">Drag</strong> the slime to stretch it</p>
-        <p>👆 <strong className="text-slate-400">Poke</strong> anywhere to squish it</p>
+      <div className="text-center text-slate-400 text-sm mb-8">
+        <p>👆 <strong className="text-slate-200">Drag</strong> the slime to stretch it</p>
+        <p>👆 <strong className="text-slate-200">Poke</strong> anywhere to squish it</p>
       </div>
 
       {/* SEO Content */}

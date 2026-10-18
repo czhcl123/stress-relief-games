@@ -467,7 +467,7 @@ export default function BubbleWrapGame() {
           <span className={`text-xl font-bold text-violet-400 ${bump ? 'score-bump' : ''}`}>
             {score}
           </span>
-          <span className="text-slate-500 text-sm">/ {total}</span>
+          <span className="text-slate-400 text-sm">/ {total}</span>
         </div>
 
         {/* Timer (speed mode) */}

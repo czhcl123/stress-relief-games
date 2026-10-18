@@ -557,7 +557,7 @@ export default function StressBall() {
 
       {/* Stats */}
       <div className="flex items-center justify-center gap-6 mb-4 text-sm">
-        <span className="text-slate-500">Throws: <span className="text-violet-400 font-bold">{squeezeCount}</span></span>
+        <span className="text-slate-400">Throws: <span className="text-violet-400 font-bold">{squeezeCount}</span></span>
         <button
           onClick={resetBall}
           className="px-3 py-1 bg-slate-800 border border-slate-700 rounded-lg text-slate-400 hover:text-white hover:border-slate-500 transition"
@@ -581,9 +581,9 @@ export default function StressBall() {
         />
       </div>
 
-      <div className="text-center text-slate-500 text-sm mb-8">
-        <p>👆 <strong className="text-slate-400">Drag</strong> the ball to throw it</p>
-        <p>🏀 <strong className="text-slate-400">Watch</strong> it bounce off the walls</p>
+      <div className="text-center text-slate-400 text-sm mb-8">
+        <p>👆 <strong className="text-slate-200">Drag</strong> the ball to throw it</p>
+        <p>🏀 <strong className="text-slate-200">Watch</strong> it bounce off the walls</p>
       </div>
 
       <div className="max-w-2xl mx-auto">

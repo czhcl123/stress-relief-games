@@ -1,16 +1,69 @@
 import type { Metadata } from 'next'
+import { siteDescription, siteName, siteUrl } from '@/lib/seo'
 import './globals.css'
 
+const title = 'Stress Relief Games - Free Online Relaxing & Satisfying Games'
+
 export const metadata: Metadata = {
-  title: 'Stress Relief Games - Free Online Relaxing & Satisfying Games',
-  description: 'Play free online stress relief games. Bubble wrap popping, slime simulator, fidget spinner, and more relaxing games to help you unwind.',
-  keywords: 'stress relief games, satisfying games, relaxing games, bubble wrap, fidget spinner, antistress',
+  metadataBase: new URL(siteUrl),
+  title: {
+    default: title,
+    template: `%s | ${siteName}`,
+  },
+  description: siteDescription,
+  keywords: [
+    'stress relief games',
+    'satisfying games',
+    'relaxing games',
+    'bubble wrap',
+    'slime simulator',
+    'zen garden',
+    'stress ball',
+    'antistress',
+  ],
+  applicationName: siteName,
+  alternates: { canonical: '/' },
+  openGraph: {
+    type: 'website',
+    siteName,
+    url: siteUrl,
+    title,
+    description: siteDescription,
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title,
+    description: siteDescription,
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+      'max-video-preview': -1,
+    },
+  },
+}
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  name: siteName,
+  url: siteUrl,
+  description: siteDescription,
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
       <body>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
         <header className="border-b border-slate-800 bg-slate-900/80 backdrop-blur sticky top-0 z-50">
           <div className="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
             <a href="/" className="text-xl font-bold">
@@ -26,7 +79,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           </div>
         </header>
         <main>{children}</main>
-        <footer className="border-t border-slate-800 text-center py-6 text-sm text-slate-500">
+        <footer className="border-t border-slate-800 text-center py-6 text-sm text-slate-400">
           <p>Free online stress relief games. No signup, no download.</p>
           <p className="mt-1">© 2026 StressReliefGames.net</p>
         </footer>
