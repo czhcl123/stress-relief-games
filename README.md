@@ -23,6 +23,11 @@ npm install
 npm run dev
 ```
 
+Requires Node.js 22, or at least 20.9 (Next.js 16 minimum).
+
 ## Deploy
 
-Configured for Railway. Push to `main` triggers automatic build.
+Configured for Railway (Nixpacks). Push to `master` triggers an automatic build.
+
+The Node.js version is pinned to 22 via the `engines.node` field in `package.json`,
+so Nixpacks provisions a compatible runtime.
