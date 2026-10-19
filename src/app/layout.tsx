@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import { siteDescription, siteName, siteUrl } from '@/lib/seo'
 import './globals.css'
 
-const title = 'Stress Relief Games - Free Online Relaxing & Satisfying Games'
+const title = 'Stress Relief Games - Free Online Relaxing Games'
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
