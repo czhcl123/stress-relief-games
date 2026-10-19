@@ -3,7 +3,7 @@ import { siteUrl } from '@/lib/seo'
 
 const title = 'About'
 const description =
-  'Stress Relief Games is a small solo-built project offering free browser games for quick, satisfying mental breaks. Learn who builds it, why, and how the games are made.'
+  'Stress Relief Games is a small solo-built project: free browser games for quick, satisfying mental breaks. Learn who builds it, why, and how they are made.'
 
 export const metadata: Metadata = {
   title,

@@ -111,7 +111,7 @@ const blocks: Block[] = [
       'A piece of putty or a [stress ball](/games/stress-ball) — resistance you can feel without having to look at anything.',
       'A textured ring, which is silent and invisible.',
       'Standing up and walking for twenty seconds, which changes more variables at once than any fidget can.',
-      'The [20-second gaze break](/blog/what-is-a-zen-garden): look at something far away, which resets visual focus rather than giving your hands a job.',
+      'Letting your eyes follow one calm thing instead of a spinner — the [zen garden guide](/blog/what-is-a-zen-garden) covers why a low-stakes, visible-progress task is far easier to stop than a flick-and-watch toy.',
     ],
   },
   {
