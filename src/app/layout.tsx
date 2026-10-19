@@ -89,7 +89,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             Free online stress relief games. No signup, no download.{' '}
             <a href="/about" className="text-violet-400 hover:underline">About</a>
           </p>
-          <p className="mt-1">© 2026 StressReliefGames.net</p>
+          <p className="mt-1">© 2026 {siteName}</p>
         </footer>
       </body>
     </html>

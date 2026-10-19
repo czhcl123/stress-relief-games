@@ -1,7 +1,10 @@
+import { siteUrl } from '@/lib/seo'
+
 // LLM-friendly site index following the llmstxt.org standard.
 // Served at /llms.txt so GPTBot, ClaudeBot, and other LLM crawlers can
 // discover every game page with a one-sentence description.
-const SITE = 'https://stress-relief-games-production.up.railway.app'
+// Derived from siteUrl so it can never drift from the canonical domain.
+const SITE = siteUrl
 
 const body = `# Stress Relief Games
 

@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { siteUrl } from '@/lib/seo'
 
 const title = 'About'
 const description =
@@ -10,7 +11,7 @@ export const metadata: Metadata = {
   alternates: { canonical: '/about' },
   openGraph: {
     type: 'website',
-    url: 'https://stress-relief-games-production.up.railway.app/about',
+    url: `${siteUrl}/about`,
     title: `${title} | Stress Relief Games`,
     description,
   },
@@ -20,11 +21,11 @@ const personJsonLd = {
   '@context': 'https://schema.org',
   '@type': 'Person',
   name: 'Stress Relief Games Team',
-  url: 'https://stress-relief-games-production.up.railway.app/about',
+  url: `${siteUrl}/about`,
   worksFor: {
     '@type': 'Organization',
     name: 'Stress Relief Games',
-    url: 'https://stress-relief-games-production.up.railway.app',
+    url: siteUrl,
   },
   description:
     'Solo developer and editor behind Stress Relief Games — a small collection of free browser games for short, satisfying mental breaks.',
@@ -34,7 +35,7 @@ const orgJsonLd = {
   '@context': 'https://schema.org',
   '@type': 'Organization',
   name: 'Stress Relief Games',
-  url: 'https://stress-relief-games-production.up.railway.app',
+  url: siteUrl,
   description:
     'Free online stress relief games: pop bubble wrap, stretch slime, spin a fidget spinner, rake a zen garden, squeeze a stress ball, or cut kinetic sand.',
   foundingDate: '2026',
@@ -157,8 +158,8 @@ export default function AboutPage() {
         <h2 className="text-2xl font-semibold text-white mb-3">Contact</h2>
         <p className="leading-relaxed">
           For bug reports, suggestions, or general feedback, email{' '}
-          <a className="text-violet-400 hover:underline" href="mailto:hello@stressreliefgames.net">
-            hello@stressreliefgames.net
+          <a className="text-violet-400 hover:underline" href="mailto:hello@stress-relief-games.com">
+            hello@stress-relief-games.com
           </a>
           . Bug reports with a browser name, device, and a short description of what
           happened are the most useful.

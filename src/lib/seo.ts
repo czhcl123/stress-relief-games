@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 
 // Canonical site origin. Override with NEXT_PUBLIC_SITE_URL in the environment.
 export const siteUrl = (
-  process.env.NEXT_PUBLIC_SITE_URL ?? 'https://stress-relief-games-production.up.railway.app'
+  process.env.NEXT_PUBLIC_SITE_URL ?? 'https://stress-relief-games.com'
 ).replace(/\/$/, '')
 
 export const siteName = 'Stress Relief Games'
