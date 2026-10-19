@@ -158,7 +158,7 @@ export default function AboutPage() {
         <h2 className="text-2xl font-semibold text-white mb-3">Contact</h2>
         <p className="leading-relaxed">
           For bug reports, suggestions, or general feedback, email{' '}
-          <a className="text-violet-400 hover:underline" href="mailto:hello@stress-relief-games.com">
+          <a className="text-violet-400 underline underline-offset-2 hover:text-violet-300" href="mailto:hello@stress-relief-games.com">
             hello@stress-relief-games.com
           </a>
           . Bug reports with a browser name, device, and a short description of what

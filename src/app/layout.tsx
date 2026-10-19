@@ -80,6 +80,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               <a href="/games/stress-ball" className="hover:text-white transition">Stress Ball</a>
               <a href="/games/fidget-spinner" className="hover:text-white transition">Spinner</a>
               <a href="/games/sand-cutting" className="hover:text-white transition">Sand</a>
+              <a href="/blog" className="hover:text-white transition">Guides</a>
             </nav>
           </div>
         </header>
@@ -87,7 +88,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <footer className="border-t border-slate-800 text-center py-6 text-sm text-slate-400">
           <p>
             Free online stress relief games. No signup, no download.{' '}
-            <a href="/about" className="text-violet-400 hover:underline">About</a>
+            <a href="/blog" className="text-violet-400 underline underline-offset-2 transition hover:text-violet-300">Guides</a>
+            <span aria-hidden="true"> · </span>
+            <a href="/about" className="text-violet-400 underline underline-offset-2 transition hover:text-violet-300">About</a>
           </p>
           <p className="mt-1">© 2026 {siteName}</p>
         </footer>

@@ -1,4 +1,5 @@
 import { games } from '@/lib/games'
+import { posts, postHref } from '@/lib/posts'
 
 export default function Home() {
   return (
@@ -46,6 +47,28 @@ export default function Home() {
           </a>
         ))}
       </div>
+
+      {/* Guides */}
+      <section className="mt-16">
+        <div className="mb-4 flex flex-wrap items-baseline justify-between gap-2">
+          <h2 className="text-2xl font-bold">Stress Relief Guides</h2>
+          <a href="/blog" className="text-sm text-violet-400 underline underline-offset-2 hover:text-violet-300">
+            All guides →
+          </a>
+        </div>
+        <ul className="grid grid-cols-1 gap-3 sm:grid-cols-2">
+          {posts.map((post) => (
+            <li key={post.slug}>
+              <a
+                href={postHref(post)}
+                className="block rounded-xl border border-slate-800 px-4 py-3 text-sm text-slate-300 transition hover:border-violet-500 hover:bg-slate-800/50 hover:text-white"
+              >
+                {post.title}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </section>
 
       {/* SEO Content */}
       <div className="mt-16 max-w-3xl mx-auto text-center">

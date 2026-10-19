@@ -1,10 +1,17 @@
 import { siteUrl } from '@/lib/seo'
+import { posts, postHref } from '@/lib/posts'
 
 // LLM-friendly site index following the llmstxt.org standard.
 // Served at /llms.txt so GPTBot, ClaudeBot, and other LLM crawlers can
-// discover every game page with a one-sentence description.
+// discover every page with a one-sentence description.
 // Derived from siteUrl so it can never drift from the canonical domain.
 const SITE = siteUrl
+
+// Generated from the same registry as the sitemap and the /blog index, so a
+// new guide can never be missing here.
+const guides = posts
+  .map((post) => `- [${post.title}](${SITE}${postHref(post)}): ${post.description}`)
+  .join('\n')
 
 const body = `# Stress Relief Games
 
@@ -18,8 +25,12 @@ const body = `# Stress Relief Games
 - [Fidget Spinner](${SITE}/games/fidget-spinner): Flick a virtual fidget spinner with realistic spin physics. Six designs, variable friction, bearing hum that rises with RPM.
 - [Sand Cutting](${SITE}/games/sand-cutting): Slice, scoop, and smooth virtual kinetic sand. Six sand colors, three tools, crisp ASMR cutting sounds.
 
+## Guides
+${guides}
+
 ## Site info
 - [Home](${SITE}/): Browse all six stress relief games on one page.
+- [All guides](${SITE}/blog): Every long-form article about how these games work and how to use them.
 - [About](${SITE}/about): Who builds the site, editorial policy, and contact details.
 - [Sitemap](${SITE}/sitemap.xml): Full XML sitemap of every page on the site.
 `

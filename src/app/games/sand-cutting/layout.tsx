@@ -1,4 +1,5 @@
 import { gameJsonLd, gameMetadata } from '@/lib/seo'
+import GuideLink from '@/components/GuideLink'
 import RelatedGames from '@/components/RelatedGames'
 
 // One object feeds both the page metadata and the structured data, so the
@@ -26,6 +27,7 @@ export default function SandCuttingLayout({ children }: { children: React.ReactN
   return (
     <>
       {children}
+      <GuideLink gameHref={seo.path} />
       <RelatedGames current={seo.path} />
       <script
         type="application/ld+json"
