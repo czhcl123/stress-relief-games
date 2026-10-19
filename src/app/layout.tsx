@@ -25,6 +25,11 @@ export const metadata: Metadata = {
     'antistress',
   ],
   applicationName: siteName,
+  // Google Search Console ownership proof (HTML tag method). Kept in the root
+  // layout so every page carries it and verification can never silently lapse.
+  verification: {
+    google: 'hdEepR7774uDLVmiuC7nLdplgpmLGUTiziYPMrGe2yg',
+  },
   alternates: { canonical: '/' },
   openGraph: {
     type: 'website',
