@@ -11,6 +11,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: '/games/zen-garden', priority: 0.8 },
     { path: '/games/stress-ball', priority: 0.8 },
     { path: '/games/fidget-spinner', priority: 0.8 },
+    { path: '/games/sand-cutting', priority: 0.8 },
   ]
 
   return routes.map((route) => ({

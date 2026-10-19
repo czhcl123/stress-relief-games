@@ -20,6 +20,8 @@ export const metadata: Metadata = {
     'zen garden',
     'stress ball',
     'fidget spinner',
+    'sand cutting',
+    'kinetic sand',
     'antistress',
   ],
   applicationName: siteName,
@@ -77,6 +79,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               <a href="/games/zen-garden" className="hover:text-white transition">Zen Garden</a>
               <a href="/games/stress-ball" className="hover:text-white transition">Stress Ball</a>
               <a href="/games/fidget-spinner" className="hover:text-white transition">Spinner</a>
+              <a href="/games/sand-cutting" className="hover:text-white transition">Sand</a>
             </nav>
           </div>
         </header>

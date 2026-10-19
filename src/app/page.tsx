@@ -1,5 +1,13 @@
 export default function Home() {
-  const games = [
+  // `coming` is optional — a card without a route yet renders a "Coming Soon" badge.
+  const games: {
+    href: string
+    emoji: string
+    title: string
+    desc: string
+    tags: string[]
+    coming?: boolean
+  }[] = [
     {
       href: '/games/bubble-wrap',
       emoji: '🫧',
@@ -36,12 +44,11 @@ export default function Home() {
       tags: ['fidget', 'satisfying'],
     },
     {
-      href: '#',
+      href: '/games/sand-cutting',
       emoji: '🏖️',
       title: 'Sand Cutting',
-      desc: 'Cut through sand with satisfying ASMR sounds.',
+      desc: 'Slice and scoop kinetic sand with satisfying ASMR sounds.',
       tags: ['asmr', 'satisfying'],
-      coming: true,
     },
   ]
 
