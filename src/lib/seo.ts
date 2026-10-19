@@ -8,7 +8,7 @@ export const siteUrl = (
 export const siteName = 'Stress Relief Games'
 
 export const siteDescription =
-  'Play free online stress relief games. Bubble wrap popping, slime simulator, zen garden, and stress balls — relaxing, satisfying games to help you unwind. No signup, no download.'
+  'Free online stress relief games: pop bubble wrap, stretch slime, spin a fidget spinner, rake a zen garden. Relaxing, satisfying, no signup.'
 
 /**
  * Builds consistent per-game page metadata (title, description, canonical, Open Graph).

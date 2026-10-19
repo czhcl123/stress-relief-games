@@ -29,12 +29,11 @@ export default function Home() {
       tags: ['fidget', 'quick'],
     },
     {
-      href: '#',
+      href: '/games/fidget-spinner',
       emoji: '🔄',
       title: 'Fidget Spinner',
-      desc: 'Spin a virtual fidget spinner with realistic physics.',
+      desc: 'Flick a virtual fidget spinner and listen to the whirr. Realistic spin physics.',
       tags: ['fidget', 'satisfying'],
-      coming: true,
     },
     {
       href: '#',

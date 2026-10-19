@@ -19,6 +19,7 @@ export const metadata: Metadata = {
     'slime simulator',
     'zen garden',
     'stress ball',
+    'fidget spinner',
     'antistress',
   ],
   applicationName: siteName,
@@ -65,16 +66,17 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
         <header className="border-b border-slate-800 bg-slate-900/80 backdrop-blur sticky top-0 z-50">
-          <div className="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
-            <a href="/" className="text-xl font-bold">
+          <div className="max-w-6xl mx-auto px-4 py-3 flex flex-wrap items-center justify-between gap-x-4 gap-y-2">
+            <a href="/" className="text-lg sm:text-xl font-bold">
               <span className="text-violet-400">🎮</span> Stress Relief Games
             </a>
-            <nav className="hidden sm:flex gap-6 text-sm text-slate-400">
+            <nav className="hidden sm:flex flex-wrap items-center justify-end gap-x-4 md:gap-x-6 gap-y-1 text-sm text-slate-400">
               <a href="/" className="hover:text-white transition">Home</a>
               <a href="/games/bubble-wrap" className="hover:text-white transition">Bubble Wrap</a>
               <a href="/games/slime-simulator" className="hover:text-white transition">Slime</a>
               <a href="/games/zen-garden" className="hover:text-white transition">Zen Garden</a>
               <a href="/games/stress-ball" className="hover:text-white transition">Stress Ball</a>
+              <a href="/games/fidget-spinner" className="hover:text-white transition">Spinner</a>
             </nav>
           </div>
         </header>
