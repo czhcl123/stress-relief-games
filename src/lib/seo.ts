@@ -57,3 +57,42 @@ export function gameMetadata({
     },
   }
 }
+
+/**
+ * Per-game structured data. `VideoGame` is a `SoftwareApplication` subclass,
+ * so applicationCategory / operatingSystem / offers are all valid on it.
+ * No aggregateRating: we have no real ratings, and inventing them is a
+ * structured-data violation.
+ */
+export function gameJsonLd({
+  title,
+  description,
+  path,
+}: {
+  title: string
+  description: string
+  path: string
+}) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'VideoGame',
+    name: title,
+    description,
+    url: `${siteUrl}${path}`,
+    applicationCategory: 'GameApplication',
+    operatingSystem: 'Web browser',
+    browserRequirements: 'Requires JavaScript',
+    inLanguage: 'en',
+    isAccessibleForFree: true,
+    offers: {
+      '@type': 'Offer',
+      price: '0',
+      priceCurrency: 'USD',
+    },
+    publisher: {
+      '@type': 'Organization',
+      name: siteName,
+      url: siteUrl,
+    },
+  }
+}

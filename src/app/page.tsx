@@ -1,57 +1,6 @@
-export default function Home() {
-  // `coming` is optional — a card without a route yet renders a "Coming Soon" badge.
-  const games: {
-    href: string
-    emoji: string
-    title: string
-    desc: string
-    tags: string[]
-    coming?: boolean
-  }[] = [
-    {
-      href: '/games/bubble-wrap',
-      emoji: '🫧',
-      title: 'Bubble Wrap Popper',
-      desc: 'Pop virtual bubble wrap! Satisfying sounds, endless bubbles.',
-      tags: ['satisfying', 'zen'],
-    },
-    {
-      href: '/games/slime-simulator',
-      emoji: '🟢',
-      title: 'Slime Simulator',
-      desc: 'Stretch and poke colorful slime. ASMR sounds included.',
-      tags: ['relaxing', 'asmr'],
-    },
-    {
-      href: '/games/zen-garden',
-      emoji: '🪨',
-      title: 'Zen Garden',
-      desc: 'Arrange stones, rake sand, find your calm.',
-      tags: ['calming', 'creative'],
-    },
-    {
-      href: '/games/stress-ball',
-      emoji: '🏀',
-      title: 'Stress Relief Ball',
-      desc: 'Squeeze and bounce a virtual stress ball.',
-      tags: ['fidget', 'quick'],
-    },
-    {
-      href: '/games/fidget-spinner',
-      emoji: '🔄',
-      title: 'Fidget Spinner',
-      desc: 'Flick a virtual fidget spinner and listen to the whirr. Realistic spin physics.',
-      tags: ['fidget', 'satisfying'],
-    },
-    {
-      href: '/games/sand-cutting',
-      emoji: '🏖️',
-      title: 'Sand Cutting',
-      desc: 'Slice and scoop kinetic sand with satisfying ASMR sounds.',
-      tags: ['asmr', 'satisfying'],
-    },
-  ]
+import { games } from '@/lib/games'
 
+export default function Home() {
   return (
     <div className="max-w-6xl mx-auto px-4 py-12">
       {/* Hero */}
