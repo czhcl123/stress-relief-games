@@ -17,7 +17,8 @@ const body = `# Stress Relief Games
 
 ## Site info
 - [Home](${SITE}/): Browse all six stress relief games on one page.
-- [Sitemap](${SITE}/sitemap.xml): Full XML sitemap of every game page.
+- [About](${SITE}/about): Who builds the site, editorial policy, and contact details.
+- [Sitemap](${SITE}/sitemap.xml): Full XML sitemap of every page on the site.
 `
 
 export function GET() {

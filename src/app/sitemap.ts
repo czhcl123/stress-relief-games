@@ -6,6 +6,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const routes: { path: string; priority: number }[] = [
     { path: '/', priority: 1 },
+    { path: '/about', priority: 0.5 },
     { path: '/games/bubble-wrap', priority: 0.8 },
     { path: '/games/slime-simulator', priority: 0.8 },
     { path: '/games/zen-garden', priority: 0.8 },
