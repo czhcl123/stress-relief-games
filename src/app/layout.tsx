@@ -99,6 +99,14 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           </p>
           <p className="mt-1">© 2026 {siteName}</p>
         </footer>
+        {/* Ahrefs Analytics — kept as a plain async script so the tag is present
+            in the server-rendered HTML (next/script only preloads it), which is
+            also what Ahrefs' site-ownership verification looks for. */}
+        <script
+          src="https://analytics.ahrefs.com/analytics.js"
+          data-key="+MKjZZJ84XCEYCstwH6e5Q"
+          async
+        />
       </body>
     </html>
   )
