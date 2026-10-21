@@ -11,7 +11,7 @@ const BALL_TYPES = [
   { name: '🔴 Rubber', color: '#ef5350', stripe: '#c62828', bounce: 0.95, squish: 0.45 },
 ]
 
-export default function StressBall() {
+export default function StressBall({ embed = false }: { embed?: boolean } = {}) {
   const canvasRef = useRef<HTMLCanvasElement>(null)
   const animRef = useRef<number>(0)
   const audioCtxRef = useRef<AudioContext | null>(null)
@@ -528,8 +528,8 @@ export default function StressBall() {
   }, [playThrow])
 
   return (
-    <div className="max-w-4xl mx-auto px-4 py-8">
-      <div className="text-center mb-6">
+    <div className={embed ? 'mx-auto px-2 py-3' : 'max-w-4xl mx-auto px-4 py-8'}>
+      <div className={embed ? 'hidden' : 'text-center mb-6'}>
         <h1 className="text-3xl sm:text-4xl font-bold mb-2">
           🏀 Stress Relief Ball
         </h1>
@@ -586,7 +586,7 @@ export default function StressBall() {
         <p>🏀 <strong className="text-slate-200">Watch</strong> it bounce off the walls</p>
       </div>
 
-      <div className="max-w-2xl mx-auto">
+      <div className={embed ? 'hidden' : 'max-w-2xl mx-auto'}>
         <h2 className="text-xl font-bold mb-3">About Stress Ball</h2>
         <p className="text-slate-400">
           Drag the ball and release to throw it around. Watch it bounce off walls with realistic

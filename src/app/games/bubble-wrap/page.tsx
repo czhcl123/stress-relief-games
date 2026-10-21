@@ -2,7 +2,7 @@
 
 import { useState, useCallback, useRef, useEffect } from 'react'
 
-export default function BubbleWrapGame() {
+export default function BubbleWrapGame({ embed = false }: { embed?: boolean } = {}) {
   const ROWS = 12
   const COLS = 16
   const total = ROWS * COLS
@@ -432,9 +432,9 @@ export default function BubbleWrapGame() {
   }
 
   return (
-    <div className="max-w-6xl mx-auto px-4 py-8">
+    <div className={embed ? 'mx-auto px-2 py-3' : 'max-w-6xl mx-auto px-4 py-8'}>
       {/* Header */}
-      <div className="text-center mb-6">
+      <div className={embed ? 'hidden' : 'text-center mb-6'}>
         <h1 className="text-3xl sm:text-4xl font-bold mb-2">
           🫧 Bubble Wrap Popper
         </h1>
@@ -560,7 +560,7 @@ export default function BubbleWrapGame() {
       </div>
 
       {/* SEO Content */}
-      <div className="mt-12 max-w-2xl mx-auto">
+      <div className={embed ? 'hidden' : 'mt-12 max-w-2xl mx-auto'}>
         <h2 className="text-xl font-bold mb-3">How to Play</h2>
         <p className="text-slate-400 mb-4">
           Click or tap each bubble to pop it. In <strong className="text-slate-300">Zen mode</strong>,

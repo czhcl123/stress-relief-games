@@ -22,7 +22,7 @@ interface Plant {
 // Kept as a constant so the init effect never re-runs on "Add Stone".
 const INITIAL_STONES = 3
 
-export default function ZenGarden() {
+export default function ZenGarden({ embed = false }: { embed?: boolean } = {}) {
   const canvasRef = useRef<HTMLCanvasElement>(null)
   const sandCanvasRef = useRef<HTMLCanvasElement | null>(null) // offscreen sand layer
   const isDrawingRef = useRef(false)
@@ -578,9 +578,9 @@ export default function ZenGarden() {
   }, [playStoneSound])
 
   return (
-    <div className="max-w-4xl mx-auto px-4 py-8">
+    <div className={embed ? 'mx-auto px-2 py-3' : 'max-w-4xl mx-auto px-4 py-8'}>
       {/* Header */}
-      <div className="text-center mb-6">
+      <div className={embed ? 'hidden' : 'text-center mb-6'}>
         <h1 className="text-3xl sm:text-4xl font-bold mb-2">
           🪨 Zen Garden
         </h1>
@@ -646,7 +646,7 @@ export default function ZenGarden() {
       </div>
 
       {/* SEO Content */}
-      <div className="max-w-2xl mx-auto">
+      <div className={embed ? 'hidden' : 'max-w-2xl mx-auto'}>
         <h2 className="text-xl font-bold mb-3">About Zen Garden</h2>
         <p className="text-slate-400 mb-4">
           Japanese rock gardens (枯山水, karesansui) have been used for centuries as spaces for

@@ -157,7 +157,7 @@ function drawBearing(
   ctx.stroke()
 }
 
-export default function FidgetSpinner() {
+export default function FidgetSpinner({ embed = false }: { embed?: boolean } = {}) {
   const canvasRef = useRef<HTMLCanvasElement>(null)
   const frameRef = useRef(0)
   const lastTimeRef = useRef(0)
@@ -558,9 +558,9 @@ export default function FidgetSpinner() {
   ]
 
   return (
-    <div className="max-w-4xl mx-auto px-4 py-8">
+    <div className={embed ? 'mx-auto px-2 py-3' : 'max-w-4xl mx-auto px-4 py-8'}>
       {/* Header */}
-      <div className="text-center mb-6">
+      <div className={embed ? 'hidden' : 'text-center mb-6'}>
         <h1 className="text-3xl sm:text-4xl font-bold mb-2">🔄 Fidget Spinner</h1>
         <p className="text-slate-400">Flick it. Watch it coast. Listen to the whirr.</p>
       </div>
@@ -639,7 +639,7 @@ export default function FidgetSpinner() {
       </div>
 
       {/* SEO Content */}
-      <div className="max-w-2xl mx-auto">
+      <div className={embed ? 'hidden' : 'max-w-2xl mx-auto'}>
         <h2 className="text-xl font-bold mb-3">About Fidget Spinners</h2>
         <p className="text-slate-400 mb-4">
           Fidget spinners were designed as a simple way to release restless energy. A flick sends the

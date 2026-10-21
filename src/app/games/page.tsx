@@ -162,6 +162,14 @@ export default function GamesIndex() {
         </ul>
       </section>
 
+      <p className="mt-10 text-center text-sm text-slate-400">
+        Teachers and bloggers:{' '}
+        <a href="/embed" className="text-violet-400 underline underline-offset-2 hover:text-violet-300">
+          every game can be embedded on your own page
+        </a>
+        .
+      </p>
+
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}

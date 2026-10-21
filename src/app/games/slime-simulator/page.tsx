@@ -20,7 +20,7 @@ const SLIME_TYPES = [
   { name: '🔴 Lava', color: '#f87171', glow: '#ef4444', highlight: '#fca5a5', viscosity: 0.90 },
 ]
 
-export default function SlimeSimulator() {
+export default function SlimeSimulator({ embed = false }: { embed?: boolean } = {}) {
   const canvasRef = useRef<HTMLCanvasElement>(null)
   const pointsRef = useRef<Point[]>([])
   const centerRef = useRef<Point>({ x: 0, y: 0, vx: 0, vy: 0, homeX: 0, homeY: 0 })
@@ -426,9 +426,9 @@ export default function SlimeSimulator() {
   }, [playPoke])
 
   return (
-    <div className="max-w-4xl mx-auto px-4 py-8">
+    <div className={embed ? 'mx-auto px-2 py-3' : 'max-w-4xl mx-auto px-4 py-8'}>
       {/* Header */}
-      <div className="text-center mb-6">
+      <div className={embed ? 'hidden' : 'text-center mb-6'}>
         <h1 className="text-3xl sm:text-4xl font-bold mb-2">
           🟢 Slime Simulator
         </h1>
@@ -484,7 +484,7 @@ export default function SlimeSimulator() {
       </div>
 
       {/* SEO Content */}
-      <div className="max-w-2xl mx-auto">
+      <div className={embed ? 'hidden' : 'max-w-2xl mx-auto'}>
         <h2 className="text-xl font-bold mb-3">About Slime Simulator</h2>
         <p className="text-slate-400 mb-4">
           This virtual slime simulator lets you experience the satisfying sensation of playing with

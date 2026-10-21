@@ -35,7 +35,7 @@ const SLICE_DEPTH = 3.4 // cells
 const SCOOP_R = 7 // cells
 const SMOOTH_R = 9 // cells
 
-export default function SandCutting() {
+export default function SandCutting({ embed = false }: { embed?: boolean } = {}) {
   const canvasRef = useRef<HTMLCanvasElement>(null)
   const frameRef = useRef(0)
 
@@ -564,9 +564,9 @@ export default function SandCutting() {
   ]
 
   return (
-    <div className="max-w-4xl mx-auto px-4 py-8">
+    <div className={embed ? 'mx-auto px-2 py-3' : 'max-w-4xl mx-auto px-4 py-8'}>
       {/* Header */}
-      <div className="text-center mb-6">
+      <div className={embed ? 'hidden' : 'text-center mb-6'}>
         <h1 className="text-3xl sm:text-4xl font-bold mb-2">🏖️ Sand Cutting</h1>
         <p className="text-slate-400">Slice, scoop and smooth kinetic sand. Crisp cuts, crunchy sounds.</p>
       </div>
@@ -643,7 +643,7 @@ export default function SandCutting() {
       </div>
 
       {/* SEO Content */}
-      <div className="max-w-2xl mx-auto">
+      <div className={embed ? 'hidden' : 'max-w-2xl mx-auto'}>
         <h2 className="text-xl font-bold mb-3">About Sand Cutting</h2>
         <p className="text-slate-400 mb-4">
           Kinetic sand holds whatever shape you press into it, which is why cutting it is so
