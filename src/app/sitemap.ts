@@ -9,6 +9,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const routes: { path: string; priority: number; lastModified?: string }[] = [
     { path: '/', priority: 1 },
+    { path: '/games', priority: 0.9 },
     { path: '/about', priority: 0.5 },
     { path: '/blog', priority: 0.6 },
     // Guides come from the registry so the sitemap can never miss one, and each

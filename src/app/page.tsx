@@ -16,6 +16,12 @@ export default function Home() {
       </div>
 
       {/* Game Grid */}
+      <div className="mb-4 flex flex-wrap items-baseline justify-between gap-2">
+        <h2 className="text-2xl font-bold">Six Games to Try</h2>
+        <a href="/games" className="text-sm text-violet-400 underline underline-offset-2 hover:text-violet-300">
+          All games →
+        </a>
+      </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {games.map((game) => (
           <a

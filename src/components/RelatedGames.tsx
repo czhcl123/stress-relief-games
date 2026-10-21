@@ -27,6 +27,11 @@ export default function RelatedGames({ current }: { current: string }) {
           </li>
         ))}
       </ul>
+      <p className="mt-4 text-center text-sm text-slate-400">
+        <a href="/games" className="text-violet-400 underline underline-offset-2 hover:text-violet-300">
+          See all six stress relief games
+        </a>
+      </p>
     </section>
   )
 }

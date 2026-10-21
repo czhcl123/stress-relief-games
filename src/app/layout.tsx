@@ -93,6 +93,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <footer className="border-t border-slate-800 text-center py-6 text-sm text-slate-400">
           <p>
             Free online stress relief games. No signup, no download.{' '}
+            <a href="/games" className="text-violet-400 underline underline-offset-2 transition hover:text-violet-300">All Games</a>
+            <span aria-hidden="true"> · </span>
             <a href="/blog" className="text-violet-400 underline underline-offset-2 transition hover:text-violet-300">Guides</a>
             <span aria-hidden="true"> · </span>
             <a href="/about" className="text-violet-400 underline underline-offset-2 transition hover:text-violet-300">About</a>
