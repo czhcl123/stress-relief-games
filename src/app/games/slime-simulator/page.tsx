@@ -485,17 +485,170 @@ export default function SlimeSimulator({ embed = false }: { embed?: boolean } = 
 
       {/* SEO Content */}
       <div className={embed ? 'hidden' : 'max-w-2xl mx-auto'}>
-        <h2 className="text-xl font-bold mb-3">About Slime Simulator</h2>
+        <h2 className="text-xl font-bold mb-3">What this slime simulator does</h2>
         <p className="text-slate-400 mb-4">
-          This virtual slime simulator lets you experience the satisfying sensation of playing with
-          slime — without the mess. Drag, stretch, and poke the slime to hear ASMR squish sounds.
-          Choose from 6 different slime types, each with its own color and feel.
+          This is a free slime simulator that runs in the browser. There is nothing to download and
+          no account to create. The slime on screen is a soft body: twenty-four points around the
+          edge are connected to each other and pulled toward the centre, so when you drag one part
+          of it, the rest follows and slowly settles back into shape. That is why it stretches
+          instead of tearing, and why it sags a little at the bottom like the real thing.
         </p>
-        <h2 className="text-xl font-bold mb-3">Why Slime Is So Satisfying</h2>
-        <p className="text-slate-400">
-          Slime triggers our tactile senses in a deeply satisfying way. The stretching resistance,
-          the way it slowly snaps back, the squelchy sounds — all of these activate the same
-          neural pathways as other fidget activities. It&apos;s a perfect micro-break for stress relief.
+        <p className="text-slate-400 mb-6">
+          Sound is generated live rather than played from a file. A short burst of filtered noise
+          becomes the squish when you drag, and a quick falling tone becomes the pop when you poke.
+          The pitch follows how fast you move, so a slow stretch sounds different from a quick flick.
+        </p>
+
+        <h2 className="text-xl font-bold mb-3">How to play</h2>
+        <ul className="text-slate-400 mb-6 space-y-2 list-disc pl-5">
+          <li>
+            <strong className="text-slate-200">Drag</strong> any point on the edge to stretch the
+            slime. The further you pull, the harder it snaps back.
+          </li>
+          <li>
+            <strong className="text-slate-200">Poke</strong> the surface to squish it and hear a
+            pop. The counter above the canvas keeps track.
+          </li>
+          <li>
+            <strong className="text-slate-200">Switch slime types</strong> with the buttons above
+            the canvas. Each type has a different viscosity, so some stretch further before they
+            recover.
+          </li>
+          <li>
+            <strong className="text-slate-200">On a phone</strong>, drag with one finger. The canvas
+            captures touch events, so the page will not scroll while you are stretching.
+          </li>
+        </ul>
+
+        <h2 className="text-xl font-bold mb-3">Six slime types</h2>
+        <p className="text-slate-400 mb-3">
+          All six are the same physics model with different colours and stiffness values. Stiffness
+          changes how quickly the slime returns to its resting shape:
+        </p>
+        <ul className="text-slate-400 mb-6 space-y-2 list-disc pl-5">
+          <li>
+            <strong className="text-slate-200">Classic green</strong> — the middle of the range.
+            Stretches a long way and recovers slowly.
+          </li>
+          <li>
+            <strong className="text-slate-200">Galaxy purple</strong> — looser, so it wobbles for
+            longer after a poke.
+          </li>
+          <li>
+            <strong className="text-slate-200">Pink</strong> — close to classic, slightly softer on
+            release.
+          </li>
+          <li>
+            <strong className="text-slate-200">Ocean blue</strong> — the stiffest of the six. Short
+            pulls, fast snap-back.
+          </li>
+          <li>
+            <strong className="text-slate-200">Gold</strong> — the loosest. Best one for long,
+            slow stretches.
+          </li>
+          <li>
+            <strong className="text-slate-200">Lava red</strong> — firm, with a quick rebound.
+          </li>
+        </ul>
+
+        <h2 className="text-xl font-bold mb-3">Why slime feels satisfying</h2>
+        <p className="text-slate-400 mb-4">
+          Slime gives your hands something to do with a predictable result. You pull, it resists;
+          you let go, it settles. That loop is the same reason people tap pens or knead a stress
+          ball: the feedback is immediate and it takes just enough attention to crowd out whatever
+          you were stuck on.
+        </p>
+        <p className="text-slate-400 mb-6">
+          The sound matters as much as the movement. The squish is a low, filtered noise burst, close
+          to the sound of the real thing, and it lands at the same moment as the stretch. If you want
+          the longer explanation of why slime is calming, read{' '}
+          <a
+            href="/blog/why-is-slime-calming"
+            className="text-violet-400 underline underline-offset-2 hover:text-violet-300"
+          >
+            why slime is calming
+          </a>
+          , which covers the tactile and auditory side in more detail.
+        </p>
+
+        <h2 className="text-xl font-bold mb-3">Virtual slime vs real slime</h2>
+        <ul className="text-slate-400 mb-6 space-y-2 list-disc pl-5">
+          <li>
+            <strong className="text-slate-200">No cleanup.</strong> Real slime picks up dust, hair
+            and carpet fibres within a day. This one starts clean every time you open the page.
+          </li>
+          <li>
+            <strong className="text-slate-200">No cost per batch.</strong> A homemade batch needs
+            glue, activator and colouring. A shop-bought tub is a few dollars and dries out.
+          </li>
+          <li>
+            <strong className="text-slate-200">Safe around furniture.</strong> Nothing to spill on a
+            sofa or press into a keyboard.
+          </li>
+          <li>
+            <strong className="text-slate-200">But it is not the same sensation.</strong> Screen
+            slime gives you the movement and the sound, not the temperature or the stickiness. If
+            the tactile part is what you are after, real slime still wins.
+          </li>
+        </ul>
+
+        <h2 className="text-xl font-bold mb-3">Getting more out of a two-minute break</h2>
+        <ul className="text-slate-400 mb-6 space-y-2 list-disc pl-5">
+          <li>Turn the sound on. The squish is half the effect, and it is muted by default on most browsers.</li>
+          <li>Stretch slowly rather than flicking. Slow pulls produce the lower, longer sound.</li>
+          <li>Pick one slime type and stay with it for the whole break instead of switching every few seconds.</li>
+          <li>Stop after a couple of minutes. Like any fidget, it works better as a pause than as a background activity.</li>
+        </ul>
+
+        <h2 className="text-xl font-bold mb-3">Questions people ask</h2>
+        <div className="text-slate-400 space-y-4 mb-6">
+          <div>
+            <h3 className="font-semibold text-slate-200 mb-1">Is it free?</h3>
+            <p>Yes. No sign-up, no download, no in-app purchase. It runs entirely in the browser.</p>
+          </div>
+          <div>
+            <h3 className="font-semibold text-slate-200 mb-1">Does it work on a phone?</h3>
+            <p>
+              Yes. Drag with one finger. The canvas takes over touch gestures so the page stays still
+              while you stretch.
+            </p>
+          </div>
+          <div>
+            <h3 className="font-semibold text-slate-200 mb-1">Why is there no sound?</h3>
+            <p>
+              Browsers block audio until you interact with the page. Tap the slime once and the sound
+              engine starts. Check the volume too — the squish is quiet by design.
+            </p>
+          </div>
+          <div>
+            <h3 className="font-semibold text-slate-200 mb-1">Can I use it in a classroom or on a stream?</h3>
+            <p>
+              Yes. There is an{' '}
+              <a href="/embed/slime-simulator" className="text-violet-400 underline underline-offset-2 hover:text-violet-300">
+                embeddable version
+              </a>{' '}
+              with the text stripped out, sized for an iframe.
+            </p>
+          </div>
+          <div>
+            <h3 className="font-semibold text-slate-200 mb-1">Is it the same as real slime?</h3>
+            <p>
+              No. You get the movement and the sound, not the temperature or the texture. It is a
+              substitute for the fidget, not for the material.
+            </p>
+          </div>
+        </div>
+
+        <p className="text-slate-400 mb-4">
+          If you want something with more resistance, try the{' '}
+          <a href="/games/stress-ball" className="text-violet-400 underline underline-offset-2 hover:text-violet-300">
+            stress ball
+          </a>
+          . If you want a slower, quieter break, the{' '}
+          <a href="/games/zen-garden" className="text-violet-400 underline underline-offset-2 hover:text-violet-300">
+            zen garden
+          </a>{' '}
+          is the opposite pace.
         </p>
       </div>
     </div>
