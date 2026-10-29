@@ -73,7 +73,7 @@ export const posts: Post[] = [
     slug: 'stress-ball-exercises',
     title: '7 Stress Ball Exercises to Release Tension Fast',
     description:
-      'Seven quick stress ball exercises you can do anywhere, matched to the tension you are actually feeling, plus how to do them virtually.',
+      '7 stress ball exercises ranked by tension type — squeeze, roll, drop, pass — with a 2-minute routine and an honest "stop if it hurts" limit.',
     date: '2026-10-19',
     minutes: 5,
     game: '/games/stress-ball',

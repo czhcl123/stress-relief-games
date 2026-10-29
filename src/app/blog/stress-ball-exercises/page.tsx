@@ -17,6 +17,7 @@ export const metadata: Metadata = articleMetadata({
   path: `/blog/${post.slug}`,
   keywords,
   published: post.date,
+  modified: '2026-10-29',
 })
 
 const jsonLd = articleJsonLd({
@@ -24,6 +25,7 @@ const jsonLd = articleJsonLd({
   description: post.description,
   path: `/blog/${post.slug}`,
   published: post.date,
+  modified: '2026-10-29',
   keywords,
 })
 
