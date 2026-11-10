@@ -2,6 +2,7 @@ import type { ReactNode } from 'react'
 import { games } from '@/lib/games'
 import { posts, postHref, type Block, type Post } from '@/lib/posts'
 import RelatedGames from '@/components/RelatedGames'
+import GameEmbed from '@/components/GameEmbed'
 
 const MONTHS = [
   'January',
@@ -152,6 +153,11 @@ export default function BlogArticle({ post, blocks }: { post: Post; blocks: Bloc
             {post.minutes} min read
           </p>
         </header>
+
+        {/* Playable widget above the fold. The guide answers "why", the widget
+            answers "do it" — the CTA used to sit after ~1000 words of body copy,
+            which is why 331 impressions on the guides produced 1 click. */}
+        {game && <GameEmbed gameHref={post.game} />}
 
         <Blocks blocks={blocks} />
 

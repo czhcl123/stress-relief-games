@@ -660,6 +660,107 @@ export default function ZenGarden({ embed = false }: { embed?: boolean } = {}) {
           your garden. There&apos;s no goal, no score — just the quiet satisfaction of creating
           something beautiful.
         </p>
+
+        <h2 className="text-xl font-bold mb-3">What this virtual zen garden does</h2>
+        <p className="text-slate-400 mb-4">
+          The sand is a separate layer from the objects sitting on it, so raking never drags a
+          stone out of place. Every stroke you drag leaves a groove with a soft highlight
+          beside it, and the three patterns are drawn as they would be in a real garden:
+          straight lines for the water-flow look, concentric circles around a stone, and
+          flowing waves for the wind-and-water effect. The sand grain is generated on load, so
+          every garden starts with a slightly different texture.
+        </p>
+        <p className="text-slate-400 mb-6">
+          Nothing is uploaded and nothing is tracked. The whole garden runs in your browser,
+          which means it works on a phone in a queue, on a laptop during a break, or on a
+          tablet propped up on a desk. Sounds are synthesised live — a soft scrape when you rake
+          and a low thud when a stone is set down — so the feedback matches the movement without
+          loading a single audio file.
+        </p>
+
+        <h2 className="text-xl font-bold mb-3">Why raking sand helps you focus</h2>
+        <p className="text-slate-400 mb-4">
+          A rock garden is a task with no correct answer and no way to fail. That is the point
+          of it. Raking gives your hands something repetitive and low-stakes to do while the
+          rest of you is stuck on something difficult, and the result is visible immediately.
+          Repetitive movement like this is a common focus aid for the same reason knitting is:
+          it occupies the part of the brain that wants to fidget, without taking the part that
+          wants to think.
+        </p>
+        <p className="text-slate-400 mb-6">
+          It also works as a breathing reset. Most people who try raking slow down without
+          deciding to, because the pattern asks you to move at a steady pace. A couple of
+          minutes in a virtual garden is not the same as sitting in a real one, but it is a
+          legitimate two-minute break that fits in a browser tab.
+        </p>
+
+        <h2 className="text-xl font-bold mb-3">What to make in a virtual rock garden</h2>
+        <ul className="text-slate-400 mb-6 space-y-2 list-disc pl-5">
+          <li>
+            <strong className="text-slate-200">Three stones, one large</strong> is the classic
+            arrangement — it reads as a small island group, which is the usual subject of a
+            karesansui garden.
+          </li>
+          <li>
+            <strong className="text-slate-200">Straight lines</strong> around a stone suggest
+            water flowing past it. Keep the lines even and leave a small gap around the stone.
+          </li>
+          <li>
+            <strong className="text-slate-200">Concentric circles</strong> look like ripples.
+            Use them as the centre of a composition rather than filling the whole surface.
+          </li>
+          <li>
+            <strong className="text-slate-200">Waves</strong> read as wind or distant water.
+            They work well across an open area with no stones in it.
+          </li>
+          <li>
+            <strong className="text-slate-200">Moss and bamboo</strong> are already placed in
+            the garden. Drag them to reposition — they sway gently on their own.
+          </li>
+        </ul>
+
+        <h2 className="text-xl font-bold mb-3">Questions people ask</h2>
+
+        <h3 className="font-semibold text-slate-200 mb-1">Is it free?</h3>
+        <p className="text-slate-400 mb-4">
+          Yes, completely free. There is no account, no sign-up, no download and no in-app
+          purchase. The garden runs in your browser.
+        </p>
+
+        <h3 className="font-semibold text-slate-200 mb-1">Does it work on a phone?</h3>
+        <p className="text-slate-400 mb-4">
+          Yes. Drag with one finger to rake or to move a stone. The canvas captures touch
+          events so the page will not scroll while you are drawing, and the garden resizes
+          with the screen.
+        </p>
+
+        <h3 className="font-semibold text-slate-200 mb-1">Is this the same as a real zen garden?</h3>
+        <p className="text-slate-400 mb-4">
+          It is the same ritual without the sand, the tray, or the sweeping up afterwards. A
+          real rock garden uses raked gravel around carefully placed stones; this is the same
+          action rendered on a screen. It will not replace a physical one, but it is the
+          closest thing to the gesture in a browser tab.
+        </p>
+
+        <h3 className="font-semibold text-slate-200 mb-1">How do I clear the sand?</h3>
+        <p className="text-slate-400 mb-4">
+          The Clear Sand button above the garden wipes every groove and returns the surface to
+          its original grain. Your stones and plants stay where they are, so you can rake
+          again without rebuilding the layout.
+        </p>
+
+        <h3 className="font-semibold text-slate-200 mb-1">Can I add more stones?</h3>
+        <p className="text-slate-400 mb-4">
+          Yes. The Add Stone button places another rock on the sand, and you can drag it
+          anywhere afterwards. There is no upper limit, so you can build as sparse or as busy a
+          garden as you like.
+        </p>
+
+        <h3 className="font-semibold text-slate-200 mb-1">Why is there no score or timer?</h3>
+        <p className="text-slate-400 mb-4">
+          On purpose. A zen garden has no goal to complete, so adding one would turn a
+          relaxing activity into a task. There is nothing to lose and nothing to chase.
+        </p>
       </div>
     </div>
   )

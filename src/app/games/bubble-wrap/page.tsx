@@ -575,6 +575,75 @@ export default function BubbleWrapGame({ embed = false }: { embed?: boolean } = 
           that help you decompress. Our virtual bubble wrap gives you the same satisfaction without
           the waste.
         </p>
+        
+        <h2 className="text-xl font-bold mb-3">What this virtual bubble wrap does</h2>
+        <p className="text-slate-400 mb-4">
+        Every bubble is a real element on a grid, not an animation of one. Popping one removes it
+        from the sheet, so the remaining bubbles shift to fill the gap and the sheet stays intact
+        however far in you get. Sounds are synthesised in the browser as you pop, with a small
+        variation in pitch so a run of pops does not sound mechanical. There is nothing to
+        download and nothing is uploaded — the whole sheet lives in your browser tab.
+        </p>
+        <p className="text-slate-400 mb-6">
+        Two modes, and they are genuinely different activities rather than a speed toggle.
+        Zen mode has no clock and no counter, so it is something to idle in while a call is on
+        hold. Speed mode times you against the clock and is meant to be replayed a few times to
+        beat your own time.
+        </p>
+        
+        <h2 className="text-xl font-bold mb-3">Which mode should I use?</h2>
+        <ul className="text-slate-400 mb-6 space-y-2 list-disc pl-5">
+        <li>
+        <strong className="text-slate-200">Zen mode</strong> when you want to decompress
+        rather than compete. No timer, no score, no pressure to finish.
+        </li>
+        <li>
+        <strong className="text-slate-200">Speed mode</strong> when you want a goal to chase.
+        The clock starts on your first pop and stops when the last bubble goes.
+        </li>
+        <li>
+        <strong className="text-slate-200">On a phone</strong>, tap bubbles one at a time
+        or drag across a row to pop several in a single motion.
+        </li>
+        <li>
+        <strong className="text-slate-200">On a desktop</strong>, click as fast as you like —
+        there is no delay between the click and the pop.
+        </li>
+        </ul>
+        
+        <h2 className="text-xl font-bold mb-3">Questions people ask</h2>
+        
+        <h3 className="font-semibold text-slate-200 mb-1">Is it free?</h3>
+        <p className="text-slate-400 mb-4">
+        Yes, completely free. No account, no sign-up, no download, no in-app purchase, and no
+        limit on how many bubbles you pop.
+        </p>
+        
+        <h3 className="font-semibold text-slate-200 mb-1">Does it work on a phone?</h3>
+        <p className="text-slate-400 mb-4">
+        Yes, and it is one of the main reasons to use the browser version. Tap a bubble to pop
+        it, or drag across a row to clear several at once. The sheet reflows to fit your screen
+        width.
+        </p>
+        
+        <h3 className="font-semibold text-slate-200 mb-1">How many bubbles are there?</h3>
+        <p className="text-slate-400 mb-4">
+        {total} bubbles per sheet. Popping one removes it and the rest close up around the gap,
+        so the sheet never runs out early.
+        </p>
+        
+        <h3 className="font-semibold text-slate-200 mb-1">Is popping bubble wrap really good for stress?</h3>
+        <p className="text-slate-400 mb-4">
+        It is a small, predictable, repeating action that gives immediate feedback, and that
+        is generally what people are after. Studies on repetitive fidgeting behaviour suggest
+        it helps some people settle, though it is not a substitute for anything that treats
+        anxiety itself.
+        </p>
+        
+        <h3 className="font-semibold text-slate-200 mb-1">Do I need an account or anything installed?</h3>
+        <p className="text-slate-400 mb-4">
+        No. It runs in your browser with nothing to install and nothing sent to a server.
+        </p>
       </div>
     </div>
   )
