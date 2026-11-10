@@ -646,6 +646,141 @@ export default function FidgetSpinner({ embed = false }: { embed?: boolean } = {
           bearing spinning, and the smooth whirr that slowly fades out gives your hands and ears
           something calming to follow — the same reason bubble wrap and slime are so satisfying.
         </p>
+        <h2 className="text-xl font-bold mb-3">What this virtual fidget spinner does</h2>
+                <p className="text-slate-400 mb-4">
+                  The spin is simulated rather than pre-recorded: the bearing has its own inertia, and it
+                  loses speed to two separate forces — a drag proportional to how fast it is turning, and
+                  a constant friction from the bearing itself. That is why a flick that looks fast coasts
+                  for a few seconds and then falls away on its own, and why holding the centre slows it
+                  down much faster than letting it run.
+                </p>
+                <p className="text-slate-400 mb-6">
+                  The RPM counter is calculated from the actual angular velocity, not estimated, so it
+                  climbs and falls with the real spin. Each of the six designs has a different shape and
+                  weight, which changes how long it holds its speed.
+                </p>
+
+                <h2 className="text-xl font-bold mb-3">How to play</h2>
+                <ul className="text-slate-400 mb-6 space-y-2 list-disc pl-5">
+                  <li>
+                    <strong className="text-slate-200">Drag around the outside</strong> of the spinner to
+                    flick it. The further and faster you drag, the faster it spins.
+                  </li>
+                  <li>
+                    <strong className="text-slate-200">Grab the centre</strong> while it is turning to slow
+                    it down deliberately. This is the fastest way to stop it.
+                  </li>
+                  <li>
+                    <strong className="text-slate-200">Use the Flick button</strong> for an instant random
+                    spin if you would rather not flick by hand.
+                  </li>
+                  <li>
+                    <strong className="text-slate-200">Switch design</strong> with the buttons above the
+                    canvas. Six shapes, from a classic three-lobe spinner to a six-lobe ring.
+                  </li>
+                  <li>
+                    <strong className="text-slate-200">On a phone</strong>, drag with one finger. The canvas
+                    captures touch events, so the page will not scroll while you are spinning.
+                  </li>
+                </ul>
+
+                <h2 className="text-xl font-bold mb-3">Six designs and how they feel</h2>
+                <p className="text-slate-400 mb-4">
+                  The design is not only cosmetic. Each shape has a different weight and a different number
+                  of lobes, and both change how the bearing behaves once it is turning.
+                </p>
+                <ul className="text-slate-400 mb-6 space-y-2 list-disc pl-5">
+                  <li>
+                    <strong className="text-slate-200">Three-lobe spinner</strong> — the classic shape.
+                    Balanced, smooth, and the easiest one to spin fast.
+                  </li>
+                  <li>
+                    <strong className="text-slate-200">Four and five-lobe designs</strong> — heavier at
+                    the tips, so they carry a bit more momentum and coast longer.
+                  </li>
+                  <li>
+                    <strong className="text-slate-200">Six-lobe ring</strong> — the widest and heaviest.
+                    Takes more effort to start and takes longer to stop.
+                  </li>
+                  <li>
+                    <strong className="text-slate-200">Metal-style bearings</strong> — spin longest and
+                    make the highest whirr, because the bearing loses the least speed.
+                  </li>
+                  <li>
+                    <strong className="text-slate-200">Plastic bearings</strong> — stop sooner, which is
+                    useful if you want the spin under your control.
+                  </li>
+                </ul>
+
+                <h2 className="text-xl font-bold mb-3">Why fidget spinners can help with focus</h2>
+                <p className="text-slate-400 mb-4">
+                  The honest answer is that the evidence is mixed. A spinner gives your hands something
+                  repetitive and low-demand to do while the rest of you is on something else, which helps
+                  some people settle and does nothing for others. It is a useful tool to have available, not
+                  a treatment for anything.
+                </p>
+                <p className="text-slate-400 mb-6">
+                  What it does well is predictable. The spin keeps going on its own for a while, it needs no
+                  attention to maintain, and there is no way to fail at it — which is what makes it usable
+                  in the middle of a task. If you are trying it as a focus aid, the honest test is whether
+                  you are calmer afterwards, not whether you can make it spin faster.
+                </p>
+
+                <h2 className="text-xl font-bold mb-3">Getting more out of a two-minute break</h2>
+                <ul className="text-slate-400 mb-6 space-y-2 list-disc pl-5">
+                  <li>
+                    <strong className="text-slate-200">Flick hard, then leave it</strong> and watch it
+                    coast down. Following the spin all the way to a stop is part of what makes it settling.
+                  </li>
+                  <li>
+                    <strong className="text-slate-200">Use both hands</strong> — a second spinner in the
+                    other hand gives the other one something to do.
+                  </li>
+                  <li>
+                    <strong className="text-slate-200">Change design mid-break</strong> if one feels
+                    repetitive. The shapes behave differently enough to notice.
+                  </li>
+                  <li>
+                    <strong className="text-slate-200">Try it with a phone call on hold</strong> rather
+                    than during something that needs your full attention.
+                  </li>
+                </ul>
+
+                <h2 className="text-xl font-bold mb-3">Questions people ask</h2>
+
+                <h3 className="font-semibold text-slate-200 mb-1">Is it free?</h3>
+                <p className="text-slate-400 mb-4">
+                  Yes, completely free. No account, no sign-up, no download and no in-app purchase. It runs
+                  in your browser.
+                </p>
+
+                <h3 className="font-semibold text-slate-200 mb-1">Does it work on a phone?</h3>
+                <p className="text-slate-400 mb-4">
+                  Yes. Drag around the edge of the spinner to flick it, and use the Flick button if that is
+                  easier one-handed. The canvas captures touch events so the page will not scroll while you
+                  are playing.
+                </p>
+
+                <h3 className="font-semibold text-slate-200 mb-1">How fast does it actually spin?</h3>
+                <p className="text-slate-400 mb-4">
+                  The counter shows real RPM and it climbs to roughly 2500 on a good flick, then coasts down
+                  on its own. Holding the centre stops it much faster than simply waiting.
+                </p>
+
+                <h3 className="font-semibold text-slate-200 mb-1">Do fidget spinners really help focus?</h3>
+                <p className="text-slate-400 mb-4">
+                  The research is genuinely mixed, and most of it is small-scale. They are a reasonable
+                  fidgeting option for some people and no help at all for others. Whether it works for you
+                  is easy to test — try it for a couple of minutes before and after a task and notice.
+                </p>
+
+                <h3 className="font-semibold text-slate-200 mb-1">Is this the same as a real fidget spinner?</h3>
+                <p className="text-slate-400 mb-4">
+                  Same idea, different material. A real one has a metal bearing and a plastic body you hold
+                  between your fingers; this one is on a screen, which means no weight and no sound you can
+                  feel through your hand.
+                </p>
+
         <h2 className="text-xl font-bold mb-3">How to Play</h2>
         <p className="text-slate-400">
           Pick one of six designs, then drag around the outside to flick it into motion. Grab the

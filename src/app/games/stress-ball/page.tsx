@@ -594,6 +594,138 @@ export default function StressBall({ embed = false }: { embed?: boolean } = {}) 
           is extra squishy, while the rubber ball bounces the highest. Squeeze and throw as much as
           you need.
         </p>
+        <h2 className="text-xl font-bold mb-3">How to play</h2>
+                <ul className="text-slate-400 mb-6 space-y-2 list-disc pl-5">
+                  <li>
+                    <strong className="text-slate-200">Drag the ball</strong> anywhere on the canvas to pick
+                    it up, then let go to throw it. The faster your release, the further it travels.
+                  </li>
+                  <li>
+                    <strong className="text-slate-200">Pull away from the centre</strong> while holding
+                    the ball to squash it. The further out you pull, the more it compresses and the louder
+                    the squish.
+                  </li>
+                  <li>
+                    <strong className="text-slate-200">Watch it bounce</strong> off the walls. Each ball
+                    type keeps a different share of its speed on impact, so a rubber ball keeps almost all
+                    of it and a stress ball loses most of it.
+                  </li>
+                  <li>
+                    <strong className="text-slate-200">Switch ball type</strong> with the buttons above the
+                    canvas. Six types, each with its own bounce and squish behaviour.
+                  </li>
+                  <li>
+                    <strong className="text-slate-200">On a phone</strong>, drag with one finger. The canvas
+                    captures touch events, so the page will not scroll while you are throwing.
+                  </li>
+                </ul>
+
+                <h2 className="text-xl font-bold mb-3">Six ball types and what makes them different</h2>
+                <p className="text-slate-400 mb-4">
+                  Every type here is the same physics model with two numbers changed: how much speed it
+                  keeps on a bounce, and how much it squashes when you pull it. That is enough to make them
+                  feel like genuinely different objects in the hand.
+                </p>
+                <ul className="text-slate-400 mb-6 space-y-2 list-disc pl-5">
+                  <li>
+                    <strong className="text-slate-200">Basketball</strong> — a firm bounce and a moderate
+                    squash. The default, and the closest to a real ball.
+                  </li>
+                  <li>
+                    <strong className="text-slate-200">Soccer</strong> — bouncy but slightly softer, so it
+                    settles a little faster than a basketball.
+                  </li>
+                  <li>
+                    <strong className="text-slate-200">Tennis</strong> — the bounciest of the sports
+                    balls. It keeps most of its speed on impact and keeps moving.
+                  </li>
+                  <li>
+                    <strong className="text-slate-200">Volleyball</strong> — softer and squishier. Good
+                    for slow, heavy throws rather than fast ones.
+                  </li>
+                  <li>
+                    <strong className="text-slate-200">Stress ball</strong> — the squishiest of the six.
+                    Barely bounces, compresses hard, and is the one meant for squeezing rather than
+                    throwing.
+                  </li>
+                  <li>
+                    <strong className="text-slate-200">Rubber</strong> — the highest bounce and the least
+                    squash. Throws hard and keeps going.
+                  </li>
+                </ul>
+
+                <h2 className="text-xl font-bold mb-3">Why squeezing helps with tension</h2>
+                <p className="text-slate-400 mb-4">
+                  A stress ball works on a simple principle: the resistance you feel is proportional to
+                  how hard you push, so it gives you an honest signal about how much force you are using.
+                  That feedback loop is the point. You can push until it feels right rather than until it
+                  hurts, which is why doctors and therapists recommend them for hand and forearm tension
+                  after typing or mousing all day.
+                </p>
+                <p className="text-slate-400 mb-6">
+                  The physics here is built to support that. Pull the ball away from the centre and it
+                  compresses along one axis while bulging along the other, then springs back on release. It
+                  is a small, repeatable, harmless outlet — the kind of thing that is genuinely easier to
+                  do for two minutes than a breathing exercise, and it works whether or not you are
+                  especially wound up.
+                </p>
+
+                <h2 className="text-xl font-bold mb-3">Getting more out of a two-minute break</h2>
+                <ul className="text-slate-400 mb-6 space-y-2 list-disc pl-5">
+                  <li>
+                    <strong className="text-slate-200">Squeeze and hold</strong> for a few seconds at a
+                    time instead of quick repeated squeezes. Holding it is where the release does most of
+                    the work.
+                  </li>
+                  <li>
+                    <strong className="text-slate-200">Throw it across the room</strong> if you can. A
+                    hard throw followed by watching it settle is a stronger release than a soft one.
+                  </li>
+                  <li>
+                    <strong className="text-slate-200">Use a slower ball</strong> when your hands are
+                    already tired. The stress ball type is the softest option.
+                  </li>
+                  <li>
+                    <strong className="text-slate-200">Change type mid-session</strong> if you get bored.
+                    The difference in bounce changes the movement completely.
+                  </li>
+                </ul>
+
+                <h2 className="text-xl font-bold mb-3">Questions people ask</h2>
+
+                <h3 className="font-semibold text-slate-200 mb-1">Is it free?</h3>
+                <p className="text-slate-400 mb-4">
+                  Yes, completely free. No account, no sign-up, no download and no in-app purchase. It runs
+                  in your browser.
+                </p>
+
+                <h3 className="font-semibold text-slate-200 mb-1">Does it work on a phone?</h3>
+                <p className="text-slate-400 mb-4">
+                  Yes. Drag with one finger to grab, move and throw the ball. The canvas captures touch
+                  events so the page will not scroll while you are playing, and the field resizes to fit
+                  your screen.
+                </p>
+
+                <h3 className="font-semibold text-slate-200 mb-1">How do I count my squeezes?</h3>
+                <p className="text-slate-400 mb-4">
+                  The counter above the canvas tracks every throw. The Reset button puts the ball back in
+                  the middle and clears the count.
+                </p>
+
+                <h3 className="font-semibold text-slate-200 mb-1">Is a real stress ball better?</h3>
+                <p className="text-slate-400 mb-4">
+                  A real one gives you a more varied surface and texture, and if tension in your hands is
+                  an ongoing problem a physical one is a reasonable thing to keep at a desk. This is the
+                  version you can use anywhere with nothing to carry.
+                </p>
+
+                <h3 className="font-semibold text-slate-200 mb-1">Why is there no sound?</h3>
+                <p className="text-slate-400 mb-4">
+                  There is sound — a soft squish when you pull the ball and a thud when it hits a wall.
+                  It is synthesised in the browser as you play rather than played from a file, so the pitch
+                  follows how hard you are squeezing.
+                </p>
+
       </div>
     </div>
   )
