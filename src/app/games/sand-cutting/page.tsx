@@ -650,6 +650,153 @@ export default function SandCutting({ embed = false }: { embed?: boolean } = {})
           satisfying: a steady hand carves a crisp groove, the displaced sand rolls into little
           ridges either side, and the surface stays exactly as you left it. No mess, no vacuuming.
         </p>
+        <h2 className="text-xl font-bold mb-3">What this kinetic sand simulator does</h2>
+                <p className="text-slate-400 mb-4">
+                  The sand is stored as a height map rather than a picture, so every groove, pile and slope
+                  you make is real data that stays put. Slicing pushes the height down along a line, scooping
+                  lifts it into a rounded crater with the sand pushed up onto the rim, and smoothing flattens
+                  the area back out. Because the lighting is drawn from those same numbers, the shadow on
+                  the side of a cut moves when you cut deeper — the same way it does with real kinetic sand.
+                </p>
+                <p className="text-slate-400 mb-6">
+                  Each colour has its own grain and shading, and all six can be switched at any time without
+                  losing what you have already carved. Nothing is uploaded and there is nothing to install:
+                  the whole tray runs in your browser, so it works on a phone as well as a desktop.
+                </p>
+
+                <h2 className="text-xl font-bold mb-3">How to play</h2>
+                <ul className="text-slate-400 mb-6 space-y-2 list-disc pl-5">
+                  <li>
+                    <strong className="text-slate-200">Slice</strong> to cut a straight trench. Each cut
+                    raises a sharp edge along the line and the sand on either side stays where it was.
+                  </li>
+                  <li>
+                    <strong className="text-slate-200">Scoop</strong> to dig out a rounded crater. The
+                    removed sand piles up around the edge of the hole instead of disappearing.
+                  </li>
+                  <li>
+                    <strong className="text-slate-200">Smooth</strong> to press an area flat again when you
+                    want a fresh surface to work on.
+                  </li>
+                  <li>
+                    <strong className="text-slate-200">Switch colour</strong> with the six buttons at the
+                    top. Beige, Ocean, Blossom, Lavender, Cocoa and Charcoal all behave the same way.
+                  </li>
+                  <li>
+                    <strong className="text-slate-200">On a phone</strong>, drag with one finger. The canvas
+                    captures touch events, so the page will not scroll while you are carving.
+                  </li>
+                </ul>
+
+                <h2 className="text-xl font-bold mb-3">Six sand colours and how they look</h2>
+                <p className="text-slate-400 mb-4">
+                  Colour changes more than the tint. Light and dark sand catch the light differently, so the
+                  same cut reads very differently depending on what is underneath it — a shallow slice in
+                  pale beige is barely visible until you go deep, while the same cut in charcoal throws a
+                  clear shadow along the whole edge.
+                </p>
+                <ul className="text-slate-400 mb-6 space-y-2 list-disc pl-5">
+                  <li>
+                    <strong className="text-slate-200">Beige</strong> — the classic kinetic sand colour.
+                    Warm and neutral, and the most forgiving for shallow cuts.
+                  </li>
+                  <li>
+                    <strong className="text-slate-200">Ocean</strong> — a cool blue. The grain reads more
+                    clearly on it, so fine slices show up well.
+                  </li>
+                  <li>
+                    <strong className="text-slate-200">Blossom</strong> — a soft pink. Good for slow, shallow
+                    work where you want the surface to stay tidy.
+                  </li>
+                  <li>
+                    <strong className="text-slate-200">Lavender</strong> — a muted purple that makes deeper
+                    trenches look deeper still.
+                  </li>
+                  <li>
+                    <strong className="text-slate-200">Cocoa</strong> — the darkest of the warm tones. Cuts
+                    here have the most contrast of the light shades.
+                  </li>
+                  <li>
+                    <strong className="text-slate-200">Charcoal</strong> — nearly black. Every ridge and every
+                    pile casts a clear shadow, which makes this the one to use if you want to see exactly
+                    what you have carved.
+                  </li>
+                </ul>
+
+                <h2 className="text-xl font-bold mb-3">Why cutting kinetic sand is so satisfying</h2>
+                <p className="text-slate-400 mb-4">
+                  Kinetic sand holds a shape perfectly. It is packed enough to keep a clean edge and dry
+                  enough to keep a sharp cut, so the trench you make stays exactly as deep as you cut it.
+                  That is unusual in a material you are allowed to destroy. Sand in a real bucket slumps; clay
+                  cracks; foam dents and recovers. This keeps every line you draw.
+                </p>
+                <p className="text-slate-400 mb-6">
+                  It also rewards a kind of attention that most fidgeting does not. Slicing in a straight
+                  line takes a steady hand, and scooping a clean crater takes a slow one. You cannot rush
+                  either, and there is no point system to chase. It is closer to drawing than to demolishing,
+                  which is probably why it holds attention longer than most satisfying-once activities.
+                </p>
+
+                <h2 className="text-xl font-bold mb-3">Getting more out of a two-minute break</h2>
+                <ul className="text-slate-400 mb-6 space-y-2 list-disc pl-5">
+                  <li>
+                    <strong className="text-slate-200">Carve a grid</strong> and cut every line in one
+                    direction. The regularity is what makes it look deliberate rather than random.
+                  </li>
+                  <li>
+                    <strong className="text-slate-200">Slice thin strips</strong> rather than deep trenches.
+                    The edge catches the light and the shadow is sharper on a shallow cut.
+                  </li>
+                  <li>
+                    <strong className="text-slate-200">Switch to Charcoal</strong> when you want to see the
+                    shape of what you have made. Light sand hides the geometry.
+                  </li>
+                  <li>
+                    <strong className="text-slate-200">Alternate slicing and smoothing</strong> — carve a
+                    shape, press half of it flat, then cut into that. It gives the surface something to
+                    read against.
+                  </li>
+                  <li>
+                    <strong className="text-slate-200">Use the counter</strong> as a loose target. A few
+                    hundred cuts takes longer than you think.
+                  </li>
+                </ul>
+
+                <h2 className="text-xl font-bold mb-3">Questions people ask</h2>
+
+                <h3 className="font-semibold text-slate-200 mb-1">Is it free?</h3>
+                <p className="text-slate-400 mb-4">
+                  Yes, completely free. No account, no sign-up, no download and no in-app purchase. It runs
+                  in your browser.
+                </p>
+
+                <h3 className="font-semibold text-slate-200 mb-1">Does it work on a phone?</h3>
+                <p className="text-slate-400 mb-4">
+                  Yes. Drag with one finger to cut, scoop or smooth. The canvas captures touch events so the
+                  page will not scroll while you are working, and the tray resizes to fit your screen.
+                </p>
+
+                <h3 className="font-semibold text-slate-200 mb-1">Do my cuts stay?</h3>
+                <p className="text-slate-400 mb-4">
+                  Yes. The sand is stored as a height map, so a cut stays exactly where you made it and at
+                  exactly the depth you cut it, however much you work on it afterwards. That is the one
+                  thing that sets kinetic sand apart from ordinary sand.
+                </p>
+
+                <h3 className="font-semibold text-slate-200 mb-1">What is the difference between slicing, scooping and smoothing?</h3>
+                <p className="text-slate-400 mb-4">
+                  Slice cuts a straight trench and leaves a raised edge. Scoop digs a rounded crater and
+                  piles the removed sand around its rim. Smooth presses an area back to flat, which is how
+                  you start over without clearing the whole tray.
+                </p>
+
+                <h3 className="font-semibold text-slate-200 mb-1">Is this the same as real kinetic sand?</h3>
+                <p className="text-slate-400 mb-4">
+                  Same material behaviour, none of the mess. Real kinetic sand holds a cut edge exactly
+                  like this, but it also gets everywhere, and it needs the diatomaceous sand that comes in
+                  the box to keep its texture. This version behaves the same way and stays on the screen.
+                </p>
+
         <h2 className="text-xl font-bold mb-3">How to Play</h2>
         <p className="text-slate-400">
           Pick a sand color and a tool, then drag across the tray. <strong className="text-slate-200">Slice</strong> leaves
