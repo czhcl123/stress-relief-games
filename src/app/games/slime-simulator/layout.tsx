@@ -7,7 +7,7 @@ import RelatedGames from '@/components/RelatedGames'
 const seo = {
   title: 'Slime Simulator',
   description:
-    'Stretch, poke, and squish virtual slime online for free. Six slime types with ASMR squish sounds and realistic physics — a satisfying stress relief break.',
+    'Stretch, poke, and squish virtual slime online for free. Six slime types with ASMR squish sounds and 24-point soft-body physics — a satisfying stress relief break.',
   path: '/games/slime-simulator',
   keywords: ['slime simulator', 'virtual slime', 'squish slime', 'asmr slime game', 'stress relief game'],
 }

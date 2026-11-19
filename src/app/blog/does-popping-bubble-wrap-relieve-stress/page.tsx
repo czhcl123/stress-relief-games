@@ -17,6 +17,7 @@ export const metadata: Metadata = articleMetadata({
   path: `/blog/${post.slug}`,
   keywords,
   published: post.date,
+  modified: post.evidenceChecked,
 })
 
 const jsonLd = articleJsonLd({
@@ -40,7 +41,7 @@ const blocks: Block[] = [
   { t: 'h2', text: 'A very short history of a very satisfying mistake' },
   {
     t: 'p',
-    text: 'Bubble wrap was invented in 1957 as textured wallpaper. That idea flopped, and so did the next one — greenhouse insulation. It only became a product when someone realised the sheets were excellent at protecting fragile things in transit. The satisfying part was a side effect nobody designed.',
+    text: 'Bubble wrap was invented in 1957 as textured wallpaper (according to the founding story of its maker, Sealed Air). That idea flopped, and so did the next one — greenhouse insulation. It only became a product when someone realised the sheets were excellent at protecting fragile things in transit. The satisfying part was a side effect nobody designed.',
   },
   {
     t: 'p',
@@ -77,7 +78,7 @@ const blocks: Block[] = [
   { t: 'h3', text: '3. The sound is a safe startle' },
   {
     t: 'p',
-    text: 'A pop is loud and sudden, which is normally what a nervous system reads as a threat. But you caused it, you expected it, and nothing follows it. Repeated safe surprises are a mild, self-administered way to burn off restless energy — the same reason people tap pens and click lighters.',
+    text: 'A pop is loud and sudden, which is normally what a nervous system reads as a threat. But you caused it, you expected it, and nothing follows it. Repeated safe surprises can be a mild, self-administered way to burn off restless energy — the same reason people tap pens and click lighters.',
   },
 
   { t: 'h2', text: 'Why it beats the thing you were about to do instead' },
@@ -87,7 +88,7 @@ const blocks: Block[] = [
   },
   {
     t: 'p',
-    text: 'Popping has an end. A sheet runs out. A level finishes. You stop because the thing is done, not because you ran out of willpower. If a break is meant to restore attention, that stopping point matters more than the activity itself.',
+    text: 'Popping has an end. A sheet runs out. A level finishes. You stop because the thing is done, not because you ran out of willpower. If a break is meant to restore attention — and short breaks do help sustain concentration ([Sharpe et al., 2025](https://doi.org/10.3389/fpsyg.2025.1589411)) — that stopping point matters more than the activity itself.',
   },
 
   { t: 'h2', text: 'Zen mode or Speed mode? Pick by what you feel' },
@@ -131,6 +132,13 @@ const blocks: Block[] = [
   {
     t: 'p',
     text: 'If you want to try it without hunting for a box, the [virtual version](/games/bubble-wrap) has 192 bubbles, real popping sounds and both modes — and it refills.',
+  },
+  { t: 'h2', text: 'References' },
+  {
+    t: 'ul',
+    items: [
+      'Sharpe, B. T., Trotter, M. G., & Hale, B. J. (2025). Sustaining student concentration: the effectiveness of micro-breaks in a classroom setting. Frontiers in Psychology, 16, 1589411. [doi:10.3389/fpsyg.2025.1589411](https://doi.org/10.3389/fpsyg.2025.1589411)',
+    ],
   },
 ]
 

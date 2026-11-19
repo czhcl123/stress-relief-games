@@ -19,10 +19,10 @@ const body = `# Stress Relief Games
 
 ## Games
 - [Bubble Wrap Popper](${SITE}/games/bubble-wrap): Pop 192 virtual bubble wrap bubbles with satisfying popping sounds. Includes Zen mode and Speed mode.
-- [Slime Simulator](${SITE}/games/slime-simulator): Stretch, poke, and squish six types of virtual slime with realistic physics and ASMR squish sounds.
+- [Slime Simulator](${SITE}/games/slime-simulator): Stretch, poke, and squish six types of virtual slime with 24-point soft-body physics and ASMR squish sounds.
 - [Zen Garden](${SITE}/games/zen-garden): Arrange stones, rake sand, and place plants in a relaxing Japanese-style rock garden.
-- [Stress Relief Ball](${SITE}/games/stress-ball): Squeeze, throw, and bounce a virtual stress ball. Six ball types with realistic squish physics.
-- [Fidget Spinner](${SITE}/games/fidget-spinner): Flick a virtual fidget spinner with realistic spin physics. Six designs, variable friction, bearing hum that rises with RPM.
+- [Stress Relief Ball](${SITE}/games/stress-ball): Squeeze, throw, and bounce a virtual stress ball. Six ball types with distinct bounce and squash physics.
+- [Fidget Spinner](${SITE}/games/fidget-spinner): Flick a virtual fidget spinner with a real RPM readout — about 2,500 on a good flick. Six designs, variable friction, bearing hum that rises with RPM.
 - [Sand Cutting](${SITE}/games/sand-cutting): Slice, scoop, and smooth virtual kinetic sand. Six sand colors, three tools, crisp ASMR cutting sounds.
 
 ## Guides

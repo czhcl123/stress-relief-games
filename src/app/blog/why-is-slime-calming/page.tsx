@@ -17,6 +17,7 @@ export const metadata: Metadata = articleMetadata({
   path: `/blog/${post.slug}`,
   keywords,
   published: post.date,
+  modified: post.evidenceChecked,
 })
 
 const jsonLd = articleJsonLd({
@@ -51,7 +52,7 @@ const blocks: Block[] = [
   { t: 'h3', text: 'Resistance' },
   {
     t: 'p',
-    text: 'Slime pushes back, but never enough to hurt. Occupational therapists call this kind of input proprioceptive: information from muscles and joints about how much force you are using. Firm, resistive touch is one of the standard ways to help a body feel settled, and it is why a heavy blanket or a firm handshake can feel grounding.',
+    text: 'Slime pushes back, but never enough to hurt. Occupational therapists call this kind of input proprioceptive: information from muscles and joints about how much force you are using. Firm, resistive touch is commonly used to help a body feel settled, and it is why a heavy blanket or a firm handshake can feel grounding.',
   },
   { t: 'h3', text: 'Predictability' },
   {
@@ -62,7 +63,7 @@ const blocks: Block[] = [
   { t: 'h2', text: 'What the evidence says, and what it does not' },
   {
     t: 'p',
-    text: 'This is where most articles about slime oversell it, so here is the honest version. Tactile fidget tools are widely used by occupational therapists and are generally considered low-risk, but responses vary a lot from person to person. Research on ASMR — the tingling, relaxing response many people get from soft sounds and close-up textures — is still early and relies heavily on self-report. There is no serious body of evidence that slime treats anxiety.',
+    text: 'This is where most articles about slime oversell it, so here is the honest version. Tactile fidget tools are widely used by occupational therapists and are generally considered low-risk, but responses vary a lot from person to person. Research on ASMR — the tingling, relaxing response many people get from soft sounds and close-up textures — is still young, but it is no longer just self-report: the first large survey studies appeared in 2015 ([Barratt & Davis, 2015](https://doi.org/10.7717/peerj.851)), and controlled studies now measure real changes in heart rate and mood ([Poerio et al., 2018](https://doi.org/10.1371/journal.pone.0196645)). There is no serious body of evidence that slime treats anxiety.',
   },
   {
     t: 'note',
@@ -76,7 +77,7 @@ const blocks: Block[] = [
   { t: 'h2', text: 'Match the motion to the mood' },
   {
     t: 'p',
-    text: 'Not every way of playing with slime feels the same, and the motion you choose should depend on what you are actually feeling:',
+    text: 'Not every way of playing with slime feels the same. What follows is from our own testing rather than clinical research — a starting point for matching the motion to the mood:',
   },
   {
     t: 'ul',
@@ -91,7 +92,7 @@ const blocks: Block[] = [
   { t: 'h2', text: 'Why most people stop using real slime' },
   {
     t: 'p',
-    text: 'Ask anyone who bought slime in the last few years why it is in a drawer, and you will hear the same four answers: it dries out, it picks up hair and lint, it stains fabric, and it is genuinely unpleasant to find on a sofa. The calming part lasts about a week; the maintenance lasts as long as the slime does.',
+    text: 'Ask anyone who bought slime in the last few years why it is in a drawer, and you will hear the same four answers: it dries out, it picks up hair and lint, it stains fabric, and it is genuinely unpleasant to find on a sofa. In our experience the calming part lasts about a week; the maintenance lasts as long as the slime does.',
   },
   {
     t: 'p',
@@ -100,17 +101,29 @@ const blocks: Block[] = [
 
   { t: 'h2', text: 'A three-minute slime session' },
   {
+    t: 'p',
+    text: 'Treat the timings below as a starting point from our own use rather than a clinical protocol.',
+  },
+  {
     t: 'ol',
     items: [
       'Put the phone face down. Slime is a break from screens or it is just more screen.',
       'Start with one slow stretch. Take a full breath in as you pull, and let it out as it snaps back.',
-      'Do the same motion ten times before you change anything. Repetition is what makes it settle rather than stimulate.',
+      'Do the same motion ten times before you change anything. Repetition is often what makes it settle rather than stimulate.',
       'When three minutes are up, wipe your hands and look out of a window for ten seconds before you go back.',
     ],
   },
   {
     t: 'p',
     text: 'The [Slime Simulator](/games/slime-simulator) has six types of slime with different stretch behaviour and squish sounds, so you can test which motion suits you before deciding whether to buy the real thing — or instead of it.',
+  },
+  { t: 'h2', text: 'References' },
+  {
+    t: 'ul',
+    items: [
+      'Barratt, E. L., & Davis, N. J. (2015). Autonomous Sensory Meridian Response (ASMR): a flow-like mental state. PeerJ, 3, e851. [doi:10.7717/peerj.851](https://doi.org/10.7717/peerj.851)',
+      'Poerio, G. L., Blakey, E., Hostler, T. J., & Veltri, T. (2018). More than a feeling: Autonomous sensory meridian response (ASMR) is characterized by reliable changes in affect and physiology. PLOS ONE. [doi:10.1371/journal.pone.0196645](https://doi.org/10.1371/journal.pone.0196645)',
+    ],
   },
 ]
 

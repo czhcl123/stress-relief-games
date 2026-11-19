@@ -80,13 +80,14 @@ export default function Home() {
       <div className="mt-16 max-w-3xl mx-auto text-center">
         <h2 className="text-2xl font-bold mb-4">Why Play Stress Relief Games?</h2>
         <p className="text-slate-400 leading-relaxed mb-4">
-          Studies show that brief mental breaks with simple, repetitive activities can reduce cortisol levels
-          and improve focus. Our free online games give you that micro-break — pop some virtual bubble wrap,
+          Research on short breaks suggests that brief, low-stakes pauses help sustain concentration (
+          <a href="https://doi.org/10.3389/fpsyg.2025.1589411" className="text-violet-400 underline underline-offset-2 hover:text-violet-300">Sharpe et al., 2025</a>
+          ). Our free online games give you that micro-break — pop some virtual bubble wrap,
           spin a fidget toy, or arrange a zen garden. No accounts, no downloads, no distractions.
         </p>
         <p className="text-slate-400 leading-relaxed">
           Whether you&apos;re at work, school, or just need a moment to decompress, these satisfying games
-          are designed to help you relax in under 5 minutes. Pick a game above and start unwinding.
+          are built for short breaks — most take just a couple of minutes. Pick a game above and start unwinding.
         </p>
       </div>
     </div>

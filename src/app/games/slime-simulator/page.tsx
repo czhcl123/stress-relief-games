@@ -555,7 +555,8 @@ export default function SlimeSimulator({ embed = false }: { embed?: boolean } = 
         <p className="text-slate-400 mb-4">
           Slime gives your hands something to do with a predictable result. You pull, it resists;
           you let go, it settles. That loop is the same reason people tap pens or knead a stress
-          ball: the feedback is immediate and it takes just enough attention to crowd out whatever
+          ball: the feedback is immediate, and for many people it takes just enough attention to
+          crowd out whatever
           you were stuck on.
         </p>
         <p className="text-slate-400 mb-6">

@@ -17,7 +17,7 @@ export const metadata: Metadata = articleMetadata({
   path: `/blog/${post.slug}`,
   keywords,
   published: post.date,
-  modified: '2026-10-29',
+  modified: post.evidenceChecked,
 })
 
 const jsonLd = articleJsonLd({
@@ -25,7 +25,7 @@ const jsonLd = articleJsonLd({
   description: post.description,
   path: `/blog/${post.slug}`,
   published: post.date,
-  modified: '2026-10-29',
+  modified: post.evidenceChecked,
   keywords,
 })
 
@@ -42,7 +42,7 @@ const blocks: Block[] = [
   { t: 'h2', text: 'Why squeezing works, and when it backfires' },
   {
     t: 'p',
-    text: 'The useful pattern is a brief, firm contraction followed by a full, deliberate release. That is the same principle behind progressive muscle relaxation, a well-established technique in which you tense a muscle group for a few seconds and then let go, paying attention to the contrast. The relaxation comes from the letting go, not the gripping.',
+    text: 'The useful pattern is a brief, firm contraction followed by a full, deliberate release. That is the same principle behind progressive muscle relaxation, a well-established technique ([Li et al., 2026](https://doi.org/10.3389/fpubh.2026.1906525); [Wang et al., 2026](https://doi.org/10.1080/08964289.2026.2751215)) in which you tense a muscle group for a few seconds and then let go, paying attention to the contrast. The relaxation comes from the letting go, not the gripping.',
   },
   {
     t: 'p',
@@ -75,6 +75,10 @@ const blocks: Block[] = [
 
   { t: 'h2', text: 'A two-minute routine' },
   {
+    t: 'p',
+    text: 'Treat the timings below as a starting point from our own use rather than a clinical protocol.',
+  },
+  {
     t: 'ol',
     items: [
       'Thirty seconds: five-second squeezes, three repetitions, dominant hand.',
@@ -95,7 +99,7 @@ const blocks: Block[] = [
   },
   {
     t: 'p',
-    text: 'The bouncing is worth calling out separately. A steady bounce is rhythmic and predictable, and rhythm is one of the fastest ways to settle a restless body — which is why people bounce their leg in the first place.',
+    text: 'The bouncing is worth calling out separately. A steady bounce is rhythmic and predictable, and a steady rhythm can help settle a restless body — which is why people bounce their leg in the first place.',
   },
 
   { t: 'h2', text: 'Stop if it hurts' },
@@ -106,6 +110,14 @@ const blocks: Block[] = [
   {
     t: 'p',
     text: 'Used for two minutes at seventy percent, a stress ball is a small, reliable reset. Used as a grip contest, it is just another thing to strain against.',
+  },
+  { t: 'h2', text: 'References' },
+  {
+    t: 'ul',
+    items: [
+      'Li, K., Chen, S., Liu, Y., & Yu, N. (2026). The effects of progressive muscle relaxation on sleep quality in adults: a systematic review and meta-analysis of randomized controlled trials. Frontiers in Public Health, 14, 1906525. [doi:10.3389/fpubh.2026.1906525](https://doi.org/10.3389/fpubh.2026.1906525)',
+      'Wang, Z., Wu, C., & Jiang, X. (2026). Effectiveness of Progressive Muscle Relaxation for Psychological Outcomes in Older Adults: A Systematic Review and Meta-Analysis. Behavioral Medicine. [doi:10.1080/08964289.2026.2751215](https://doi.org/10.1080/08964289.2026.2751215)',
+    ],
   },
 ]
 

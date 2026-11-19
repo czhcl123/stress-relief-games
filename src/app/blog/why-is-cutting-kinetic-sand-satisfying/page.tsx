@@ -17,6 +17,7 @@ export const metadata: Metadata = articleMetadata({
   path: `/blog/${post.slug}`,
   keywords,
   published: post.date,
+  modified: post.evidenceChecked,
 })
 
 const jsonLd = articleJsonLd({
@@ -34,7 +35,7 @@ const blocks: Block[] = [
   },
   {
     t: 'p',
-    text: 'The recipe is not magic at all: it is sand with a small amount of a polymer binder — usually a silicone-based oil — that makes the grains stick to each other just enough to behave like a very slow liquid. Change that one ingredient and you get a material that is genuinely satisfying to cut.',
+    text: 'The recipe is not magic at all: it is about 98% sand and 2% polydimethylsiloxane — a silicone oil — by weight, and that small amount of binder makes the grains stick to each other just enough to behave like a very slow liquid. Change that one ingredient and you get a material that is genuinely satisfying to cut.',
   },
 
   { t: 'h2', text: 'What makes it different from beach sand' },
@@ -67,7 +68,7 @@ const blocks: Block[] = [
   { t: 'h2', text: 'The ASMR piece' },
   {
     t: 'p',
-    text: 'Cutting sand produces a close, dry, low-volume crunch — the kind of sound that ASMR videos are built around. Many people report a tingling, relaxing response to sounds like this, and the effect is real for them. Research on ASMR is still early and relies heavily on self-report, so it is fair to say "a lot of people find this pleasant" and not much more than that.',
+    text: 'Cutting sand produces a close, dry, low-volume crunch — the kind of sound that ASMR videos are built around. Many people report a tingling, relaxing response to sounds like this, and the effect is real for them. ASMR research is still young, but controlled studies now measure real changes in heart rate and mood ([Barratt & Davis, 2015](https://doi.org/10.7717/peerj.851); [Poerio et al., 2018](https://doi.org/10.1371/journal.pone.0196645)), so it is fair to say "a lot of people find this pleasant" and not much more than that.',
   },
   {
     t: 'note',
@@ -106,6 +107,10 @@ const blocks: Block[] = [
 
   { t: 'h2', text: 'A five-minute session' },
   {
+    t: 'p',
+    text: 'Treat the timings below as a starting point from our own use rather than a clinical protocol.',
+  },
+  {
     t: 'ol',
     items: [
       'Smooth the surface first. Starting from blank makes the first cut land properly.',
@@ -117,6 +122,14 @@ const blocks: Block[] = [
   {
     t: 'p',
     text: 'That is the whole trick: a material that responds immediately, a task with no way to fail, and an ending you choose.',
+  },
+  { t: 'h2', text: 'References' },
+  {
+    t: 'ul',
+    items: [
+      'Barratt, E. L., & Davis, N. J. (2015). Autonomous Sensory Meridian Response (ASMR): a flow-like mental state. PeerJ, 3, e851. [doi:10.7717/peerj.851](https://doi.org/10.7717/peerj.851)',
+      'Poerio, G. L., Blakey, E., Hostler, T. J., & Veltri, T. (2018). More than a feeling: Autonomous sensory meridian response (ASMR) is characterized by reliable changes in affect and physiology. PLOS ONE. [doi:10.1371/journal.pone.0196645](https://doi.org/10.1371/journal.pone.0196645)',
+    ],
   },
 ]
 

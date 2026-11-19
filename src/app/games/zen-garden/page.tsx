@@ -678,17 +678,18 @@ export default function ZenGarden({ embed = false }: { embed?: boolean } = {}) {
           loading a single audio file.
         </p>
 
-        <h2 className="text-xl font-bold mb-3">Why raking sand helps you focus</h2>
+        <h2 className="text-xl font-bold mb-3">Why raking sand can help you focus</h2>
         <p className="text-slate-400 mb-4">
           A rock garden is a task with no correct answer and no way to fail. That is the point
           of it. Raking gives your hands something repetitive and low-stakes to do while the
           rest of you is stuck on something difficult, and the result is visible immediately.
-          Repetitive movement like this is a common focus aid for the same reason knitting is:
+          Repetitive movement like this is a common focus aid — knitting and doodling work the
+          same way for many people:
           it occupies the part of the brain that wants to fidget, without taking the part that
           wants to think.
         </p>
         <p className="text-slate-400 mb-6">
-          It also works as a breathing reset. Most people who try raking slow down without
+          It also works as a breathing reset. In our experience, most people who try raking slow down without
           deciding to, because the pattern asks you to move at a steady pace. A couple of
           minutes in a virtual garden is not the same as sitting in a real one, but it is a
           legitimate two-minute break that fits in a browser tab.

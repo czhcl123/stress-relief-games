@@ -793,8 +793,8 @@ export default function SandCutting({ embed = false }: { embed?: boolean } = {})
                 <h3 className="font-semibold text-slate-200 mb-1">Is this the same as real kinetic sand?</h3>
                 <p className="text-slate-400 mb-4">
                   Same material behaviour, none of the mess. Real kinetic sand holds a cut edge exactly
-                  like this, but it also gets everywhere, and it needs the diatomaceous sand that comes in
-                  the box to keep its texture. This version behaves the same way and stays on the screen.
+                  like this — it is about 98% sand and 2% silicone oil — but it also gets everywhere and
+                  picks up lint over time. This version behaves the same way and stays on the screen.
                 </p>
 
         <h2 className="text-xl font-bold mb-3">How to Play</h2>

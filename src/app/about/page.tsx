@@ -77,7 +77,8 @@ export default function AboutPage() {
           no account, no download, and no advertising. You click and play.
         </p>
         <p className="leading-relaxed">
-          The games are designed for short breaks. Most sessions last under five minutes. The
+          The games are designed for short breaks — the kind of session that fits inside a
+          few minutes. The
           goal is not &quot;engagement&quot; or &quot;time on site&quot; — it is the opposite. We want you to
           pop a few bubbles, take a breath, and get back to whatever you were doing.
         </p>
@@ -87,9 +88,10 @@ export default function AboutPage() {
         <h2 className="text-2xl font-semibold text-white mb-3">Who builds it</h2>
         <p className="leading-relaxed mb-3">
           The site is built and maintained by a single developer. Every game is hand-coded in
-          HTML, JavaScript, and the Canvas and Web Audio APIs. No game engines, no third-party
-          tracking, no analytics scripts. The only third-party request your browser makes is
-          loading the page itself.
+          HTML, JavaScript, and the Canvas and Web Audio APIs. No game engines, no tracking
+          pixels, no advertising. The site loads one privacy-friendly analytics script (Ahrefs)
+          that counts page loads anonymously — no cookies and no personal data — and nothing
+          else from third parties.
         </p>
         <p className="leading-relaxed">
           The project started in late 2026 as a personal experiment in building small,

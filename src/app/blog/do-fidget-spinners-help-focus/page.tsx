@@ -17,6 +17,7 @@ export const metadata: Metadata = articleMetadata({
   path: `/blog/${post.slug}`,
   keywords,
   published: post.date,
+  modified: post.evidenceChecked,
 })
 
 const jsonLd = articleJsonLd({
@@ -50,7 +51,7 @@ const blocks: Block[] = [
   { t: 'h2', text: 'What the research actually says' },
   {
     t: 'p',
-    text: 'The honest summary is: **mixed, and mostly from small studies.** Some research suggests that fidgeting or moving can help sustain attention for people with ADHD, particularly on long, low-stimulation tasks like listening. Other work finds that a fidget object can compete for attention rather than support it — especially on tasks that lean on working memory, where your hands are not the bottleneck but your attention is.',
+    text: 'The honest summary is: **mixed, and mostly from small studies.** Some research suggests that fidgeting or moving can help sustain attention for people with ADHD — movement has been argued to be a compensatory behaviour that supports performance rather than a pure deficit ([Sarver et al., 2015](https://doi.org/10.1007/s10802-015-0011-1)), and a randomised controlled trial of fidget devices found calming effects on anxiety and physiological measures for some adults with ADHD ([Elahi et al., 2025](https://doi.org/10.1016/j.ridd.2025.104944)). Other work finds that a fidget object can compete for attention rather than support it — especially on tasks that lean on working memory, where your hands are not the bottleneck but your attention is.',
   },
   {
     t: 'p',
@@ -117,6 +118,15 @@ const blocks: Block[] = [
   {
     t: 'p',
     text: 'The habit is worth keeping even if the spinner is not. The useful part was never the plastic — it was noticing that your hands wanted something to do, and giving them something that does not cost you the thing you were trying to pay attention to.',
+  },
+  { t: 'h2', text: 'References' },
+  {
+    t: 'ul',
+    items: [
+      'Sarver, D. E., Rapport, M. D., Kofler, M. J., Raiker, J. S., & Friedman, L. M. (2015). Hyperactivity in Attention-Deficit/Hyperactivity Disorder (ADHD): Impairing Deficit or Compensatory Behavior? Journal of Abnormal Child Psychology. [doi:10.1007/s10802-015-0011-1](https://doi.org/10.1007/s10802-015-0011-1)',
+      'Elahi, H., et al. (2025). Impact of fidget devices on anxiety and physiological responses in adults with ADHD. Research in Developmental Disabilities, 158, 104944. [doi:10.1016/j.ridd.2025.104944](https://doi.org/10.1016/j.ridd.2025.104944)',
+      'Hettinger, C. A. Spinning toy. US Patent 5,591,062. [Google Patents](https://patents.google.com/patent/US5591062A)',
+    ],
   },
 ]
 

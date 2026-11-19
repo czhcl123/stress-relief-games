@@ -17,6 +17,7 @@ export const metadata: Metadata = articleMetadata({
   path: `/blog/${post.slug}`,
   keywords,
   published: post.date,
+  modified: post.evidenceChecked,
 })
 
 const jsonLd = articleJsonLd({
@@ -75,7 +76,7 @@ const blocks: Block[] = [
   { t: 'h2', text: 'The desk version' },
   {
     t: 'p',
-    text: 'Miniature sand gardens have been sold as desk objects since at least the 1990s, and they work on exactly the same principle at a much smaller scale: a shallow tray, fine sand, a plastic rake, three or four stones. They are popular for a reason — the effect survives the shrink.',
+    text: 'Miniature sand gardens have been sold as desk objects for decades now, and they work on exactly the same principle at a much smaller scale: a shallow tray, fine sand, a plastic rake, three or four stones. They are popular for a reason — the effect survives the shrink.',
   },
   {
     t: 'p',

@@ -151,6 +151,9 @@ export default function BlogArticle({ post, blocks }: { post: Post; blocks: Bloc
             <time dateTime={post.date}>{formatDate(post.date)}</time>
             <span aria-hidden="true"> · </span>
             {post.minutes} min read
+            <span aria-hidden="true"> · </span>
+            Evidence last checked{' '}
+            <time dateTime={post.evidenceChecked}>{formatDate(post.evidenceChecked)}</time>
           </p>
         </header>
 

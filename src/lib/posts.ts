@@ -18,6 +18,8 @@ export interface Post {
   description: string
   /** ISO publication date. */
   date: string
+  /** ISO date the research claims in this guide were last checked against sources. */
+  evidenceChecked: string
   /** Reading time shown on the index and the article header. */
   minutes: number
   /** The game this guide is paired with — drives the CTA and the cross-links. */
@@ -43,8 +45,9 @@ export const posts: Post[] = [
     slug: 'does-popping-bubble-wrap-relieve-stress',
     title: 'Does Popping Bubble Wrap Actually Relieve Stress?',
     description:
-      'Popping bubble wrap really does take the edge off. Here is why the pop feels so good, and how to get the same effect online in about two minutes.',
+      'Popping bubble wrap takes the edge off for many people. What the evidence does and does not show, and how to get the same effect online in two minutes.',
     date: '2026-10-19',
+    evidenceChecked: '2026-11-19',
     minutes: 6,
     game: '/games/bubble-wrap',
     tags: ['stress', 'satisfying', 'science'],
@@ -55,6 +58,7 @@ export const posts: Post[] = [
     description:
       'Slime is one of the most satisfying textures there is. Here is what makes it calming, and how to get the effect without the sticky mess.',
     date: '2026-10-19',
+    evidenceChecked: '2026-11-19',
     minutes: 5,
     game: '/games/slime-simulator',
     tags: ['anxiety', 'asmr', 'tactile'],
@@ -65,6 +69,7 @@ export const posts: Post[] = [
     description:
       'A zen garden is a small raked sand garden used for quiet focus. Here is what it is, why raking works, and how to use one at your desk in five minutes.',
     date: '2026-10-19',
+    evidenceChecked: '2026-11-19',
     minutes: 6,
     game: '/games/zen-garden',
     tags: ['calm', 'focus', 'design'],
@@ -75,6 +80,7 @@ export const posts: Post[] = [
     description:
       '7 stress ball exercises ranked by tension type — squeeze, roll, drop, pass — with a 2-minute routine and an honest "stop if it hurts" limit.',
     date: '2026-10-19',
+    evidenceChecked: '2026-11-19',
     minutes: 5,
     game: '/games/stress-ball',
     tags: ['tension', 'hands', 'routine'],
@@ -85,6 +91,7 @@ export const posts: Post[] = [
     description:
       'Fidget spinners are popular focus tools, but the evidence is mixed. Here is what research suggests, and who they tend to help most.',
     date: '2026-10-19',
+    evidenceChecked: '2026-11-19',
     minutes: 6,
     game: '/games/fidget-spinner',
     tags: ['focus', 'adhd', 'evidence'],
@@ -95,6 +102,7 @@ export const posts: Post[] = [
     description:
       'Cutting kinetic sand is one of the most satisfying sensations there is. Here is why it feels so good, and how to try it instantly in your browser.',
     date: '2026-10-19',
+    evidenceChecked: '2026-11-19',
     minutes: 5,
     game: '/games/sand-cutting',
     tags: ['asmr', 'satisfying', 'tactile'],

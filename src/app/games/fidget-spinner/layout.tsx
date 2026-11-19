@@ -7,7 +7,7 @@ import RelatedGames from '@/components/RelatedGames'
 const seo = {
   title: 'Fidget Spinner',
   description:
-    'A free virtual fidget spinner with realistic spin physics. Flick it, hold the center to slow it down, and enjoy six designs with a rising whirr.',
+    'A free virtual fidget spinner with six designs and a real RPM readout — about 2,500 on a good flick. Hold the center to slow it down.',
   path: '/games/fidget-spinner',
   keywords: [
     'fidget spinner',

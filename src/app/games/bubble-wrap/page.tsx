@@ -635,9 +635,10 @@ export default function BubbleWrapGame({ embed = false }: { embed?: boolean } = 
         <h3 className="font-semibold text-slate-200 mb-1">Is popping bubble wrap really good for stress?</h3>
         <p className="text-slate-400 mb-4">
         It is a small, predictable, repeating action that gives immediate feedback, and that
-        is generally what people are after. Studies on repetitive fidgeting behaviour suggest
-        it helps some people settle, though it is not a substitute for anything that treats
-        anxiety itself.
+        is generally what people are after. A randomised controlled trial of fidget devices in
+        adults with ADHD found calming effects for some participants (
+        <a href="https://doi.org/10.1016/j.ridd.2025.104944" className="text-violet-400 underline underline-offset-2 hover:text-violet-300">Elahi et al., 2025</a>
+        ), though it is not a substitute for anything that treats anxiety itself.
         </p>
         
         <h3 className="font-semibold text-slate-200 mb-1">Do I need an account or anything installed?</h3>

@@ -642,9 +642,12 @@ export default function FidgetSpinner({ embed = false }: { embed?: boolean } = {
       <div className={embed ? 'hidden' : 'max-w-2xl mx-auto'}>
         <h2 className="text-xl font-bold mb-3">About Fidget Spinners</h2>
         <p className="text-slate-400 mb-4">
-          Fidget spinners were designed as a simple way to release restless energy. A flick sends the
+          Fidget spinners took off in 2017 as a simple way to release restless energy. The shape goes
+          back to a{' '}
+          <a href="https://patents.google.com/patent/US5591062A" className="text-violet-400 underline underline-offset-2 hover:text-violet-300">1990s spinning-toy patent</a>{' '}
+          by Catherine Hettinger. A flick sends the
           bearing spinning, and the smooth whirr that slowly fades out gives your hands and ears
-          something calming to follow — the same reason bubble wrap and slime are so satisfying.
+          something calming to follow — part of why bubble wrap and slime are so satisfying too.
         </p>
         <h2 className="text-xl font-bold mb-3">What this virtual fidget spinner does</h2>
                 <p className="text-slate-400 mb-4">

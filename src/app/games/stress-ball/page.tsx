@@ -589,7 +589,7 @@ export default function StressBall({ embed = false }: { embed?: boolean } = {}) 
       <div className={embed ? 'hidden' : 'max-w-2xl mx-auto'}>
         <h2 className="text-xl font-bold mb-3">About Stress Ball</h2>
         <p className="text-slate-400">
-          Drag the ball and release to throw it around. Watch it bounce off walls with realistic
+          Drag the ball and release to throw it around. Watch it bounce off walls with simulated
           physics. Each ball type has different bounce and squish properties — the purple stress ball
           is extra squishy, while the rubber ball bounces the highest. Squeeze and throw as much as
           you need.
@@ -659,27 +659,29 @@ export default function StressBall({ embed = false }: { embed?: boolean } = {}) 
                   A stress ball works on a simple principle: the resistance you feel is proportional to
                   how hard you push, so it gives you an honest signal about how much force you are using.
                   That feedback loop is the point. You can push until it feels right rather than until it
-                  hurts, which is why doctors and therapists recommend them for hand and forearm tension
-                  after typing or mousing all day.
+                  hurts. The squeeze-and-release pattern is a simplified version of progressive muscle
+                  relaxation, a technique with a solid research base (
+                  <a href="https://doi.org/10.3389/fpubh.2026.1906525" className="text-violet-400 underline underline-offset-2 hover:text-violet-300">Li et al., 2026</a>
+                  ).
                 </p>
                 <p className="text-slate-400 mb-6">
                   The physics here is built to support that. Pull the ball away from the centre and it
                   compresses along one axis while bulging along the other, then springs back on release. It
-                  is a small, repeatable, harmless outlet — the kind of thing that is genuinely easier to
-                  do for two minutes than a breathing exercise, and it works whether or not you are
-                  especially wound up.
+                  is a small, repeatable, harmless outlet — often easier to do for two minutes than to sit
+                  still and breathe, and you can use it whether or not you are especially wound up.
                 </p>
 
                 <h2 className="text-xl font-bold mb-3">Getting more out of a two-minute break</h2>
                 <ul className="text-slate-400 mb-6 space-y-2 list-disc pl-5">
                   <li>
                     <strong className="text-slate-200">Squeeze and hold</strong> for a few seconds at a
-                    time instead of quick repeated squeezes. Holding it is where the release does most of
+                    time instead of quick repeated squeezes. In our experience, holding it is where the release does most of
                     the work.
                   </li>
                   <li>
                     <strong className="text-slate-200">Throw it across the room</strong> if you can. A
-                    hard throw followed by watching it settle is a stronger release than a soft one.
+                    hard throw followed by watching it settle releases more tension than a soft one,
+                    in our experience.
                   </li>
                   <li>
                     <strong className="text-slate-200">Use a slower ball</strong> when your hands are
