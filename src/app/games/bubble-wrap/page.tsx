@@ -439,7 +439,7 @@ export default function BubbleWrapGame({ embed = false }: { embed?: boolean } = 
           🫧 Bubble Wrap Popper
         </h1>
         <p className="text-slate-400">
-          Pop every bubble. Feel the satisfaction.
+          The classic bubble wrap popper — pop every bubble, feel the satisfaction.
         </p>
       </div>
 
@@ -567,7 +567,7 @@ export default function BubbleWrapGame({ embed = false }: { embed?: boolean } = 
           take your time — there&apos;s no rush. In <strong className="text-slate-300">Speed mode</strong>,
           race against the clock to pop all {total} bubbles as fast as you can.
         </p>
-        <h2 className="text-xl font-bold mb-3">Why Pop Bubble Wrap?</h2>
+        <h2 className="text-xl font-bold mb-3">Why Is a Bubble Wrap Popper So Satisfying?</h2>
         <p className="text-slate-400">
           There&apos;s a reason bubble wrap is so satisfying. The combination of tactile feedback,
           the popping sound, and the repetitive action triggers a small dopamine release in your brain.
