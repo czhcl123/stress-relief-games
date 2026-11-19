@@ -25,6 +25,7 @@ const jsonLd = articleJsonLd({
   description: post.description,
   path: `/blog/${post.slug}`,
   published: post.date,
+  modified: post.evidenceChecked,
   keywords,
 })
 

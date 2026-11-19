@@ -46,7 +46,7 @@ export const games: Game[] = [
     href: '/games/fidget-spinner',
     emoji: '🔄',
     title: 'Fidget Spinner',
-    desc: 'Flick a virtual fidget spinner and listen to the whirr. Realistic spin physics.',
+    desc: 'Flick a virtual fidget spinner and listen to the whirr. Real RPM readout.',
     tags: ['fidget', 'satisfying'],
   },
   {

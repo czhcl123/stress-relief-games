@@ -15,7 +15,7 @@ const guides = posts
 
 const body = `# Stress Relief Games
 
-> Free online stress relief games you can play in your browser — pop bubble wrap, stretch slime, spin a fidget spinner, rake a zen garden, squeeze a stress ball, or cut kinetic sand. No signup, no download, no ads. Each game is a short, satisfying break designed to lower stress in under five minutes.
+> Free online stress relief games you can play in your browser — pop bubble wrap, stretch slime, spin a fidget spinner, rake a zen garden, squeeze a stress ball, or cut kinetic sand. No signup, no download, no ads. Each game is a short, satisfying break — most sessions take just a couple of minutes.
 
 ## Games
 - [Bubble Wrap Popper](${SITE}/games/bubble-wrap): Pop 192 virtual bubble wrap bubbles with satisfying popping sounds. Includes Zen mode and Speed mode.
