@@ -1,5 +1,6 @@
 import type { MetadataRoute } from 'next'
 import { siteUrl } from '@/lib/seo'
+import { collections } from '@/lib/collections'
 import { games } from '@/lib/games'
 import { posts, postHref } from '@/lib/posts'
 
@@ -50,6 +51,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
       path: game.href,
       priority: 0.8,
       images: [`${siteUrl}${game.image}`],
+    })),
+    ...collections.map((collection) => ({
+      path: `/${collection.slug}`,
+      priority: 0.8,
+      lastModified: '2026-11-25',
+      images: collection.items
+        .map((href) => games.find((game) => game.href === href))
+        .filter((game): game is NonNullable<typeof game> => Boolean(game))
+        .map((game) => `${siteUrl}${game.thumb}`),
     })),
   ]
 

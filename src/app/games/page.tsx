@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { collections } from '@/lib/collections'
 import { games } from '@/lib/games'
 import { gameComparison } from '@/lib/gameComparison'
 import { posts, postHref } from '@/lib/posts'
@@ -141,6 +142,28 @@ export default function GamesIndex() {
               ))}
             </tbody>
           </table>
+        </div>
+      </section>
+
+      <section id="collections" className="mx-auto mt-16 max-w-5xl">
+        <h2 className="mb-4 text-2xl font-bold">Browse by Mood</h2>
+        <p className="mb-6 leading-relaxed text-slate-400">
+          Not sure where to start? These collections group the games and tools by what you want
+          from the break — pop, texture, quiet, fidget, sound, or a specific situation.
+        </p>
+        <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-4">
+          {collections.map((collection) => (
+            <a
+              key={collection.slug}
+              href={`/${collection.slug}`}
+              className="rounded-xl border border-slate-800 bg-slate-900/40 px-4 py-4 transition hover:border-violet-500 hover:bg-slate-800/60"
+            >
+              <span className="block font-semibold text-white">{collection.h1}</span>
+              <span className="mt-1 block text-xs text-slate-500">
+                {collection.items.length} games & tools
+              </span>
+            </a>
+          ))}
         </div>
       </section>
 

@@ -1,4 +1,5 @@
 import { siteUrl } from '@/lib/seo'
+import { collections } from '@/lib/collections'
 import { games } from '@/lib/games'
 import { posts, postHref } from '@/lib/posts'
 
@@ -18,6 +19,10 @@ const guides = posts
   .map((post) => `- [${post.title}](${SITE}${postHref(post)}): ${post.description}`)
   .join('\n')
 
+const collectionLines = collections
+  .map((collection) => `- [${collection.h1}](${SITE}/${collection.slug}): ${collection.description}`)
+  .join('\n')
+
 const body = `# Stress Relief Games
 
 > Free online stress relief games and calm tools you can play in your browser — pop bubble wrap, stretch slime, spin a fidget spinner, rake a zen garden, squeeze a stress ball, cut kinetic sand, follow a breathing circle, play rain sounds, draw a mandala, or use a worry jar. No signup, no download, no ads. Each is a short, satisfying break — most sessions take just a couple of minutes. Written and maintained by Chen Lei.
@@ -25,11 +30,15 @@ const body = `# Stress Relief Games
 ## Games & Tools
 ${gameLines}
 
+## Collections
+${collectionLines}
+
 ## Guides
 ${guides}
 
 ## Site info
 - [Home](${SITE}/): Browse all games and tools on one page.
+- [All collections](${SITE}/games#collections): Browse by mood, texture or situation.
 - [All guides](${SITE}/blog): Every long-form article about how these games work and how to use them.
 - [About](${SITE}/about): Who builds the site, editorial policy, and contact details.
 - [Author: Chen Lei](${SITE}/authors/chen-lei): The developer and writer behind the site.

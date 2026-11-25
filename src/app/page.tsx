@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { collections } from '@/lib/collections'
 import { games } from '@/lib/games'
 import { posts, postHref } from '@/lib/posts'
 import { ogUrl, siteName, siteUrl } from '@/lib/seo'
@@ -196,6 +197,29 @@ export default function Home() {
             className="text-violet-400 underline underline-offset-2 hover:text-violet-300"
           >
             See the full comparison table →
+          </a>
+        </p>
+      </section>
+
+      <section className="mt-12 max-w-3xl mx-auto">
+        <h2 className="text-2xl font-bold mb-4">Browse by Mood</h2>
+        <div className="flex flex-wrap gap-2">
+          {collections.map((collection) => (
+            <a
+              key={collection.slug}
+              href={`/${collection.slug}`}
+              className="rounded-full border border-slate-700 px-3 py-1.5 text-sm text-slate-300 transition hover:border-violet-500 hover:text-white"
+            >
+              {collection.h1}
+            </a>
+          ))}
+        </div>
+        <p className="mt-3 text-sm">
+          <a
+            href="/games#collections"
+            className="text-violet-400 underline underline-offset-2 hover:text-violet-300"
+          >
+            See all collections →
           </a>
         </p>
       </section>
