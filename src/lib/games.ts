@@ -11,6 +11,10 @@ export interface Game {
   imageHeight: number
   /** 1200×630 crop used for Open Graph / Article image. */
   ogImage: string
+  /** 800×450 gameplay crop used on the homepage and /games cards. */
+  thumb: string
+  thumbWidth: number
+  thumbHeight: number
   /** Optional — a card without a route yet renders a "Coming Soon" badge. */
   coming?: boolean
 }
@@ -32,6 +36,9 @@ export const games: Game[] = [
     imageWidth: 1174,
     imageHeight: 727,
     ogImage: '/images/og/bubble-wrap.jpg',
+    thumb: '/images/thumbs/bubble-wrap.webp',
+    thumbWidth: 800,
+    thumbHeight: 450,
   },
   {
     href: '/games/slime-simulator',
@@ -44,6 +51,9 @@ export const games: Game[] = [
     imageWidth: 1155,
     imageHeight: 738,
     ogImage: '/images/og/slime-simulator.jpg',
+    thumb: '/images/thumbs/slime-simulator.webp',
+    thumbWidth: 800,
+    thumbHeight: 450,
   },
   {
     href: '/games/zen-garden',
@@ -56,6 +66,9 @@ export const games: Game[] = [
     imageWidth: 1147,
     imageHeight: 725,
     ogImage: '/images/og/zen-garden.jpg',
+    thumb: '/images/thumbs/zen-garden.webp',
+    thumbWidth: 800,
+    thumbHeight: 450,
   },
   {
     href: '/games/stress-ball',
@@ -68,6 +81,9 @@ export const games: Game[] = [
     imageWidth: 1137,
     imageHeight: 736,
     ogImage: '/images/og/stress-ball.jpg',
+    thumb: '/images/thumbs/stress-ball.webp',
+    thumbWidth: 800,
+    thumbHeight: 450,
   },
   {
     href: '/games/fidget-spinner',
@@ -80,6 +96,9 @@ export const games: Game[] = [
     imageWidth: 1133,
     imageHeight: 735,
     ogImage: '/images/og/fidget-spinner.jpg',
+    thumb: '/images/thumbs/fidget-spinner.webp',
+    thumbWidth: 800,
+    thumbHeight: 450,
   },
   {
     href: '/games/sand-cutting',
@@ -92,5 +111,8 @@ export const games: Game[] = [
     imageWidth: 1135,
     imageHeight: 729,
     ogImage: '/images/og/sand-cutting.jpg',
+    thumb: '/images/thumbs/sand-cutting.webp',
+    thumbWidth: 800,
+    thumbHeight: 450,
   },
 ]

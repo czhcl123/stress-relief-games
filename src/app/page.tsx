@@ -92,7 +92,14 @@ export default function Home() {
                 : 'border-slate-700 bg-slate-800/50 hover:border-violet-500 hover:bg-slate-800 hover:shadow-lg hover:shadow-violet-500/10'
             }`}
           >
-            <div className="text-4xl mb-3">{game.emoji}</div>
+            <img
+              src={game.thumb}
+              alt={game.imageAlt}
+              width={game.thumbWidth}
+              height={game.thumbHeight}
+              loading="lazy"
+              className="mb-4 aspect-video w-full rounded-xl border border-slate-700 object-cover"
+            />
             <h2 className="text-xl font-semibold mb-2">
               {game.title}
               {game.coming && (

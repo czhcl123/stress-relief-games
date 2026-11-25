@@ -66,9 +66,14 @@ export default function GamesIndex() {
                 : 'border-slate-700 bg-slate-800/50 hover:border-violet-500 hover:bg-slate-800 hover:shadow-lg hover:shadow-violet-500/10'
             }`}
           >
-            <div className="mb-3 text-4xl" aria-hidden="true">
-              {game.emoji}
-            </div>
+            <img
+              src={game.thumb}
+              alt={game.imageAlt}
+              width={game.thumbWidth}
+              height={game.thumbHeight}
+              loading="lazy"
+              className="mb-4 aspect-video w-full rounded-xl border border-slate-700 object-cover"
+            />
             <h2 className="mb-2 text-xl font-semibold">{game.title}</h2>
             <p className="mb-3 text-sm text-slate-400">{game.desc}</p>
             <div className="flex flex-wrap gap-2">

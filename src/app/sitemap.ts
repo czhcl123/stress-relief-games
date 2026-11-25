@@ -14,11 +14,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
     lastModified?: string
     images?: string[]
   }[] = [
-    { path: '/', priority: 1 },
+    {
+      path: '/',
+      priority: 1,
+      images: games.map((game) => `${siteUrl}${game.thumb}`),
+    },
     {
       path: '/games',
       priority: 0.9,
-      images: games.map((game) => `${siteUrl}${game.image}`),
+      images: games.map((game) => `${siteUrl}${game.thumb}`),
     },
     { path: '/embed', priority: 0.8 },
     { path: '/about', priority: 0.5 },

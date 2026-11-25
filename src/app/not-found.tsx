@@ -1,3 +1,10 @@
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  // `absolute` avoids the root layout appending the brand a second time.
+  title: { absolute: 'Page not found | Stress Relief Games' },
+}
+
 export default function NotFound() {
   return (
     <div className="mx-auto max-w-2xl px-4 py-20 text-center">
