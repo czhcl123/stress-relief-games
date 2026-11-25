@@ -216,7 +216,7 @@ export default function BlogArticle({ post, blocks }: { post: Post; blocks: Bloc
         {/* Playable widget above the fold. The guide answers "why", the widget
             answers "do it" — the CTA used to sit after ~1000 words of body copy,
             which is why 331 impressions on the guides produced 1 click. */}
-        {game && <GameEmbed gameHref={post.game} />}
+        {game && <GameEmbed gameHref={game.href} />}
 
         {extra && (
           <>
@@ -355,7 +355,7 @@ export default function BlogArticle({ post, blocks }: { post: Post; blocks: Bloc
         </section>
       </article>
 
-      <RelatedGames current={post.game} />
+      {post.game && <RelatedGames current={post.game} />}
       {faqJsonLd && (
         <script
           type="application/ld+json"

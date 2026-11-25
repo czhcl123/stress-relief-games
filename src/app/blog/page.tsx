@@ -48,7 +48,7 @@ export default function BlogIndex() {
                 className="group flex gap-4 rounded-2xl border border-slate-700 bg-slate-800/50 p-5 transition hover:border-violet-500 hover:bg-slate-800"
               >
                 <span aria-hidden="true" className="text-3xl leading-none">
-                  {game?.emoji}
+                  {game?.emoji ?? '📝'}
                 </span>
                 <span className="min-w-0">
                   <span className="mb-1 block text-lg font-semibold text-white group-hover:text-violet-300">

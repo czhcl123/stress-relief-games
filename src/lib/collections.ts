@@ -45,7 +45,7 @@ export const collections: Collection[] = [
       'Want a longer, more visual session? Add Sand Cutting from the texture collection.',
     ],
     items: ['/games/bubble-wrap', '/games/pop-it'],
-    guideSlugs: ['does-popping-bubble-wrap-relieve-stress'],
+    guideSlugs: ['does-popping-bubble-wrap-relieve-stress', 'best-free-stress-relief-games', 'bubble-wrap-vs-fidget-spinner-vs-stress-ball'],
     faqs: [
       {
         q: 'Are these bubble wrap games free?',
@@ -83,7 +83,7 @@ export const collections: Collection[] = [
       'Want sound with the texture? Both have synthesised ASMR-style audio; mute if it is not for you.',
     ],
     items: ['/games/slime-simulator', '/games/sand-cutting'],
-    guideSlugs: ['why-is-slime-calming', 'why-is-cutting-kinetic-sand-satisfying'],
+    guideSlugs: ['why-is-slime-calming', 'why-is-cutting-kinetic-sand-satisfying', 'kinetic-sand-vs-slime'],
     faqs: [
       {
         q: 'Are the slime and sand games free?',
@@ -128,7 +128,7 @@ export const collections: Collection[] = [
       '/games/breathing',
       '/games/worry-jar',
     ],
-    guideSlugs: ['what-is-a-zen-garden'],
+    guideSlugs: ['what-is-a-zen-garden', 'how-to-take-a-micro-break'],
     faqs: [
       {
         q: 'Are these zen games free?',
@@ -172,7 +172,7 @@ export const collections: Collection[] = [
       '/games/pop-it',
       '/games/slime-simulator',
     ],
-    guideSlugs: ['do-fidget-spinners-help-focus', 'stress-ball-exercises'],
+    guideSlugs: ['do-fidget-spinners-help-focus', 'stress-ball-exercises', 'why-do-we-fidget', 'stress-relief-games-for-adhd', 'bubble-wrap-vs-fidget-spinner-vs-stress-ball'],
     faqs: [
       {
         q: 'Are these fidget games free?',
@@ -215,7 +215,7 @@ export const collections: Collection[] = [
       '/games/rain-sounds',
       '/games/pop-it',
     ],
-    guideSlugs: ['why-is-slime-calming', 'why-is-cutting-kinetic-sand-satisfying'],
+    guideSlugs: ['why-is-slime-calming', 'why-is-cutting-kinetic-sand-satisfying', 'kinetic-sand-vs-slime'],
     faqs: [
       {
         q: 'Are these ASMR games free?',
@@ -263,7 +263,7 @@ export const collections: Collection[] = [
       '/games/rain-sounds',
       '/games/stress-ball',
     ],
-    guideSlugs: ['what-is-a-zen-garden', 'stress-ball-exercises'],
+    guideSlugs: ['what-is-a-zen-garden', 'stress-ball-exercises', 'how-to-take-a-micro-break'],
     faqs: [
       {
         q: 'Can games help with anxiety?',
@@ -309,7 +309,7 @@ export const collections: Collection[] = [
       '/games/stress-ball',
       '/games/rain-sounds',
     ],
-    guideSlugs: ['do-fidget-spinners-help-focus', 'stress-ball-exercises'],
+    guideSlugs: ['do-fidget-spinners-help-focus', 'stress-ball-exercises', 'why-do-we-fidget', 'stress-relief-games-for-adhd', 'bubble-wrap-vs-fidget-spinner-vs-stress-ball'],
     faqs: [
       {
         q: 'Are these games free for students?',
@@ -357,7 +357,7 @@ export const collections: Collection[] = [
       '/games/zen-garden',
       '/games/bubble-wrap',
     ],
-    guideSlugs: ['stress-ball-exercises', 'do-fidget-spinners-help-focus'],
+    guideSlugs: ['stress-ball-exercises', 'do-fidget-spinners-help-focus', 'how-to-take-a-micro-break', 'bubble-wrap-vs-fidget-spinner-vs-stress-ball'],
     faqs: [
       {
         q: 'Are these work break games free?',
