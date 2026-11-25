@@ -145,4 +145,112 @@ export const gameFaqs: Record<string, GameFaq[]> = {
       a: 'Same material behaviour, none of the mess. Real kinetic sand holds a cut edge exactly like this — it is about 98% sand and 2% silicone oil — but it also gets everywhere. This version behaves the same way and stays on the screen.',
     },
   ],
+  '/games/breathing': [
+    {
+      q: 'Is box breathing free?',
+      a: 'Yes. It runs in your browser with no signup, no download and no ads.',
+    },
+    {
+      q: 'How long should I do it?',
+      a: 'Two to five minutes is enough for a short reset — roughly four to eight cycles. You can pause or reset at any time.',
+    },
+    {
+      q: 'Does box breathing reduce stress?',
+      a: 'Some people find slow, paced breathing calming. The evidence is indirect and individual responses vary; this is a relaxation exercise, not a treatment for anxiety or a medical condition.',
+    },
+    {
+      q: 'Can I use it at work?',
+      a: 'Yes. It is silent, needs no account, and you can pause it instantly if someone needs you.',
+    },
+  ],
+  '/games/rain-sounds': [
+    {
+      q: 'Are the rain sounds free?',
+      a: 'Yes. The rain generator is free, with no signup, download or ads.',
+    },
+    {
+      q: 'Does the rain loop?',
+      a: 'Yes. The sound is synthesised continuously in the browser, so it can loop for as long as the tab is open.',
+    },
+    {
+      q: 'Can I use it for sleep?',
+      a: 'Some people use steady noise to mask background sound. There is no sleep timer, and this is not a medical treatment for insomnia.',
+    },
+    {
+      q: 'Why is there no sound?',
+      a: 'Browsers block audio until you interact with the page. Press Play, then check your device volume and the volume slider.',
+    },
+  ],
+  '/games/lava-lamp': [
+    {
+      q: 'Is the lava lamp free?',
+      a: 'Yes. It runs in the browser with no signup, download or ads.',
+    },
+    {
+      q: 'Can I change the colours?',
+      a: 'Yes. There are four palettes, a speed slider and a pause button.',
+    },
+    {
+      q: 'Does it save my settings?',
+      a: 'No. Refreshing the page resets the palette and speed.',
+    },
+    {
+      q: 'Is there sound?',
+      a: 'No. This one is visual only; if you want sound, try Rain Sounds.',
+    },
+  ],
+  '/games/mandala': [
+    {
+      q: 'Is the mandala drawing tool free?',
+      a: 'Yes. It runs in the browser with no signup, download or ads.',
+    },
+    {
+      q: 'How does the symmetry work?',
+      a: 'Every stroke is repeated around the centre in sixfold symmetry, so a small mark becomes a pattern.',
+    },
+    {
+      q: 'Can I download my mandala?',
+      a: 'Yes. The Download PNG button saves the current canvas as an image.',
+    },
+    {
+      q: 'Can I undo a stroke?',
+      a: 'There is no undo yet. Download first if you want to keep a version, then use Clear to start again.',
+    },
+  ],
+  '/games/worry-jar': [
+    {
+      q: 'Is the worry jar private?',
+      a: 'Yes. The text stays in your browser tab; nothing is sent to a server, saved to an account, or stored after you refresh.',
+    },
+    {
+      q: 'Does it save my worries?',
+      a: 'No. Refreshing the page clears the jar. That is deliberate: the point is to let go, not to build an archive.',
+    },
+    {
+      q: 'How many worries can I add?',
+      a: 'Up to twelve slips at a time. You can release them all with one button.',
+    },
+    {
+      q: 'Is this therapy?',
+      a: 'No. It is a short letting-go exercise. If worry is persistent or affecting your sleep or work, talk to a qualified professional.',
+    },
+  ],
+  '/games/pop-it': [
+    {
+      q: 'Is Pop It free?',
+      a: 'Yes. It runs in the browser with no signup, download or ads.',
+    },
+    {
+      q: 'Can I unpop a bubble?',
+      a: 'Yes. Tap or click a popped bubble again to push it back up.',
+    },
+    {
+      q: 'Does it work on a phone?',
+      a: 'Yes. Tap the bubbles directly; the grid adapts to the screen width.',
+    },
+    {
+      q: 'Is it the same as bubble wrap?',
+      a: 'It is a similar repetitive popping toy, but a different grid and feel. Bubble Wrap Popper uses a 192-bubble sheet; Pop It uses a 6×6 silicone-style grid.',
+    },
+  ],
 }

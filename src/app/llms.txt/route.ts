@@ -1,4 +1,5 @@
 import { siteUrl } from '@/lib/seo'
+import { games } from '@/lib/games'
 import { posts, postHref } from '@/lib/posts'
 
 // LLM-friendly site index following the llmstxt.org standard.
@@ -7,29 +8,28 @@ import { posts, postHref } from '@/lib/posts'
 // Derived from siteUrl so it can never drift from the canonical domain.
 const SITE = siteUrl
 
-// Generated from the same registry as the sitemap and the /blog index, so a
-// new guide can never be missing here.
+// Generated from the same registries as the sitemap and the /blog index, so a
+// new game, tool or guide can never be missing here.
+const gameLines = games
+  .map((game) => `- [${game.title}](${SITE}${game.href}): ${game.llmsDescription}`)
+  .join('\n')
+
 const guides = posts
   .map((post) => `- [${post.title}](${SITE}${postHref(post)}): ${post.description}`)
   .join('\n')
 
 const body = `# Stress Relief Games
 
-> Free online stress relief games you can play in your browser — pop bubble wrap, stretch slime, spin a fidget spinner, rake a zen garden, squeeze a stress ball, or cut kinetic sand. No signup, no download, no ads. Each game is a short, satisfying break — most sessions take just a couple of minutes. Written and maintained by Chen Lei.
+> Free online stress relief games and calm tools you can play in your browser — pop bubble wrap, stretch slime, spin a fidget spinner, rake a zen garden, squeeze a stress ball, cut kinetic sand, follow a breathing circle, play rain sounds, draw a mandala, or use a worry jar. No signup, no download, no ads. Each is a short, satisfying break — most sessions take just a couple of minutes. Written and maintained by Chen Lei.
 
-## Games
-- [Bubble Wrap Popper](${SITE}/games/bubble-wrap): Pop 192 virtual bubble wrap bubbles with satisfying popping sounds. Includes Zen mode and Speed mode.
-- [Slime Simulator](${SITE}/games/slime-simulator): Stretch, poke, and squish six types of virtual slime with 24-point soft-body physics and ASMR squish sounds.
-- [Zen Garden](${SITE}/games/zen-garden): Arrange stones, rake sand, and place plants in a relaxing Japanese-style rock garden.
-- [Stress Relief Ball](${SITE}/games/stress-ball): Squeeze, throw, and bounce a virtual stress ball. Six ball types with distinct bounce and squash physics.
-- [Fidget Spinner](${SITE}/games/fidget-spinner): Flick a virtual fidget spinner with a real RPM readout — about 2,500 on a good flick. Six designs, variable friction, bearing hum that rises with RPM.
-- [Sand Cutting](${SITE}/games/sand-cutting): Slice, scoop, and smooth virtual kinetic sand. Six sand colors, three tools, crisp ASMR cutting sounds.
+## Games & Tools
+${gameLines}
 
 ## Guides
 ${guides}
 
 ## Site info
-- [Home](${SITE}/): Browse all six stress relief games on one page.
+- [Home](${SITE}/): Browse all games and tools on one page.
 - [All guides](${SITE}/blog): Every long-form article about how these games work and how to use them.
 - [About](${SITE}/about): Who builds the site, editorial policy, and contact details.
 - [Author: Chen Lei](${SITE}/authors/chen-lei): The developer and writer behind the site.

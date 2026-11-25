@@ -29,7 +29,7 @@ export default function GameSeoExtras({ gamePath }: { gamePath: string }) {
       <Breadcrumbs
         items={[
           { name: 'Home', href: '/' },
-          { name: 'Games', href: '/games' },
+          { name: 'Games & Tools', href: '/games' },
           { name: game.title, href: gamePath },
         ]}
       />

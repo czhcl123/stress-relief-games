@@ -68,7 +68,7 @@ export default function BlogIndex() {
       <p className="mt-10 text-center text-sm text-slate-400">
         Just want to play?{' '}
         <a href="/" className="text-violet-400 underline underline-offset-2 hover:text-violet-300">
-          All six games are on the homepage
+          All games and tools are on the homepage
         </a>
         .
       </p>

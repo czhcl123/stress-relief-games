@@ -102,14 +102,16 @@ export function gameJsonLd({
   path: string
 }) {
   const game = games.find((item) => item.href === path)
+  const isTool = game?.kind === 'tool'
   return {
     '@context': 'https://schema.org',
-    '@type': 'VideoGame',
+    '@type': isTool ? 'WebApplication' : 'VideoGame',
     name: title,
     description,
     url: `${siteUrl}${path}`,
-    ...(game ? { screenshot: `${siteUrl}${game.image}` } : {}),
-    applicationCategory: 'GameApplication',
+    ...(game ? { image: `${siteUrl}${game.image}` } : {}),
+    ...(game?.imageIsScreenshot ? { screenshot: `${siteUrl}${game.image}` } : {}),
+    applicationCategory: isTool ? 'LifestyleApplication' : 'GameApplication',
     operatingSystem: 'Web browser',
     browserRequirements: 'Requires JavaScript',
     inLanguage: 'en',
@@ -122,9 +124,13 @@ export function gameJsonLd({
     publisher: {
       '@id': `${siteUrl}/#organization`,
     },
-    genre: ['Casual', 'Simulation'],
-    gamePlatform: 'Web browser',
-    playMode: 'SinglePlayer',
+    ...(isTool
+      ? {}
+      : {
+          genre: ['Casual', 'Simulation'],
+          gamePlatform: 'Web browser',
+          playMode: 'SinglePlayer',
+        }),
   }
 }
 

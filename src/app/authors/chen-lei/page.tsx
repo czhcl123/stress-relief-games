@@ -77,8 +77,8 @@ export default function AuthorPage() {
       <section className="mb-10 space-y-4 leading-relaxed">
         <p>
           {authorName} is an independent developer and programming enthusiast who builds
-          small, focused browser games. He created {siteName}, a collection of six free
-          browser games designed for short, satisfying breaks.
+          small, focused browser games. He created {siteName}, a collection of free browser
+          games and calm tools designed for short, satisfying breaks.
         </p>
         <p>
           Every game is hand-coded in HTML, JavaScript, the Canvas API and the Web Audio

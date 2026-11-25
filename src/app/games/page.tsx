@@ -4,9 +4,9 @@ import { gameComparison } from '@/lib/gameComparison'
 import { posts, postHref } from '@/lib/posts'
 import { ogUrl, siteName, siteUrl } from '@/lib/seo'
 
-const title = 'All 6 Stress Relief Games — Free Online'
+const title = `All ${games.length} Stress Relief Games & Tools`
 const description =
-  'All six free online stress relief games in one place: bubble wrap, slime, zen garden, stress ball, fidget spinner and kinetic sand. Compare and pick one.'
+  'Free online stress relief games and calm tools: bubble wrap, slime, zen garden, stress ball, fidget spinner, breathing and rain sounds. Compare and pick one.'
 
 export const metadata: Metadata = {
   title: { absolute: title },
@@ -18,23 +18,23 @@ export const metadata: Metadata = {
     siteName,
     title: `${title} | ${siteName}`,
     description,
-    images: [{ url: ogUrl(title, 'All six games — free online'), width: 1200, height: 630, alt: title }],
+    images: [{ url: ogUrl(title, 'All games and tools — free online'), width: 1200, height: 630, alt: title }],
   },
   twitter: {
     card: 'summary_large_image',
     title: `${title} | ${siteName}`,
     description,
-    images: [ogUrl(title, 'All six games — free online')],
+    images: [ogUrl(title, 'All games and tools — free online')],
   },
 }
 
 // An ItemList is accurate here: this page is literally an ordered collection of
-// the six games, and each entry points at the page that hosts the game. No
+// the games and tools, and each entry points at the page that hosts it. No
 // ratings or review counts are invented.
 const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'ItemList',
-  name: 'Free Online Stress Relief Games',
+  name: 'Free Online Stress Relief Games & Tools',
   numberOfItems: games.length,
   itemListElement: games.map((game, index) => ({
     '@type': 'ListItem',
@@ -49,10 +49,12 @@ export default function GamesIndex() {
   return (
     <div className="mx-auto max-w-6xl px-4 py-12">
       <header className="mb-12 text-center">
-        <h1 className="mb-4 text-3xl font-bold sm:text-4xl">All Six Stress Relief Games</h1>
+        <h1 className="mb-4 text-3xl font-bold sm:text-4xl">
+          All {games.length} Stress Relief Games &amp; Tools
+        </h1>
         <p className="mx-auto max-w-2xl leading-relaxed text-slate-400">
-          Six small games you can finish in a couple of minutes. Everything runs in the browser: no
-          signup, no download, nothing to install. Pick one and start with the thing itself.
+          Short games and calm tools you can finish in a couple of minutes. Everything runs in the
+          browser: no signup, no download, nothing to install. Pick one and start with the thing itself.
         </p>
       </header>
 
@@ -75,7 +77,14 @@ export default function GamesIndex() {
               loading="lazy"
               className="mb-4 aspect-video w-full rounded-xl border border-slate-700 object-cover"
             />
-            <h2 className="mb-2 text-xl font-semibold">{game.title}</h2>
+            <h2 className="mb-2 text-xl font-semibold">
+              {game.title}
+              {game.kind === 'tool' && (
+                <span className="ml-2 rounded-full bg-violet-500/15 px-2 py-0.5 text-xs font-medium text-violet-300">
+                  Tool
+                </span>
+              )}
+            </h2>
             <p className="mb-3 text-sm text-slate-400">{game.desc}</p>
             <div className="flex flex-wrap gap-2">
               {game.tags.map((tag) => (
@@ -91,15 +100,15 @@ export default function GamesIndex() {
       <section id="compare" className="mx-auto mt-16 max-w-5xl">
         <h2 className="mb-4 text-2xl font-bold">At a Glance</h2>
         <p className="mb-6 leading-relaxed text-slate-400">
-          A quick comparison of the six games. The evidence column is deliberately conservative:
-          none of these games has a direct clinical trial behind it, so the labels describe how
-          close the supporting research is.
+          A quick comparison of the games and tools. The evidence column is deliberately
+          conservative: none of these has a direct clinical trial behind it, so the labels describe
+          how close the supporting research is.
         </p>
         <div className="overflow-x-auto rounded-2xl border border-slate-800">
-          <table className="w-full min-w-[760px] border-collapse text-left text-sm">
+          <table className="w-full min-w-[800px] border-collapse text-left text-sm">
             <thead className="bg-slate-800/60 text-xs uppercase tracking-wide text-slate-400">
               <tr>
-                <th className="px-4 py-3 font-semibold">Game</th>
+                <th className="px-4 py-3 font-semibold">Game / Tool</th>
                 <th className="px-4 py-3 font-semibold">Best for</th>
                 <th className="px-4 py-3 font-semibold">Session</th>
                 <th className="px-4 py-3 font-semibold">Sound</th>
@@ -117,6 +126,11 @@ export default function GamesIndex() {
                     >
                       {row.name}
                     </a>
+                    {row.kind === 'tool' && (
+                      <span className="ml-2 rounded-full bg-violet-500/15 px-2 py-0.5 text-xs font-medium text-violet-300">
+                        Tool
+                      </span>
+                    )}
                   </td>
                   <td className="px-4 py-3 text-slate-400">{row.bestFor}</td>
                   <td className="px-4 py-3 text-slate-400">{row.session}</td>
@@ -133,7 +147,7 @@ export default function GamesIndex() {
       <section className="mx-auto mt-16 max-w-3xl">
         <h2 className="mb-4 text-2xl font-bold">Which One to Pick</h2>
         <p className="mb-6 leading-relaxed text-slate-400">
-          The six games are not six flavours of the same thing. They ask for different kinds of
+          The games and tools are not flavours of the same thing. They ask for different kinds of
           attention, so the right choice depends on what kind of break you actually have time for.
         </p>
         <ul className="space-y-4 leading-relaxed text-slate-400">
@@ -173,11 +187,37 @@ export default function GamesIndex() {
             </a>
             . Open, play, close. Nothing to set up and nothing to leave behind.
           </li>
+          <li>
+            <strong className="text-white">Wound up, need to slow the breath</strong> —{' '}
+            <a href="/games/breathing" className="text-violet-400 underline underline-offset-2 hover:text-violet-300">
+              Box Breathing
+            </a>
+            ,{' '}
+            <a href="/games/rain-sounds" className="text-violet-400 underline underline-offset-2 hover:text-violet-300">
+              Rain Sounds
+            </a>{' '}
+            or{' '}
+            <a href="/games/worry-jar" className="text-violet-400 underline underline-offset-2 hover:text-violet-300">
+              Worry Jar
+            </a>
+            . Quiet tools for a slower reset.
+          </li>
+          <li>
+            <strong className="text-white">Want to make something</strong> —{' '}
+            <a href="/games/mandala" className="text-violet-400 underline underline-offset-2 hover:text-violet-300">
+              Mandala Drawing
+            </a>{' '}
+            or{' '}
+            <a href="/games/lava-lamp" className="text-violet-400 underline underline-offset-2 hover:text-violet-300">
+              Lava Lamp
+            </a>
+            . Visual, low-stakes and easy to stop.
+          </li>
         </ul>
       </section>
 
       <section className="mx-auto mt-14 max-w-3xl">
-        <h2 className="mb-4 text-2xl font-bold">What These Games Are Not</h2>
+        <h2 className="mb-4 text-2xl font-bold">What These Games &amp; Tools Are Not</h2>
         <p className="mb-4 leading-relaxed text-slate-400">
           They are not therapy and they are not a substitute for one. What they are is a real break:
           a minute or two of low-stakes, repetitive attention that gives the part of your head that
@@ -191,10 +231,10 @@ export default function GamesIndex() {
       </section>
 
       <section className="mx-auto mt-14 max-w-3xl">
-        <h2 className="mb-4 text-2xl font-bold">Why Each Game Works</h2>
+        <h2 className="mb-4 text-2xl font-bold">Why These Games Work</h2>
         <p className="mb-5 leading-relaxed text-slate-400">
-          Every game has a guide behind it that looks at what the research actually supports — and
-          where the claim falls apart. {posts.length} of them, all short:
+          Each of the six original games has a guide behind it that looks at what the research
+          actually supports — and where the claim falls apart. {posts.length} guides, all short:
         </p>
         <ul className="grid grid-cols-1 gap-3 sm:grid-cols-2">
           {posts.map((post) => (
@@ -213,7 +253,7 @@ export default function GamesIndex() {
       <p className="mt-10 text-center text-sm text-slate-400">
         Teachers and bloggers:{' '}
         <a href="/embed" className="text-violet-400 underline underline-offset-2 hover:text-violet-300">
-          every game can be embedded on your own page
+          six of our games can be embedded on your own page
         </a>
         .
       </p>

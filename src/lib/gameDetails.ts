@@ -104,4 +104,94 @@ export const gameDetails: Record<string, GameDetail> = {
     ],
     updated: 'November 25, 2026',
   },
+  '/games/breathing': {
+    built:
+      'A React timer drives four phases — inhale 4 seconds, hold 4, exhale 4, hold 4. The circle scales with the phase and the remaining seconds, and a cycle counter tracks completed rounds. No audio, no canvas.',
+    tested: [
+      'Desktop: current Chrome and Edge.',
+      'Mobile: Android Chrome.',
+      'Start, pause and reset controls; no audio permission needed.',
+    ],
+    limitations: [
+      'No audio cues; the guide is visual only.',
+      'Refreshing resets the cycle count.',
+      'Stop if you feel dizzy; this is a relaxation exercise, not medical advice.',
+    ],
+    updated: 'November 25, 2026',
+  },
+  '/games/rain-sounds': {
+    built:
+      'A looping noise buffer is filtered and shaped with the Web Audio API. Light, Medium and Heavy change the filter and gain, and the volume slider is independent. The rain is synthesised in the browser, not a recorded file.',
+    tested: [
+      'Desktop: current Chrome and Edge.',
+      'Mobile: Android Chrome.',
+      'Play/pause, intensity and volume controls; audio starts after a click.',
+    ],
+    limitations: [
+      'Synthesised rain, not a field recording.',
+      'No sleep timer; closing the tab stops the sound.',
+      'Browsers require a user gesture before audio can play.',
+    ],
+    updated: 'November 25, 2026',
+  },
+  '/games/lava-lamp': {
+    built:
+      'CSS-animated blobs inside a lamp-shaped container; each blob has its own duration and offset. Palettes change the gradient, the speed slider changes animation duration, and Pause stops the animations.',
+    tested: [
+      'Desktop: current Chrome and Edge.',
+      'Mobile: Android Chrome.',
+      'Palette, speed and pause controls.',
+    ],
+    limitations: [
+      'Visual only; there is no sound.',
+      'Palette and speed are not saved after refresh.',
+      'Motion may not suit everyone; Pause is always available.',
+    ],
+    updated: 'November 25, 2026',
+  },
+  '/games/mandala': {
+    built:
+      'A canvas 2D drawing surface with sixfold rotational symmetry. Pointer events draw one stroke and mirror it around the centre; there are six colours and three brush sizes, and Download exports the canvas as a PNG.',
+    tested: [
+      'Desktop: current Chrome and Edge.',
+      'Mobile: Android Chrome.',
+      'Mouse, pointer and touch drawing; PNG download.',
+    ],
+    limitations: [
+      'No undo yet; Clear resets the canvas.',
+      'Download is a PNG of the current canvas.',
+      'Nothing is saved to an account or the cloud.',
+    ],
+    updated: 'November 25, 2026',
+  },
+  '/games/worry-jar': {
+    built:
+      'A React state list renders up to twelve paper slips inside a CSS jar. Text never leaves the browser tab and is never persisted; Release all clears the list with a short animation.',
+    tested: [
+      'Desktop: current Chrome and Edge.',
+      'Mobile: Android Chrome.',
+      'Typing, adding and releasing; no network calls.',
+    ],
+    limitations: [
+      'Refreshing the page clears the jar.',
+      'The text is not encrypted — it is simply not saved or sent.',
+      'This is a letting-go exercise, not therapy.',
+    ],
+    updated: 'November 25, 2026',
+  },
+  '/games/pop-it': {
+    built:
+      'A 6×6 React grid with a popped/unpopped state per cell. Each pop synthesises a short click with the Web Audio API; colour themes change the palette, and Reset clears the grid.',
+    tested: [
+      'Desktop: current Chrome and Edge.',
+      'Mobile: Android Chrome.',
+      'Tap and click; sound starts after the first interaction.',
+    ],
+    limitations: [
+      'Progress is not saved after refresh.',
+      'The sound is synthesised; this is not a real silicone toy.',
+      'Browsers require a user gesture before audio can play.',
+    ],
+    updated: 'November 25, 2026',
+  },
 }

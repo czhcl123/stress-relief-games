@@ -11,7 +11,7 @@ export default function RelatedGames({ current }: { current: string }) {
 
   return (
     <section className="max-w-4xl mx-auto px-4 pt-2 pb-12">
-      <h2 className="text-lg font-bold mb-4 text-center">Try Another Stress Relief Game</h2>
+      <h2 className="text-lg font-bold mb-4 text-center">Try Another Game or Tool</h2>
       <ul className="flex flex-wrap justify-center gap-3">
         {others.map((game) => (
           <li key={game.href}>
@@ -29,7 +29,7 @@ export default function RelatedGames({ current }: { current: string }) {
       </ul>
       <p className="mt-4 text-center text-sm text-slate-400">
         <a href="/games" className="text-violet-400 underline underline-offset-2 hover:text-violet-300">
-          See all six stress relief games
+          See all games and tools
         </a>
       </p>
     </section>

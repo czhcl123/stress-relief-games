@@ -5,7 +5,7 @@ import { ogUrl, siteName, siteUrl } from '@/lib/seo'
 
 const title = 'Free Online Stress Relief Games — No Signup, No Ads'
 const description =
-  'Play six free online stress relief games: bubble wrap, slime, zen garden, stress ball, fidget spinner and kinetic sand. No signup, no download, no ads.'
+  'Play free online stress relief games and calm tools: bubble wrap, slime, zen garden, stress ball, fidget spinner, breathing and rain sounds. No signup, no ads.'
 
 export const metadata: Metadata = {
   title: { absolute: title },
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
 const faqs = [
   {
     q: 'Are these stress relief games free?',
-    a: 'Yes. All six games are free to play in your browser. There is no signup, no download, no in-app purchase and no advertising.',
+    a: 'Yes. All games and tools are free to play in your browser. There is no signup, no download, no in-app purchase and no advertising.',
   },
   {
     q: 'Do I need to install anything?',
@@ -76,7 +76,7 @@ export default function Home() {
 
       {/* Game Grid */}
       <div className="mb-4 flex flex-wrap items-baseline justify-between gap-2">
-        <h2 className="text-2xl font-bold">Six Games to Try</h2>
+        <h2 className="text-2xl font-bold">Games &amp; Tools to Try</h2>
         <a href="/games" className="text-sm text-violet-400 underline underline-offset-2 hover:text-violet-300">
           All games →
         </a>
@@ -102,6 +102,11 @@ export default function Home() {
             />
             <h2 className="text-xl font-semibold mb-2">
               {game.title}
+              {game.kind === 'tool' && (
+                <span className="ml-2 rounded-full bg-violet-500/15 px-2 py-0.5 text-xs font-medium text-violet-300">
+                  Tool
+                </span>
+              )}
               {game.coming && (
                 <span className="ml-2 text-xs bg-slate-700 text-slate-300 px-2 py-0.5 rounded-full">
                   Coming Soon

@@ -20,7 +20,8 @@ export default function GameScreenshot({ gamePath }: { gamePath: string }) {
         className="w-full rounded-2xl border border-slate-800"
       />
       <figcaption className="mt-2 text-center text-xs text-slate-500">
-        {game.title} screenshot — the game runs in the browser, no download required.
+        {game.title} {game.imageIsScreenshot ? 'screenshot' : 'illustration'} — the{' '}
+        {game.kind === 'tool' ? 'tool' : 'game'} runs in the browser, no download required.
       </figcaption>
     </figure>
   )

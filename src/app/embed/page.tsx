@@ -54,8 +54,8 @@ export default function EmbedIndex() {
       <header className="mb-10">
         <h1 className="mb-3 text-3xl font-bold sm:text-4xl">Embed a Game on Your Site</h1>
         <p className="leading-relaxed text-slate-400">
-          All six games can be dropped into a class page, a blog post or a staff intranet with one
-          iframe. No signup, no API key, no build step — paste the snippet and it works.
+          Six of our games can be dropped into a class page, a blog post or a staff intranet with
+          one iframe. No signup, no API key, no build step — paste the snippet and it works.
         </p>
       </header>
 
@@ -90,7 +90,7 @@ export default function EmbedIndex() {
       </section>
 
       <section className="mb-10">
-        <h2 className="mb-3 text-xl font-bold">All six games</h2>
+        <h2 className="mb-3 text-xl font-bold">All six embeddable games</h2>
         <p className="mb-4 text-sm leading-relaxed text-slate-400">
           Heights below are measured at 640px wide. If your column is narrower, use the auto-resizing
           snippet instead of these numbers.

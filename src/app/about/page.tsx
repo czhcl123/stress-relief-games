@@ -58,10 +58,12 @@ export default function AboutPage() {
       <section className="mb-10">
         <h2 className="text-2xl font-semibold text-white mb-3">What this site is</h2>
         <p className="leading-relaxed mb-3">
-          Stress Relief Games hosts six free online games — bubble wrap popping, slime
-          stretching, zen garden raking, stress ball squeezing, fidget spinner spinning, and
-          kinetic sand cutting. Every game runs entirely in your browser. There is no signup,
-          no account, no download, and no advertising. You click and play.
+          Stress Relief Games hosts a growing collection of free online games and calm tools —
+          bubble wrap popping, slime stretching, zen garden raking, stress ball squeezing,
+          fidget spinner spinning, kinetic sand cutting, plus breathing, rain sounds, a lava
+          lamp, mandala drawing, a worry jar and pop-it. Everything runs entirely in your
+          browser. There is no signup, no account, no download, and no advertising. You click
+          and play.
         </p>
         <p className="leading-relaxed">
           The games are designed for short breaks — the kind of session that fits inside a

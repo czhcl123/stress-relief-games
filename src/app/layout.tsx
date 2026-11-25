@@ -166,6 +166,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 
             <nav className="hidden sm:flex flex-wrap items-center justify-end gap-x-4 md:gap-x-6 gap-y-1 text-sm text-slate-400">
               <a href="/" className="hover:text-white transition">Home</a>
+              <a href="/games" className="hover:text-white transition">All Games</a>
               <a href="/games/bubble-wrap" className="hover:text-white transition">Bubble Wrap</a>
               <a href="/games/slime-simulator" className="hover:text-white transition">Slime</a>
               <a href="/games/zen-garden" className="hover:text-white transition">Zen Garden</a>
