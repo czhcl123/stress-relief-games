@@ -53,7 +53,7 @@ const blocks: Block[] = [
   { t: 'h3', text: 'Resistance' },
   {
     t: 'p',
-    text: 'Slime pushes back, but never enough to hurt. Occupational therapists call this kind of input proprioceptive: information from muscles and joints about how much force you are using. Firm, resistive touch is commonly used to help a body feel settled, and it is why a heavy blanket or a firm handshake can feel grounding.',
+    text: 'Slime pushes back, but never enough to hurt. This kind of input is often called proprioceptive: information from muscles and joints about how much force you are using. Firm, resistive touch is commonly used to help a body feel settled, and it is why a heavy blanket or a firm handshake can feel grounding.',
   },
   { t: 'h3', text: 'Predictability' },
   {
@@ -64,7 +64,7 @@ const blocks: Block[] = [
   { t: 'h2', text: 'What the evidence says, and what it does not' },
   {
     t: 'p',
-    text: 'This is where most articles about slime oversell it, so here is the honest version. Tactile fidget tools are widely used by occupational therapists and are generally considered low-risk, but responses vary a lot from person to person. Research on ASMR — the tingling, relaxing response many people get from soft sounds and close-up textures — is still young, but it is no longer just self-report: the first large survey studies appeared in 2015 ([Barratt & Davis, 2015](https://doi.org/10.7717/peerj.851)), and controlled studies now measure real changes in heart rate and mood ([Poerio et al., 2018](https://doi.org/10.1371/journal.pone.0196645)). There is no serious body of evidence that slime treats anxiety.',
+    text: 'This is where most articles about slime oversell it, so here is the honest version. Tactile fidget tools are generally considered low-risk, but responses vary a lot from person to person. Research on ASMR — the tingling, relaxing response many people get from soft sounds and close-up textures — is still young, but it is no longer just self-report: the first large survey studies appeared in 2015 ([Barratt & Davis, 2015](https://doi.org/10.7717/peerj.851)), and controlled studies now measure real changes in heart rate and mood ([Poerio et al., 2018](https://doi.org/10.1371/journal.pone.0196645)). There is no serious body of evidence that slime treats anxiety.',
   },
   {
     t: 'note',
@@ -117,14 +117,6 @@ const blocks: Block[] = [
   {
     t: 'p',
     text: 'The [Slime Simulator](/games/slime-simulator) has six types of slime with different stretch behaviour and squish sounds, so you can test which motion suits you before deciding whether to buy the real thing — or instead of it.',
-  },
-  { t: 'h2', text: 'References' },
-  {
-    t: 'ul',
-    items: [
-      'Barratt, E. L., & Davis, N. J. (2015). Autonomous Sensory Meridian Response (ASMR): a flow-like mental state. PeerJ, 3, e851. [doi:10.7717/peerj.851](https://doi.org/10.7717/peerj.851)',
-      'Poerio, G. L., Blakey, E., Hostler, T. J., & Veltri, T. (2018). More than a feeling: Autonomous sensory meridian response (ASMR) is characterized by reliable changes in affect and physiology. PLOS ONE. [doi:10.1371/journal.pone.0196645](https://doi.org/10.1371/journal.pone.0196645)',
-    ],
   },
 ]
 

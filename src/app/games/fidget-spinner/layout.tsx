@@ -3,6 +3,7 @@ import GuideLink from '@/components/GuideLink'
 import RelatedGames from '@/components/RelatedGames'
 import GameSeoExtras from '@/components/GameSeoExtras'
 import GameScreenshot from '@/components/GameScreenshot'
+import GameDetails from '@/components/GameDetails'
 
 // One object feeds both the page metadata and the structured data, so the
 // description can never drift between the two.
@@ -31,6 +32,7 @@ export default function FidgetSpinnerLayout({ children }: { children: React.Reac
       <GameSeoExtras gamePath={seo.path} />
       {children}
       <GameScreenshot gamePath={seo.path} />
+      <GameDetails gamePath={seo.path} />
       <GuideLink gameHref={seo.path} />
       <RelatedGames current={seo.path} />
       <script

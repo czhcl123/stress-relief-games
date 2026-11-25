@@ -111,14 +111,6 @@ const blocks: Block[] = [
     t: 'p',
     text: 'Used for two minutes at seventy percent, a stress ball is a small, reliable reset. Used as a grip contest, it is just another thing to strain against.',
   },
-  { t: 'h2', text: 'References' },
-  {
-    t: 'ul',
-    items: [
-      'Li, K., Chen, S., Liu, Y., & Yu, N. (2026). The effects of progressive muscle relaxation on sleep quality in adults: a systematic review and meta-analysis of randomized controlled trials. Frontiers in Public Health, 14, 1906525. [doi:10.3389/fpubh.2026.1906525](https://doi.org/10.3389/fpubh.2026.1906525)',
-      'Wang, Z., Wu, C., & Jiang, X. (2026). Effectiveness of Progressive Muscle Relaxation for Psychological Outcomes in Older Adults: A Systematic Review and Meta-Analysis. Behavioral Medicine. [doi:10.1080/08964289.2026.2751215](https://doi.org/10.1080/08964289.2026.2751215)',
-    ],
-  },
 ]
 
 export default function Page() {

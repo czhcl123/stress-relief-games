@@ -1,10 +1,19 @@
 import type { ReactNode } from 'react'
 import { games } from '@/lib/games'
 import { posts, postHref, type Block, type Post } from '@/lib/posts'
-import { authorName } from '@/lib/seo'
+import { guideExtras, type EvidenceStrength } from '@/lib/guideExtras'
+import { authorBio, authorName, authorRole } from '@/lib/seo'
 import Breadcrumbs from '@/components/Breadcrumbs'
 import RelatedGames from '@/components/RelatedGames'
 import GameEmbed from '@/components/GameEmbed'
+
+const strengthStyles: Record<EvidenceStrength, string> = {
+  Strong: 'border-emerald-500/30 bg-emerald-500/15 text-emerald-300',
+  Moderate: 'border-sky-500/30 bg-sky-500/15 text-sky-300',
+  Mixed: 'border-amber-500/30 bg-amber-500/15 text-amber-300',
+  Indirect: 'border-slate-500/30 bg-slate-500/15 text-slate-300',
+  Background: 'border-violet-500/30 bg-violet-500/15 text-violet-300',
+}
 
 const MONTHS = [
   'January',
@@ -139,6 +148,18 @@ function Blocks({ blocks }: { blocks: Block[] }) {
 export default function BlogArticle({ post, blocks }: { post: Post; blocks: Block[] }) {
   const game = games.find((g) => g.href === post.game)
   const moreGuides = posts.filter((p) => p.slug !== post.slug)
+  const extra = guideExtras[post.slug]
+  const faqJsonLd = extra
+    ? {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        mainEntity: extra.faqs.map((faq) => ({
+          '@type': 'Question',
+          name: faq.q,
+          acceptedAnswer: { '@type': 'Answer', text: faq.a },
+        })),
+      }
+    : null
 
   return (
     <>
@@ -197,7 +218,86 @@ export default function BlogArticle({ post, blocks }: { post: Post; blocks: Bloc
             which is why 331 impressions on the guides produced 1 click. */}
         {game && <GameEmbed gameHref={post.game} />}
 
+        {extra && (
+          <>
+            <section className="my-8 rounded-2xl border border-violet-500/30 bg-violet-500/10 p-5">
+              <h2 className="mb-2 text-sm font-semibold uppercase tracking-wide text-violet-300">
+                Quick answer
+              </h2>
+              <p className="text-lg leading-relaxed text-slate-200">{extra.quickAnswer}</p>
+            </section>
+
+            <section className="my-8">
+              <h2 className="mb-3 text-xl font-bold">Key takeaways</h2>
+              <ul className="list-disc space-y-2 pl-5 text-slate-300">
+                {extra.takeaways.map((item) => (
+                  <li key={item} className="leading-relaxed">{item}</li>
+                ))}
+              </ul>
+            </section>
+          </>
+        )}
+
         <Blocks blocks={blocks} />
+
+        {extra && (
+          <>
+            <section className="mt-10 rounded-xl border border-slate-700 bg-slate-800/40 p-5">
+              <h2 className="mb-2 text-xl font-bold">How we researched this</h2>
+              <p className="text-sm leading-relaxed text-slate-300">{extra.methodology}</p>
+            </section>
+
+            <section className="mt-8">
+              <h2 className="mb-3 text-xl font-bold">Limitations</h2>
+              <ul className="list-disc space-y-2 pl-5 text-slate-300">
+                {extra.limitations.map((item) => (
+                  <li key={item} className="leading-relaxed">{item}</li>
+                ))}
+              </ul>
+            </section>
+
+            <section className="mt-8">
+              <h2 className="mb-3 text-xl font-bold">References</h2>
+              <ul className="space-y-3">
+                {extra.references.map((ref) => (
+                  <li key={ref.url} className="rounded-xl border border-slate-800 p-4">
+                    <div className="mb-2 flex flex-wrap items-center gap-2">
+                      <span
+                        className={`rounded-full border px-2 py-0.5 text-xs font-semibold ${strengthStyles[ref.strength]}`}
+                      >
+                        {ref.strength}
+                      </span>
+                      {ref.note && <span className="text-xs text-slate-500">{ref.note}</span>}
+                    </div>
+                    <a
+                      href={ref.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-sm leading-relaxed text-slate-300 underline underline-offset-2 transition hover:text-violet-300"
+                    >
+                      {ref.citation}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </section>
+
+            <section className="mt-8">
+              <h2 className="mb-3 text-xl font-bold">Frequently asked questions</h2>
+              <div className="space-y-3">
+                {extra.faqs.map((faq) => (
+                  <details
+                    key={faq.q}
+                    className="rounded-xl border border-slate-800 bg-slate-900/40 px-4 py-3"
+                  >
+                    <summary className="cursor-pointer font-semibold text-white">{faq.q}</summary>
+                    <p className="mt-2 text-sm leading-relaxed text-slate-400">{faq.a}</p>
+                  </details>
+                ))}
+              </div>
+            </section>
+          </>
+        )}
 
         {game && (
           <div className="mt-10 rounded-2xl border border-violet-500/30 bg-violet-500/10 px-6 py-6 text-center">
@@ -216,6 +316,26 @@ export default function BlogArticle({ post, blocks }: { post: Post; blocks: Bloc
             </a>
           </div>
         )}
+
+        <section className="mt-10 flex gap-4 rounded-2xl border border-slate-800 bg-slate-900/40 p-5">
+          <div
+            aria-hidden="true"
+            className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full border border-violet-500/40 bg-violet-500/10 text-lg font-bold text-violet-300"
+          >
+            CL
+          </div>
+          <div>
+            <p className="font-semibold text-white">{authorName}</p>
+            <p className="text-sm text-violet-300">{authorRole}</p>
+            <p className="mt-2 text-sm leading-relaxed text-slate-400">{authorBio}</p>
+            <a
+              href="/authors/chen-lei"
+              className="mt-2 inline-block text-sm text-violet-400 underline underline-offset-2 transition hover:text-violet-300"
+            >
+              About the author →
+            </a>
+          </div>
+        </section>
 
         <section className="mt-12">
           <h2 className="mb-4 text-lg font-bold">More Stress Relief Guides</h2>
@@ -236,6 +356,12 @@ export default function BlogArticle({ post, blocks }: { post: Post; blocks: Bloc
       </article>
 
       <RelatedGames current={post.game} />
+      {faqJsonLd && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+        />
+      )}
     </>
   )
 }

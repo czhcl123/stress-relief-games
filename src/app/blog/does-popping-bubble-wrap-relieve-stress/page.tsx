@@ -74,7 +74,7 @@ const blocks: Block[] = [
   { t: 'h3', text: '2. It gives your hands something specific to do' },
   {
     t: 'p',
-    text: 'Occupational therapists have long used tactile and proprioceptive input — firm, textured, resistive touch — to help people settle. You do not need a diagnosis to benefit from it. A task that occupies your hands and asks nothing of your memory is a very cheap way to interrupt a spiral.',
+    text: 'Firm, textured, resistive touch is a common way to give your hands something specific to do. You do not need a diagnosis to benefit from it. A task that occupies your hands and asks nothing of your memory is a very cheap way to interrupt a spiral.',
   },
   { t: 'h3', text: '3. The sound is a safe startle' },
   {
@@ -133,13 +133,6 @@ const blocks: Block[] = [
   {
     t: 'p',
     text: 'If you want to try it without hunting for a box, the [virtual version](/games/bubble-wrap) has 192 bubbles, real popping sounds and both modes — and it refills.',
-  },
-  { t: 'h2', text: 'References' },
-  {
-    t: 'ul',
-    items: [
-      'Sharpe, B. T., Trotter, M. G., & Hale, B. J. (2025). Sustaining student concentration: the effectiveness of micro-breaks in a classroom setting. Frontiers in Psychology, 16, 1589411. [doi:10.3389/fpsyg.2025.1589411](https://doi.org/10.3389/fpsyg.2025.1589411)',
-    ],
   },
 ]
 

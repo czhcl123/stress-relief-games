@@ -570,10 +570,11 @@ export default function BubbleWrapGame({ embed = false }: { embed?: boolean } = 
         <h2 className="text-xl font-bold mb-3">Why Is a Bubble Wrap Popper So Satisfying?</h2>
         <p className="text-slate-400">
           There&apos;s a reason bubble wrap is so satisfying. The combination of tactile feedback,
-          the popping sound, and the repetitive action triggers a small dopamine release in your brain.
-          It&apos;s the same principle behind fidget toys and stress balls — simple, repetitive actions
-          that help you decompress. Our virtual bubble wrap gives you the same satisfaction without
-          the waste.
+          the popping sound and the repetitive action gives your attention something small and
+          complete to do. It&apos;s the same principle behind fidget toys and stress balls — simple,
+          repetitive actions that help some people decompress — though the evidence is indirect
+          and not everyone responds the same way. Our virtual bubble wrap gives you the same
+          satisfaction without the waste.
         </p>
         
         <h2 className="text-xl font-bold mb-3">What this virtual bubble wrap does</h2>

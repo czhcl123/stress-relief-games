@@ -25,6 +25,7 @@ const personJsonLd = {
   jobTitle: authorRole,
   url: authorUrl,
   worksFor: { '@id': `${siteUrl}/#organization` },
+  sameAs: ['https://github.com/czhcl123'],
   description: authorBio,
   knowsAbout: [
     'Browser games',
@@ -143,9 +144,10 @@ export default function AboutPage() {
           play.
         </p>
         <p className="leading-relaxed">
-          Compatibility: the games run in any modern desktop or mobile browser released in
-          the last three years. Touch input is supported on mobile. Sound can be muted from
-          each game&apos;s on-screen control.
+          Compatibility: the games are built and tested in current Chrome and Edge on desktop,
+          and Android Chrome on mobile. Touch input is supported. Safari and Firefox are not
+          formally tested yet; if you hit a bug there, email hello@stress-relief-games.com.
+          Sound can be muted from each game&apos;s on-screen control.
         </p>
       </section>
 

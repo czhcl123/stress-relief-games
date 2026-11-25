@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { games } from '@/lib/games'
+import { gameComparison } from '@/lib/gameComparison'
 import { posts, postHref } from '@/lib/posts'
 import { ogUrl, siteName, siteUrl } from '@/lib/seo'
 
@@ -86,6 +87,48 @@ export default function GamesIndex() {
           </a>
         ))}
       </div>
+
+      <section id="compare" className="mx-auto mt-16 max-w-5xl">
+        <h2 className="mb-4 text-2xl font-bold">At a Glance</h2>
+        <p className="mb-6 leading-relaxed text-slate-400">
+          A quick comparison of the six games. The evidence column is deliberately conservative:
+          none of these games has a direct clinical trial behind it, so the labels describe how
+          close the supporting research is.
+        </p>
+        <div className="overflow-x-auto rounded-2xl border border-slate-800">
+          <table className="w-full min-w-[760px] border-collapse text-left text-sm">
+            <thead className="bg-slate-800/60 text-xs uppercase tracking-wide text-slate-400">
+              <tr>
+                <th className="px-4 py-3 font-semibold">Game</th>
+                <th className="px-4 py-3 font-semibold">Best for</th>
+                <th className="px-4 py-3 font-semibold">Session</th>
+                <th className="px-4 py-3 font-semibold">Sound</th>
+                <th className="px-4 py-3 font-semibold">Input</th>
+                <th className="px-4 py-3 font-semibold">Evidence</th>
+              </tr>
+            </thead>
+            <tbody>
+              {gameComparison.map((row) => (
+                <tr key={row.href} className="border-t border-slate-800">
+                  <td className="px-4 py-3">
+                    <a
+                      href={row.href}
+                      className="font-semibold text-white transition hover:text-violet-300"
+                    >
+                      {row.name}
+                    </a>
+                  </td>
+                  <td className="px-4 py-3 text-slate-400">{row.bestFor}</td>
+                  <td className="px-4 py-3 text-slate-400">{row.session}</td>
+                  <td className="px-4 py-3 text-slate-400">{row.sound}</td>
+                  <td className="px-4 py-3 text-slate-400">{row.input}</td>
+                  <td className="px-4 py-3 text-slate-400">{row.evidence}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </section>
 
       <section className="mx-auto mt-16 max-w-3xl">
         <h2 className="mb-4 text-2xl font-bold">Which One to Pick</h2>

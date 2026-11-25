@@ -43,6 +43,7 @@ const personJsonLd = {
   url: authorUrl,
   description: authorBio,
   worksFor: { '@id': `${siteUrl}/#organization` },
+  sameAs: ['https://github.com/czhcl123'],
   knowsAbout: [
     'Browser games',
     'HTML5 Canvas',
@@ -135,6 +136,27 @@ export default function AuthorPage() {
             hello@stress-relief-games.com
           </a>
           .
+        </p>
+        <p className="mt-2">
+          GitHub:{' '}
+          <a
+            className="text-violet-400 underline underline-offset-2 hover:text-violet-300"
+            href="https://github.com/czhcl123"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            github.com/czhcl123
+          </a>
+          {' · '}
+          Project source:{' '}
+          <a
+            className="text-violet-400 underline underline-offset-2 hover:text-violet-300"
+            href="https://github.com/czhcl123/stress-relief-games"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            stress-relief-games
+          </a>
         </p>
       </section>
     </div>

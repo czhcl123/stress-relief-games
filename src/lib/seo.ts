@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { games } from '@/lib/games'
+import { guideExtras } from '@/lib/guideExtras'
 import { posts } from '@/lib/posts'
 
 // Canonical site origin. Override with NEXT_PUBLIC_SITE_URL in the environment.
@@ -80,7 +81,7 @@ export function gameMetadata({
       card: 'summary_large_image',
       title: fullTitle,
       description,
-      images: ['/opengraph-image'],
+      images: [image.url],
     },
   }
 }
@@ -186,7 +187,7 @@ export function articleMetadata({
       card: 'summary_large_image',
       title,
       description,
-      images: ['/opengraph-image'],
+      images: [image.url],
     },
   }
 }
@@ -213,6 +214,7 @@ export function articleJsonLd({
 }) {
   const post = posts.find((item) => `/blog/${item.slug}` === path)
   const game = post ? games.find((item) => item.href === post.game) : undefined
+  const extra = post ? guideExtras[post.slug] : undefined
   return {
     '@context': 'https://schema.org',
     '@type': 'Article',
@@ -233,10 +235,12 @@ export function articleJsonLd({
       '@type': 'Person',
       name: authorName,
       url: authorUrl,
+      sameAs: ['https://github.com/czhcl123'],
     },
     publisher: {
       '@id': `${siteUrl}/#organization`,
     },
+    ...(extra ? { citation: extra.references.map((ref) => ref.url) } : {}),
     ...(keywords && keywords.length > 0 ? { keywords: keywords.join(', ') } : {}),
   }
 }

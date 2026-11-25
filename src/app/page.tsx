@@ -34,7 +34,7 @@ const faqs = [
   },
   {
     q: 'Do I need to install anything?',
-    a: 'No. The games run in a modern desktop or mobile browser. Sound is optional and can be muted from each game.',
+    a: 'No. The games are tested in current Chrome and Edge on desktop, and Android Chrome on mobile. Touch input is supported; Safari and Firefox are not formally tested yet. Sound is optional and can be muted from each game.',
   },
   {
     q: 'Which game is best for a quick break?',
@@ -185,6 +185,14 @@ export default function Home() {
             Open, play, close.
           </li>
         </ul>
+        <p className="mt-4 text-sm">
+          <a
+            href="/games#compare"
+            className="text-violet-400 underline underline-offset-2 hover:text-violet-300"
+          >
+            See the full comparison table →
+          </a>
+        </p>
       </section>
 
       <section className="mt-12 max-w-3xl mx-auto">

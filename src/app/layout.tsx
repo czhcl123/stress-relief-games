@@ -98,7 +98,12 @@ const jsonLd = {
         name: authorName,
         jobTitle: authorRole,
         url: authorUrl,
+        sameAs: ['https://github.com/czhcl123'],
       },
+      sameAs: [
+        'https://github.com/czhcl123/stress-relief-games',
+        'https://github.com/czhcl123',
+      ],
       contactPoint: {
         '@type': 'ContactPoint',
         contactType: 'customer support',

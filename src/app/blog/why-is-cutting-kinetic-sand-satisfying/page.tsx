@@ -124,14 +124,6 @@ const blocks: Block[] = [
     t: 'p',
     text: 'That is the whole trick: a material that responds immediately, a task with no way to fail, and an ending you choose.',
   },
-  { t: 'h2', text: 'References' },
-  {
-    t: 'ul',
-    items: [
-      'Barratt, E. L., & Davis, N. J. (2015). Autonomous Sensory Meridian Response (ASMR): a flow-like mental state. PeerJ, 3, e851. [doi:10.7717/peerj.851](https://doi.org/10.7717/peerj.851)',
-      'Poerio, G. L., Blakey, E., Hostler, T. J., & Veltri, T. (2018). More than a feeling: Autonomous sensory meridian response (ASMR) is characterized by reliable changes in affect and physiology. PLOS ONE. [doi:10.1371/journal.pone.0196645](https://doi.org/10.1371/journal.pone.0196645)',
-    ],
-  },
 ]
 
 export default function Page() {
