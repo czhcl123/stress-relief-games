@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { games } from '@/lib/games'
 import { posts, postHref } from '@/lib/posts'
-import { siteName } from '@/lib/seo'
+import { ogUrl, siteName } from '@/lib/seo'
 
 const title = 'Stress Relief Guides'
 const description =
@@ -17,13 +17,13 @@ export const metadata: Metadata = {
     siteName,
     title: `${title} | ${siteName}`,
     description,
-    images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: title }],
+    images: [{ url: ogUrl(title, 'Evidence-aware guides'), width: 1200, height: 630, alt: title }],
   },
   twitter: {
     card: 'summary_large_image',
     title: `${title} | ${siteName}`,
     description,
-    images: ['/opengraph-image'],
+    images: [ogUrl(title, 'Evidence-aware guides')],
   },
 }
 

@@ -1,4 +1,6 @@
 import type { Metadata } from 'next'
+import { games } from '@/lib/games'
+import { posts } from '@/lib/posts'
 
 // Canonical site origin. Override with NEXT_PUBLIC_SITE_URL in the environment.
 export const siteUrl = (
@@ -9,6 +11,23 @@ export const siteName = 'Stress Relief Games'
 
 export const siteDescription =
   'Free online stress relief games: pop bubble wrap, stretch slime, spin a fidget spinner, rake a zen garden. Relaxing, satisfying, no signup.'
+
+/**
+ * The real, named author behind the site. Keeping this in one place means the
+ * byline, the Article JSON-LD, the About page and the author page cannot drift.
+ * No credentials are invented: "programming enthusiast" is what the author
+ * supplied, and the bio sticks to what the site actually does.
+ */
+export const authorName = 'Chen Lei'
+export const authorRole = 'Independent developer & programming enthusiast'
+export const authorUrl = `${siteUrl}/authors/chen-lei`
+export const authorBio =
+  'Chen Lei is an independent developer and programming enthusiast who builds small, focused browser games. He created Stress Relief Games and writes its guides, checking each claim against the cited research.'
+
+/** Per-page OG image, generated at request time from the page title. */
+export function ogUrl(title: string, subtitle: string) {
+  return `${siteUrl}/og?title=${encodeURIComponent(title)}&subtitle=${encodeURIComponent(subtitle)}`
+}
 
 /**
  * Builds consistent per-game page metadata (title, description, canonical, Open Graph).
@@ -27,17 +46,25 @@ export function gameMetadata({
 }): Metadata {
   const url = `${siteUrl}${path}`
   const fullTitle = `${title} | ${siteName}`
-  // The root-level file convention only covers the homepage, so declare the
-  // shared Open Graph image explicitly for every game page.
-  const image = {
-    url: '/opengraph-image',
-    width: 1200,
-    height: 630,
-    alt: `${title} — ${siteName}`,
-  }
+  const game = games.find((item) => item.href === path)
+  const image = game
+    ? {
+        url: game.ogImage,
+        width: 1200,
+        height: 630,
+        alt: game.imageAlt,
+      }
+    : {
+        url: ogUrl(title, 'Free online game — no signup, no download'),
+        width: 1200,
+        height: 630,
+        alt: `${title} — ${siteName}`,
+      }
 
   return {
-    title,
+    // Game titles already carry the query modifiers; appending the 22-character
+    // brand suffix would push most of them past the SERP truncation point.
+    title: { absolute: title },
     description,
     keywords,
     alternates: { canonical: path },
@@ -73,12 +100,14 @@ export function gameJsonLd({
   description: string
   path: string
 }) {
+  const game = games.find((item) => item.href === path)
   return {
     '@context': 'https://schema.org',
     '@type': 'VideoGame',
     name: title,
     description,
     url: `${siteUrl}${path}`,
+    ...(game ? { screenshot: `${siteUrl}${game.image}` } : {}),
     applicationCategory: 'GameApplication',
     operatingSystem: 'Web browser',
     browserRequirements: 'Requires JavaScript',
@@ -90,10 +119,11 @@ export function gameJsonLd({
       priceCurrency: 'USD',
     },
     publisher: {
-      '@type': 'Organization',
-      name: siteName,
-      url: siteUrl,
+      '@id': `${siteUrl}/#organization`,
     },
+    genre: ['Casual', 'Simulation'],
+    gamePlatform: 'Web browser',
+    playMode: 'SinglePlayer',
   }
 }
 
@@ -120,7 +150,21 @@ export function articleMetadata({
   modified?: string
 }): Metadata {
   const url = `${siteUrl}${path}`
-  const image = { url: '/opengraph-image', width: 1200, height: 630, alt: title }
+  const post = posts.find((item) => `/blog/${item.slug}` === path)
+  const game = post ? games.find((item) => item.href === post.game) : undefined
+  const image = game
+    ? {
+        url: game.ogImage,
+        width: 1200,
+        height: 630,
+        alt: game.imageAlt,
+      }
+    : {
+        url: ogUrl(title, 'Evidence-aware guide — Stress Relief Games'),
+        width: 1200,
+        height: 630,
+        alt: title,
+      }
 
   return {
     title: { absolute: title },
@@ -135,6 +179,7 @@ export function articleMetadata({
       description,
       publishedTime: published,
       modifiedTime: modified ?? published,
+      authors: [authorName],
       images: [image],
     },
     twitter: {
@@ -166,6 +211,8 @@ export function articleJsonLd({
   modified?: string
   keywords?: string[]
 }) {
+  const post = posts.find((item) => `/blog/${item.slug}` === path)
+  const game = post ? games.find((item) => item.href === post.game) : undefined
   return {
     '@context': 'https://schema.org',
     '@type': 'Article',
@@ -177,16 +224,18 @@ export function articleJsonLd({
     dateModified: modified ?? published,
     inLanguage: 'en',
     isAccessibleForFree: true,
-    image: [`${siteUrl}/opengraph-image`],
+    image: [
+      game
+        ? `${siteUrl}${game.ogImage}`
+        : ogUrl(title, 'Evidence-aware guide — Stress Relief Games'),
+    ],
     author: {
       '@type': 'Person',
-      name: 'Stress Relief Games Team',
-      url: `${siteUrl}/about`,
+      name: authorName,
+      url: authorUrl,
     },
     publisher: {
-      '@type': 'Organization',
-      name: siteName,
-      url: siteUrl,
+      '@id': `${siteUrl}/#organization`,
     },
     ...(keywords && keywords.length > 0 ? { keywords: keywords.join(', ') } : {}),
   }

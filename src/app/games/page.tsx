@@ -1,14 +1,14 @@
 import type { Metadata } from 'next'
 import { games } from '@/lib/games'
 import { posts, postHref } from '@/lib/posts'
-import { siteName, siteUrl } from '@/lib/seo'
+import { ogUrl, siteName, siteUrl } from '@/lib/seo'
 
-const title = 'Free Online Stress Relief Games'
+const title = 'All 6 Stress Relief Games — Free Online'
 const description =
-  'Six free online stress relief games: bubble wrap, slime, zen garden, stress ball, fidget spinner and kinetic sand. No signup, no download.'
+  'All six free online stress relief games in one place: bubble wrap, slime, zen garden, stress ball, fidget spinner and kinetic sand. Compare and pick one.'
 
 export const metadata: Metadata = {
-  title,
+  title: { absolute: title },
   description,
   alternates: { canonical: '/games' },
   openGraph: {
@@ -17,13 +17,13 @@ export const metadata: Metadata = {
     siteName,
     title: `${title} | ${siteName}`,
     description,
-    images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: title }],
+    images: [{ url: ogUrl(title, 'All six games — free online'), width: 1200, height: 630, alt: title }],
   },
   twitter: {
     card: 'summary_large_image',
     title: `${title} | ${siteName}`,
     description,
-    images: ['/opengraph-image'],
+    images: [ogUrl(title, 'All six games — free online')],
   },
 }
 
@@ -48,7 +48,7 @@ export default function GamesIndex() {
   return (
     <div className="mx-auto max-w-6xl px-4 py-12">
       <header className="mb-12 text-center">
-        <h1 className="mb-4 text-3xl font-bold sm:text-4xl">Six Free Online Stress Relief Games</h1>
+        <h1 className="mb-4 text-3xl font-bold sm:text-4xl">All Six Stress Relief Games</h1>
         <p className="mx-auto max-w-2xl leading-relaxed text-slate-400">
           Six small games you can finish in a couple of minutes. Everything runs in the browser: no
           signup, no download, nothing to install. Pick one and start with the thing itself.

@@ -1,5 +1,64 @@
+import type { Metadata } from 'next'
 import { games } from '@/lib/games'
 import { posts, postHref } from '@/lib/posts'
+import { ogUrl, siteName, siteUrl } from '@/lib/seo'
+
+const title = 'Free Online Stress Relief Games — No Signup, No Ads'
+const description =
+  'Play six free online stress relief games: bubble wrap, slime, zen garden, stress ball, fidget spinner and kinetic sand. No signup, no download, no ads.'
+
+export const metadata: Metadata = {
+  title: { absolute: title },
+  description,
+  alternates: { canonical: '/' },
+  openGraph: {
+    type: 'website',
+    url: siteUrl,
+    siteName,
+    title,
+    description,
+    images: [{ url: ogUrl(title, 'Free online · no signup · no ads'), width: 1200, height: 630, alt: title }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title,
+    description,
+    images: [ogUrl(title, 'Free online · no signup · no ads')],
+  },
+}
+
+const faqs = [
+  {
+    q: 'Are these stress relief games free?',
+    a: 'Yes. All six games are free to play in your browser. There is no signup, no download, no in-app purchase and no advertising.',
+  },
+  {
+    q: 'Do I need to install anything?',
+    a: 'No. The games run in a modern desktop or mobile browser. Sound is optional and can be muted from each game.',
+  },
+  {
+    q: 'Which game is best for a quick break?',
+    a: 'For one or two minutes, try the Stress Relief Ball or the Fidget Spinner. For a slower break, the Zen Garden or Slime Simulator works better. Bubble Wrap and Sand Cutting sit in between.',
+  },
+  {
+    q: 'Are these games a substitute for therapy?',
+    a: 'No. They are short, low-stakes breaks, not treatment. If stress is affecting your sleep, work or appetite for weeks, talk to a doctor or therapist. This site is general information, not medical advice.',
+  },
+  {
+    q: 'Do the games work on a phone?',
+    a: 'Yes. Every game supports touch input, and the layout adapts to phone screens. Headphones make the ASMR sounds more noticeable, but they are not required.',
+  },
+]
+
+const faqJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqs.map((faq) => ({
+    '@type': 'Question',
+    name: faq.q,
+    acceptedAnswer: { '@type': 'Answer', text: faq.a },
+  })),
+}
 
 export default function Home() {
   return (
@@ -76,20 +135,83 @@ export default function Home() {
         </ul>
       </section>
 
-      {/* SEO Content */}
-      <div className="mt-16 max-w-3xl mx-auto text-center">
-        <h2 className="text-2xl font-bold mb-4">Why Play Stress Relief Games?</h2>
+      {/* SEO content */}
+      <section className="mt-16 max-w-3xl mx-auto">
+        <h2 className="text-2xl font-bold mb-4">What Are Stress Relief Games?</h2>
         <p className="text-slate-400 leading-relaxed mb-4">
-          Research on short breaks suggests that brief, low-stakes pauses help sustain concentration (
-          <a href="https://doi.org/10.3389/fpsyg.2025.1589411" className="text-violet-400 underline underline-offset-2 hover:text-violet-300">Sharpe et al., 2025</a>
-          ). Our free online games give you that micro-break — pop some virtual bubble wrap,
-          spin a fidget toy, or arrange a zen garden. No accounts, no downloads, no distractions.
+          Stress relief games are short, low-stakes browser games built around a simple,
+          repetitive action: popping bubble wrap, stretching slime, raking sand, squeezing a
+          stress ball. They are not therapy, and they are not a replacement for rest, exercise
+          or professional support. What they do is interrupt an open-ended stress loop with
+          something that has a clear finish line — which is often enough to make a two-minute
+          break feel like a real break.
         </p>
         <p className="text-slate-400 leading-relaxed">
-          Whether you&apos;re at work, school, or just need a moment to decompress, these satisfying games
-          are built for short breaks — most take just a couple of minutes. Pick a game above and start unwinding.
+          Every game here runs entirely in your browser. There is no account, no download,
+          no advertising and no timer pushing you to stay. Play for thirty seconds or five
+          minutes, then close the tab and go back to your day.
         </p>
-      </div>
+      </section>
+
+      <section className="mt-12 max-w-3xl mx-auto">
+        <h2 className="text-2xl font-bold mb-4">How to Choose in 30 Seconds</h2>
+        <ul className="space-y-3 text-slate-400 leading-relaxed">
+          <li>
+            <strong className="text-white">Restless hands, need something to do</strong> —{' '}
+            <a href="/games/bubble-wrap" className="text-violet-400 underline underline-offset-2 hover:text-violet-300">Bubble Wrap Popper</a>{' '}
+            or{' '}
+            <a href="/games/sand-cutting" className="text-violet-400 underline underline-offset-2 hover:text-violet-300">Sand Cutting</a>.
+            Fast, repetitive and easy to stop.
+          </li>
+          <li>
+            <strong className="text-white">Wound up, can&apos;t settle</strong> —{' '}
+            <a href="/games/zen-garden" className="text-violet-400 underline underline-offset-2 hover:text-violet-300">Zen Garden</a>{' '}
+            or{' '}
+            <a href="/games/slime-simulator" className="text-violet-400 underline underline-offset-2 hover:text-violet-300">Slime Simulator</a>.
+            Slow, quiet and no score.
+          </li>
+          <li>
+            <strong className="text-white">Two minutes between meetings</strong> —{' '}
+            <a href="/games/stress-ball" className="text-violet-400 underline underline-offset-2 hover:text-violet-300">Stress Relief Ball</a>{' '}
+            or{' '}
+            <a href="/games/fidget-spinner" className="text-violet-400 underline underline-offset-2 hover:text-violet-300">Fidget Spinner</a>.
+            Open, play, close.
+          </li>
+        </ul>
+      </section>
+
+      <section className="mt-12 max-w-3xl mx-auto">
+        <h2 className="text-2xl font-bold mb-4">Why Short Breaks Help</h2>
+        <p className="text-slate-400 leading-relaxed mb-4">
+          Research on short breaks suggests that brief, low-stakes pauses help sustain
+          concentration (
+          <a href="https://doi.org/10.3389/fpsyg.2025.1589411" className="text-violet-400 underline underline-offset-2 hover:text-violet-300">Sharpe et al., 2025</a>
+          ). The useful part is not the game itself; it is the stopping point. A feed scrolls
+          forever. A sheet of bubble wrap runs out. That clear ending is what lets a two-minute
+          break stay two minutes.
+        </p>
+        <p className="text-slate-400 leading-relaxed">
+          Whether you are at work, at school or just need a moment to decompress, these games
+          are built for short sessions. Pick one, play a round, and go back to what you were doing.
+        </p>
+      </section>
+
+      <section className="mt-12 max-w-3xl mx-auto">
+        <h2 className="text-2xl font-bold mb-4">Frequently Asked Questions</h2>
+        <div className="space-y-3">
+          {faqs.map((faq) => (
+            <details key={faq.q} className="rounded-xl border border-slate-800 bg-slate-900/40 px-4 py-3">
+              <summary className="cursor-pointer font-semibold text-white">{faq.q}</summary>
+              <p className="mt-2 text-sm leading-relaxed text-slate-400">{faq.a}</p>
+            </details>
+          ))}
+        </div>
+      </section>
+
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+      />
     </div>
   )
 }

@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { siteUrl } from '@/lib/seo'
+import { authorBio, authorName, authorRole, authorUrl, siteUrl } from '@/lib/seo'
 
 const title = 'About'
 const description =
@@ -20,31 +20,18 @@ export const metadata: Metadata = {
 const personJsonLd = {
   '@context': 'https://schema.org',
   '@type': 'Person',
-  name: 'Stress Relief Games Team',
-  url: `${siteUrl}/about`,
-  worksFor: {
-    '@type': 'Organization',
-    name: 'Stress Relief Games',
-    url: siteUrl,
-  },
-  description:
-    'Solo developer and editor behind Stress Relief Games — a small collection of free browser games for short, satisfying mental breaks.',
-}
-
-const orgJsonLd = {
-  '@context': 'https://schema.org',
-  '@type': 'Organization',
-  name: 'Stress Relief Games',
-  url: siteUrl,
-  description:
-    'Free online stress relief games: pop bubble wrap, stretch slime, spin a fidget spinner, rake a zen garden, squeeze a stress ball, or cut kinetic sand.',
-  foundingDate: '2026',
+  '@id': `${siteUrl}/#person`,
+  name: authorName,
+  jobTitle: authorRole,
+  url: authorUrl,
+  worksFor: { '@id': `${siteUrl}/#organization` },
+  description: authorBio,
   knowsAbout: [
     'Browser games',
     'HTML5 Canvas',
     'Web Audio',
+    'JavaScript',
     'Stress relief',
-    'Casual games',
   ],
 }
 
@@ -55,14 +42,13 @@ export default function AboutPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd) }}
       />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(orgJsonLd) }}
-      />
 
       <h1 className="text-4xl sm:text-5xl font-bold text-white mb-3">
         About <span className="text-violet-400">Stress Relief Games</span>
       </h1>
+      <p className="mb-4 text-sm text-slate-500">
+        Last updated November 25, 2026
+      </p>
       <p className="text-slate-400 text-lg mb-10">
         A small collection of free, browser-based games built for one purpose: a quick,
         satisfying break when you need it.
@@ -87,7 +73,14 @@ export default function AboutPage() {
       <section className="mb-10">
         <h2 className="text-2xl font-semibold text-white mb-3">Who builds it</h2>
         <p className="leading-relaxed mb-3">
-          The site is built and maintained by a single developer. Every game is hand-coded in
+          The site is built and maintained by{' '}
+          <a
+            href="/authors/chen-lei"
+            className="text-violet-400 underline underline-offset-2 hover:text-violet-300"
+          >
+            {authorName}
+          </a>
+          , an independent developer and programming enthusiast. Every game is hand-coded in
           HTML, JavaScript, and the Canvas and Web Audio APIs. No game engines, no tracking
           pixels, no advertising. The site loads one privacy-friendly analytics script (Ahrefs)
           that counts page loads anonymously — no cookies and no personal data — and nothing

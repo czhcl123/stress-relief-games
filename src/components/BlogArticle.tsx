@@ -1,6 +1,8 @@
 import type { ReactNode } from 'react'
 import { games } from '@/lib/games'
 import { posts, postHref, type Block, type Post } from '@/lib/posts'
+import { authorName } from '@/lib/seo'
+import Breadcrumbs from '@/components/Breadcrumbs'
 import RelatedGames from '@/components/RelatedGames'
 import GameEmbed from '@/components/GameEmbed'
 
@@ -140,7 +142,15 @@ export default function BlogArticle({ post, blocks }: { post: Post; blocks: Bloc
 
   return (
     <>
-      <article className="mx-auto max-w-3xl px-4 pt-10 pb-4">
+      <Breadcrumbs
+        items={[
+          { name: 'Home', href: '/' },
+          { name: 'Guides', href: '/blog' },
+          { name: post.title, href: postHref(post) },
+        ]}
+        className="mx-auto max-w-3xl px-4 pt-8"
+      />
+      <article className="mx-auto max-w-3xl px-4 pt-6 pb-4">
         <a href="/blog" className="text-sm text-slate-400 transition hover:text-white">
           ← All guides
         </a>
@@ -148,6 +158,14 @@ export default function BlogArticle({ post, blocks }: { post: Post; blocks: Bloc
         <header className="mt-4 mb-8">
           <h1 className="mb-3 text-3xl font-bold leading-tight sm:text-4xl">{post.title}</h1>
           <p className="text-sm text-slate-400">
+            By{' '}
+            <a
+              href="/authors/chen-lei"
+              className="text-violet-400 underline underline-offset-2 hover:text-violet-300"
+            >
+              {authorName}
+            </a>
+            <span aria-hidden="true"> · </span>
             <time dateTime={post.date}>{formatDate(post.date)}</time>
             <span aria-hidden="true"> · </span>
             {post.minutes} min read
@@ -156,6 +174,23 @@ export default function BlogArticle({ post, blocks }: { post: Post; blocks: Bloc
             <time dateTime={post.evidenceChecked}>{formatDate(post.evidenceChecked)}</time>
           </p>
         </header>
+
+        {game?.image && (
+          <figure className="mb-6 overflow-hidden rounded-2xl border border-slate-800">
+            <img
+              src={game.image}
+              alt={game.imageAlt}
+              width={game.imageWidth}
+              height={game.imageHeight}
+              loading="eager"
+              fetchPriority="high"
+              className="w-full"
+            />
+            <figcaption className="border-t border-slate-800 bg-slate-900/40 px-4 py-2 text-xs text-slate-500">
+              {game.title} screenshot
+            </figcaption>
+          </figure>
+        )}
 
         {/* Playable widget above the fold. The guide answers "why", the widget
             answers "do it" — the CTA used to sit after ~1000 words of body copy,

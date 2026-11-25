@@ -43,9 +43,9 @@ export type Block =
 export const posts: Post[] = [
   {
     slug: 'does-popping-bubble-wrap-relieve-stress',
-    title: 'Does Popping Bubble Wrap Actually Relieve Stress?',
+    title: 'Does Popping Bubble Wrap Relieve Stress? The Evidence',
     description:
-      'Popping bubble wrap takes the edge off for many people. What the evidence does and does not show, and how to get the same effect online in two minutes.',
+      'Popping bubble wrap takes the edge off for many people. What the research does and does not show — and how to get the same effect online in two minutes.',
     date: '2026-10-19',
     evidenceChecked: '2026-11-19',
     minutes: 6,
@@ -54,9 +54,9 @@ export const posts: Post[] = [
   },
   {
     slug: 'why-is-slime-calming',
-    title: 'Why Is Slime So Calming? The Science of Slime',
+    title: 'Why Is Slime Calming? The Science of Slime & Anxiety',
     description:
-      'Slime is one of the most satisfying textures there is. Here is what makes it calming, and how to get the effect without the sticky mess.',
+      'Slime is one of the most satisfying textures there is. What makes it calming, what the evidence says about anxiety, and how to try it without the mess.',
     date: '2026-10-19',
     evidenceChecked: '2026-11-19',
     minutes: 5,
@@ -65,9 +65,9 @@ export const posts: Post[] = [
   },
   {
     slug: 'what-is-a-zen-garden',
-    title: 'What Is a Zen Garden? And Why It Calms You Down',
+    title: 'What Is a Zen Garden? Benefits, Meaning & How to Use One',
     description:
-      'A zen garden is a small raked sand garden used for quiet focus. Here is what it is, why raking works, and how to use one at your desk in five minutes.',
+      'A zen garden is a small raked sand garden used for quiet focus. What it means, why raking works, and how to use one at your desk in five minutes.',
     date: '2026-10-19',
     evidenceChecked: '2026-11-19',
     minutes: 6,
@@ -76,7 +76,7 @@ export const posts: Post[] = [
   },
   {
     slug: 'stress-ball-exercises',
-    title: '7 Stress Ball Exercises to Release Tension Fast',
+    title: 'Stress Ball Exercises: 7 Moves + 2-Minute Routine',
     description:
       '7 stress ball exercises ranked by tension type — squeeze, roll, drop, pass — with a 2-minute routine and an honest "stop if it hurts" limit.',
     date: '2026-10-19',
@@ -87,7 +87,7 @@ export const posts: Post[] = [
   },
   {
     slug: 'do-fidget-spinners-help-focus',
-    title: 'Do Fidget Spinners Help You Focus? The Evidence',
+    title: 'Do Fidget Spinners Help Focus? The Evidence',
     description:
       'Fidget spinners are popular focus tools, but the evidence is mixed. Here is what research suggests, and who they tend to help most.',
     date: '2026-10-19',
@@ -98,7 +98,7 @@ export const posts: Post[] = [
   },
   {
     slug: 'why-is-cutting-kinetic-sand-satisfying',
-    title: 'Why Is Cutting Kinetic Sand So Satisfying?',
+    title: 'Why Is Cutting Kinetic Sand So Satisfying? Science + ASMR',
     description:
       'Cutting kinetic sand is one of the most satisfying sensations there is. Here is why it feels so good, and how to try it instantly in your browser.',
     date: '2026-10-19',
