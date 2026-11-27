@@ -105,7 +105,7 @@ export default function EmbedIndex() {
               </tr>
             </thead>
             <tbody className="text-slate-400">
-              {games.map((game) => (
+              {games.filter((game) => game.href in heights).map((game) => (
                 <tr key={game.href} className="border-t border-slate-800">
                   <td className="px-3 py-2 text-slate-200">
                     <span aria-hidden="true">{game.emoji}</span> {game.title}

@@ -175,6 +175,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               <a href="/games/fidget-spinner" className="hover:text-white transition">Spinner</a>
               <a href="/games/sand-cutting" className="hover:text-white transition">Sand</a>
               <a href="/blog" className="hover:text-white transition">Guides</a>
+              <a href="/license" className="hover:text-white transition">License</a>
             </nav>
           </div>
         </header>
