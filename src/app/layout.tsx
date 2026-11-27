@@ -161,6 +161,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 <a href="/games/sand-cutting" className="block rounded-lg px-3 py-2 text-slate-300 hover:bg-slate-800 hover:text-white">Sand</a>
                 <a href="/blog" className="block rounded-lg px-3 py-2 text-slate-300 hover:bg-slate-800 hover:text-white">Guides</a>
                 <a href="/embed" className="block rounded-lg px-3 py-2 text-slate-300 hover:bg-slate-800 hover:text-white">Embed</a>
+                <a href="/license" className="block rounded-lg px-3 py-2 text-slate-300 hover:bg-slate-800 hover:text-white">License</a>
               </nav>
             </details>
 
@@ -188,6 +189,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <a href="/about" className="text-violet-400 underline underline-offset-2 transition hover:text-violet-300">About</a>
             <span aria-hidden="true"> · </span>
             <a href="/embed" className="text-violet-400 underline underline-offset-2 transition hover:text-violet-300">Embed</a>
+            <span aria-hidden="true"> · </span>
+            <a href="/license" className="text-violet-400 underline underline-offset-2 transition hover:text-violet-300">License</a>
           </p>
           <p className="mt-2 text-xs text-slate-500">
             <a href="/authors/chen-lei" className="transition hover:text-slate-300">Author</a>

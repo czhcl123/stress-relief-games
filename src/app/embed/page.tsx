@@ -153,6 +153,18 @@ export default function EmbedIndex() {
         </ul>
       </section>
 
+      <section className="mb-10 rounded-2xl border border-slate-800 bg-slate-900/40 p-5">
+        <h2 className="mb-2 text-xl font-bold">Using this in a school or clinic?</h2>
+        <p className="text-sm leading-relaxed text-slate-400">
+          The public embed is free. If you need the credit removed, your own logo, an invoice or a
+          white-label version, see the{' '}
+          <a href="/license" className="text-violet-400 underline underline-offset-2 hover:text-violet-300">
+            organization license
+          </a>
+          .
+        </p>
+      </section>
+
       <p className="text-sm text-slate-400">
         Want a different size, a light theme or a version without the credit bar? Reply to{' '}
         <a href="/about" className="text-violet-400 underline underline-offset-2 hover:text-violet-300">

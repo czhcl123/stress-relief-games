@@ -26,6 +26,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       images: games.map((game) => `${siteUrl}${game.thumb}`),
     },
     { path: '/embed', priority: 0.8 },
+    { path: '/license', priority: 0.7 },
     { path: '/about', priority: 0.5 },
     { path: '/blog', priority: 0.6 },
     { path: '/authors/chen-lei', priority: 0.4 },

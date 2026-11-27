@@ -101,8 +101,10 @@ export default function AboutPage() {
         <h2 className="text-2xl font-semibold text-white mb-3">Editorial policy</h2>
         <p className="leading-relaxed mb-3">
           We do not run sponsored content, paid placements, or affiliate links on game pages.
-          If the site ever adds such programs, they will be clearly labeled and never affect
-          the gameplay itself.
+          Organizations can license a credit-free or white-label version for a school, clinic or
+          team; that is a software license, not a paid placement, and the public games stay free
+          and ad-free. If the site ever adds other commercial programs, they will be clearly
+          labeled and never affect the gameplay itself.
         </p>
         <p className="leading-relaxed mb-3">
           Game descriptions and instructions are written by the developer. We do not generate
